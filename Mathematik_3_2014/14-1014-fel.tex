@@ -1,0 +1,128 @@
+\section[Algebraische Strukturen mit einer Verknüpfung]{Algebraische Strukturen mit einer Verknüpfung \\ HALBGRUPPEN, MONOIDE, GRUPPEN}
+
+\subsection{Definition}
+
+Sei $X \neq \varnothing$ eine Menge.
+
+Eine \emph{Verknüpfung} oder (abstrakte) Multiplikation auf $X$ ist eine Abbildung
+\[
+{\begin{array}{lc@{}l}
+	\bigdot:& X \times X 	&\rightarrow X \\
+			& (a, b)		&\mapsto	 a \bigdot b
+		\end{array}}
+\]
+$\underset{(ab)}{a\bigdot b}$ heißt \emph{Produkt} von $a$ und $b$, muss aber mit der üblichen Multiplikation von Zahlen nichts zu tun haben.
+
+Beschreibung bei endlichen Mengen oft durch Multiplikationstafeln.
+
+\subsection{Beispiel}
+
+\begin{enumerate}
+	
+	\item
+	$X = \aset{a, b}$ 
+	\quad
+	$\begin{array}{c|cc}
+		\bigdot	& a	& b \\
+		\hline 
+		a		& b	& b \\
+		b		& a	& a
+	\end{array}$
+	
+	$(a \bigdot a) \bigdot a = b \bigdot a = a \\
+	 a \bigdot (a \bigdot a) = a \bigdot b = b$
+	\qquad  $\rightarrow$ nicht assoziativ
+	
+	
+	\item
+	$X = \Z^- \; (= \aset{0, -1, -2, \dots})$
+	
+	Die normale Multiplikation ist auf $\Z^-$ keine Verknüpfung!
+	\\(zum Beispiel ist $(-2) \cdot (-3) = 6 \notin  \Z^-$)
+	\\ Aber auf $X = \N, X = \Z$ oder $X = \aset{1}, X = \aset{0, 1}$
+	
+\end{enumerate}
+
+\subsection{Definition}
+
+Sei $H \neq \varnothing$ eine Menge mit Verknüpfung.
+
+$(H, \bigdot)$ heißt \emph{Halbgruppe}, falls gilt:
+\[ \tag{Assoziativgesetz (AG)}
+\forall a, b, c \in H \::\: (a \bigdot b) \bigdot c = a \bigdot (b \bigdot c)
+\]
+
+\subsection{Bemerkung}
+
+AG sagt aus: bei endlichen Produkten ist die Klammerung irrelevant, z.B.
+
+$(a \cdot b) \cdot (c \cdot d) = ((a \cdot b) \cdot c) \cdot d = (a \cdot (b \cdot c)) \cdot d$ \:(usw.)
+
+Deshalb werden Klammern meistens weggelassen.
+
+Die Reihenfolge der Elemente ist i.A. relevant!
+
+\subsection{Beispiel} \label{bspHalbgruppe}
+
+\begin{enumerate}
+	
+	\item
+	$(\N, \bigdot), (\Z, \bigdot), (\Q, \bigdot), (\R, \bigdot)$ \footnote{$\bigdot$ normale Multiplikation}
+	sind Halbgruppen.
+	
+	Ebenso $(\N, +), (\Z, +), (\Q, +), (\R, +)$ \footnote{$+$ normale Addition} 
+	
+	
+	\item
+	$(\Q \without{0}, :)$ \footnote{$:$ normale Division} ist \emph{keine} Halbgruppe, denn z.B.
+	$\begin{array}{ccc}
+	(12 : 6) : 2	&=& 1 \\
+	12 : (6 : 2)	&=& 4
+	\end{array}$
+	
+	\item
+	vgl. Vorlesung Theoretische Informatik
+	
+	$A \neq \varnothing$ endliche Menge (''Alphabet'')
+	
+	$A^+ = \cup_{n \in N} A^n$ = Menge aller endlichen Wörter über $A$
+	\\(z.B. $A=\aset{a, b}$, dann ist z.B. $\underset{aab}{\underbrace{(a, a, b)}} \in A^3$)
+	
+	Verknüpfung: Konkatenation (Hintereinanderschreiben)
+	\\z.B. $aab \bigdot abab = aababab$
+	
+	$A^* = A^+ \cup \aset{\lambda}$ 
+	\quad$\lambda$ (oder $\epsilon$) ist das leere Wort 
+	
+	Es gilt: 
+	$\lambda \cdot w = w \cdot \lambda = w \;\forall w \in A^*$
+	
+	$(A^+, \bigdot), (A^*, \bigdot)$ \emph{Worthalbgruppe} über $A$
+	
+	
+	\item
+	$M \neq \varnothing$ Menge, Abb($M,M$): Menge aller Abbildungen $M \to M$
+	mit $\circ$ (Komposition) ist Halbgruppe.
+	
+	\item (WICHTIG)
+	
+	$n \in \N,\; \Z_n = \aset{0, 1, \dots, n-1}$
+	
+	Verknüpfung:
+	$\begin{array}{c@{\;:\;}r@{\;:=\;}r}
+		\oplus	& a \oplus b	& (a+b) \mod{n} \\
+		\odot	& a \odot b		& (a\cdot b)\mod{n}
+	\end{array}$
+	
+	$(\Z_n, \oplus), (\Z_n, \odot)$ sind Halbgruppen.
+	
+\end{enumerate}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,135 @@
+ 
+ \subsection{Definition}
+ 
+ Eine Halbgruppe $(H, \bigdot)$ heißt \emph{kommutativ}, falls gilt:
+ %
+ \[ \tag{Kommutativgesetz, KG}
+ \forall a, b \in H\::\: a \cdot b = b \cdot a \]
+ 
+ \subsection{Beispiel}
+ 
+ Beispiele \ref{bspHalbgruppe} a), e) sind kommutative Halbgruppe.
+ \\ (hallo $\neq$ ollah, ab $\neq$ ba, Worthalbgruppe nicht kommutativ) 
+ 
+ \subsection{Definition}
+ 
+ Sei $(H, \bigdot)$ Halbgruppe, $\varnothing \neq U \subseteq H$
+ 
+ $U$ heißt \emph{Unterhalbgruppe} von $H$, falls $u \cdot v \in U \; \forall u, v \in U$ gilt.
+ 
+ $(U, \odot)$ ist dann selbst Halbgruppe.
+ 
+ \subsection{Beispiel}
+ 
+ $(\Z, +)$ Halbgruppe
+ 
+ $G =$ Menge aller gerade ganzen Zahlen $\subseteq \Z$
+ \\$(G, +)$ ist Unterhalbgruppe von $(\Z, +)$
+ 
+ $U =$ Menge aller ungerade Zahlen $\subseteq \Z$
+ \\$(U, +)$ ist \underline{keine} Unterhalbgruppe!
+ 
+ \subsection{Lemma} \label{nullelemEindeutig}
+ 
+ Sei $(H, \bigdot)$ Halbgruppe, $e_1, e_2 \in H$ mit 
+ $^{(*)} e_1 \cdot x = x \cdot e_1 = x$ und $^{(**)} e_2 \cdot x = x \cdot e_2 = x \; \forall x \in H$
+
+ Dann ist $e_1 = e_2$
+ 
+ \begin{proof}
+ $e_1 \stackrel{(**)}{=} e_1 \cdot e_2 \stackrel{(*)}{=} e_2$
+ \end{proof} 
+ 
+ 
+ \subsection{Definition}
+ 
+ Eine Halbgruppe $(H, \bigdot)$ heißt \emph{Monoid}, falls $e \in H$ existiert mit $e\cdot x = x \cdot e = x \; \forall x \in H$
+ 
+ $e$ heißt \emph{neutrales Element} / Einselement / Eins in $H$.
+ \\Schreibweise: $(H, \bigdot, e)$
+ 
+ Für \textunderset{additive}{multiplikative} Verknüpfung oft \textunderset{0}{1} für $e$ (Nullelement)
+ 
+ Nach \ref{nullelemEindeutig} ist das neutrale Element eindeutig!
+ 
+ \subsection{Beispiele}
+ 
+ \begin{enumerate}
+
+	\item
+	$(\N, \bigdot)$ Monoid mit $e=1$
+	\\$(\N, +)$ kein Monoid
+	\\$(\N_0, +)$ Monoid mit $e=0$
+	\\$(\Z, +), (\Q, +), (\R, +)$ Monoide mit $e=0$
+	\\$(\Z, \bigdot), (\N_0, \bigdot), (\Q, \bigdot), (\R, \bigdot)$ Monoide mit $e=1$
+	
+	\item
+	$(\Abb(M, M), \circ)$ Monoid, $e = \id$
+	
+	\item
+	$(\Z_n, \oplus)$ Monoid, $e=0$
+	\\ $(\Z_n, \odot)$ Monoid, $e=1$
+	
+	\item
+	$(A^*, \bigdot)$ Monoid, $e= \lambda$ (hallo$\lambda$ = $\lambda$hallo = hallo)
+
+ \end{enumerate}
+ 
+ \subsection{Definition}
+ 
+ Sei $(M, \bigdot, e)$ Monoid. Eine Teilmenge $\varnothing \neq U \subseteq M$ heißt \emph{Untermonoid} von $M$, falls $U$ mit $\bigdot$ selbst ein Monoid mit neutralem Element $e$ ist (also $e \in U$)
+
+ \subsection{Lemma} \label{neutElemEindeutig}
+ 
+ Sei $(H, \bigdot, e)$ Monoid und es gebe zu jedem Element $h \in H$ Elemente $x, y \in H$ mit ${h \cdot x \stackrel{(*)}{=} e \stackrel{(**)}{=} y \cdot h}$.
+ 
+ Dann ist $x = y$
+ 
+ \begin{proof}
+ 	$y = y \cdot e \stackrel{(*)}{=} y \cdot (h \cdot x) \stackrel{(\text{AG})}{=} (y \cdot h) \cdot x \stackrel{(**)}{=} e \cdot x = x$
+ \end{proof}
+ 
+ \subsection{Definition}
+ 
+ {\renewcommand{\labelenumi}{(\roman{enumi})}
+ \begin{enumerate}
+ 
+ 	\item
+ 	$(H, \bigdot, e)$ Monoid, $h \in H$
+ 	
+ 	Falls ein $x \in H$ existiert mit $hx = xh = e$, so nennt man $h$ \emph{invertierbar} und $x$ das \emph{Inverse} zu $h$, bez. $h^{-1}$
+ 	(bei additiven Verknüpfungen oft auch $-h$)
+ 	
+ 	Nach \ref{neutElemEindeutig} ist $h^{-1}$ eindeutig bestimmt!
+ 	
+ 	Es gilt: $e$ ist immer invertierbar, $e^{-1} = e$
+ 	
+ 	\item
+ 	Ein Monoid $(G, \bigdot, e)$ heißt \emph{Gruppe}, falls \underline{jedes} Element in $G$ invertierbar ist.
+ 	
+ 	\item
+ 	Für eine endliche Gruppe $G$ heißt die Anzahl der Elemente in $G$ die \emph{Ordnung} von $G$, $\abs{G}$
+ 	
+ \end{enumerate}
+ }
+ 
+ 
+ \subsection{Bemerkung}
+ 
+ $(H, \bigdot, e)$ Monoid.
+ 
+ Sei $G$ die Menge aller invertierbaren Elemente von $H$, dann ist $(G, \bigdot, e)$ eine Gruppe.
+ 
+ Es gilt: $e$ invertierbar $(e^{-1} = e)$
+ 
+ und falls $g$ invertierbar, dann ist auch $g^{-1}$ invertierbar: $(g^{-1})^{-1} = g$
+ 
+ falls $g, h$ invertierbar, dann auch $g \cdot h$: \quad
+ $(g \cdot h)^{-1} = h^{-1} \cdot g^{-1} $
+ 
+ 
+ 
+ 
+ 
+ 
+ 

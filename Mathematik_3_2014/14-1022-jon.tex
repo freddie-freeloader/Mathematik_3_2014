@@ -1,0 +1,138 @@
+ 
+ \subsection{Beispiel}
+ $
+ \aMatrix{ccc}{
+ 	1 & 2 & 3 \\
+ 	2 & 1 & 3
+ 	}\circ
+ 	x =
+ \aMatrix{ccc}{
+ 	1 & 2 & 3 \\
+ 	3 & 1 & 2
+ 	}
+ 	$
+ - Was ist $x$?
+ 
+ $ a \cdot x = b \Leftrightarrow x=a^{-1} \cdot b$
+ 
+ $
+ \lambda =
+  \aMatrix{ccc}{
+  	1 & 2 & 3 \\
+  	2 & 1 & 3
+  }^{-1}\circ
+ \aMatrix{ccc}{
+ 	1 & 2 & 3 \\
+ 	3 & 1 & 2
+ } = 
+  \aMatrix{ccc}{
+  	1 & 2 & 3 \\
+  	2 & 1 & 3
+  }\circ
+  \aMatrix{ccc}{
+  	1 & 2 & 3 \\
+  	3 & 1 & 2
+  } =
+  \aMatrix{ccc}{
+  	1 & 2 & 3 \\
+  	3 & 2 & 1
+  }
+  $
+
+\subsection{Definition}
+
+$(G,\cdot)$ Gruppe, $\varnothing \neq U \subseteq G$ Teilmenge.
+
+$U$ heißt \emph{Untergruppe} von $G$ ($U\leqslant G$), falls $u$ bzgl. $\cdot$ selbst eine Gruppe ist.
+
+Insbesondere gilt dann:
+$\forall u,v \in U$ ist $u \cdot v \in  U$.\\
+$e$ von $G$ ist auch neutrales Element von $u$.\\
+Inversen in $U$ sind die gleichen wie in $G$.
+
+Angenommen $e$ neutrales Element in $G$, aber $f$ neutrales Element in $U$, $f^{-1}$ Inverses von $f$ in $G$.\\
+Dann ist $f^{-1} \cdot f= f \cdot f^{-1} = e$ und $f\cdot f = f$.
+
+$\Rightarrow f = e \cdot f = (f^{-1} \cdot f) \cdot f = f^{-1} \cdot (f \cdot f) = f^{-1} \cdot f = e$
+
+\subsection{Beispiele}
+\begin{enumerate}
+	\item
+	$(\Z, +) \leqslant (\Q, +) \leqslant (\R, +)$
+	
+	\item
+	$(\{-1,1\}, \cdot) \leqslant (\Q \backslash \{0\}, \cdot) \leqslant (\R \backslash \{0\}, \cdot)$
+	
+	\item
+	$(e, \cdot)$ ist Untergruppe jeder beliebigen Gruppe mit Verkn"upfung $\cdot$ und neutralem Element $e$.
+	
+	\item
+	$\pi =
+	\aMatrix{ccc}{
+		1 & 2 & 3 \\
+		2 & 1 & 3
+		}
+	\in S_3
+	$,
+	$\pi = \pi^{-1}, \pi^{-1} \circ \pi = \text{id} =
+	\aMatrix{ccc}{
+		1 & 2 & 3 \\
+		1 & 2 & 3
+		}
+	$
+	
+	$\Rightarrow (\pi, \text{id})\leqslant S_3$
+	
+	\subsection{Satz und Definition}
+	$G$ Gruppe, $U \leqslant G$
+	\begin{enumerate}
+		\item
+		Durch $x \sim y \Leftrightarrow x \cdot y^{-1} \in U$\\
+		TODO "Das muss unter die obere Zeile: bei additiver Verkn"upfung: $x + (-y) \in U (x-y \in U)$\\
+		wird auf $G$ eine "Aquivalenzrelation definiert
+		
+		\underline{Beweis}:
+		
+		$\sim$ ist reflexiv: $x \sim x$ gilt $\forall x \in G$, denn $x \cdot x^{-1}= e \in U \; \checkmark$
+		
+		$\sim$ ist symmetrisch: $x \sim y \Rightarrow y \sim x$\\
+		 Sei $x \sim y$, also $x \cdot y^{-1} \in U$ (zzg.: $y \sim x$, also $y \cdot x^{-1} \in U$) dann ist $y \cdot x^{-1} = (x \cdot y^{-1})^{-1} \in U$, da auch $x \sim y \Leftrightarrow x \cdot y^{-1} \in U$.
+		 
+		$\sim$ ist transitiv: $x \sim y, y \sim z \Rightarrow x \sim z$\\
+		Sei $x \sim y$, also $x \cdot y^{-1} \in U$ und $y \sim z$, also $y \cdot z^{-1} \in U$ (zzg.: $x \sim z$, d.h. $x\cdot z^{-1} \in U$)
+		
+		$x \cdot z^{-1} = (\underbrace{x \cdot y^{-1}}_{\in U}) \cdot (\underbrace{y \cdot z^{-1}}_{\in U}) \in U$, also $x \sim z$.
+		
+		\item
+		F"ur $x \in G$ ist $Ux = \{u \cdot x | u \in U\}$ die "Aquivalenzklasse von $x$ bzgl. $\sim$ und heißt Rechtsnebenklasse von $U$ in $G$.
+		
+		Also (Eigenschaften von "Aquivalenzklassen siehe Mathe I):
+		\begin{enumerate}
+			\item
+			$Ux = Uy \Leftrightarrow x \sim y$, also $x \cdot y^{-1} \in U$
+			\item
+			$x,y \in G$, dann ist entweder $Ux = Uy$ oder $Ux \cap Uy = \varnothing $
+		\end{enumerate}
+		
+		Beweis:
+		\begin{enumerate}
+			\item
+			Seit $x \sim y \Rightarrow y \sim x \Rightarrow y \cdot x^{-1} \in U \Rightarrow y=y(x^{-1} \cdot x) = \underbrace{(y \cdot x^{-1})}_{\in U}x \in Ux$
+			\item
+			Sei $y \in Ux$, dann zeige: $x \sim y$ \\
+			$y \in Ux \Rightarrow y = u \cdot x$ f"ur ein $u \in U\\
+			\Rightarrow x \cdot y^{-1} = x \cdot (ux)^{-1} = x \cdot x^{-1} \cdot u^{-1} = u^{-1} \in U$\\
+			Es wurde gezeigt, dass $x \sim y$ gilt.
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Beispiel}
+
+$G = (\Z, +), 3 \Z = \{\dots, -3,0,3,6,\dots\}\\
+U = (3 \Z, +) \leqslant G$ ("UA, Blatt 2)\\
+Inverses zu y in $(\Z,+)$ ist $-y$.\\
+$x \sim y \Leftrightarrow \underbrace{x \cdot y ^{-1} \in U}_{\text{bzw.:}\, x-y \in U}$ 
+
+$ x=0 : U+0 = \{u+0 | u \in U\}= \{\dots, -3,0,3,6,\dots\}\\
+   x=1 : U+1 = \{u+1 | u \in U\} = \{\dots\}$

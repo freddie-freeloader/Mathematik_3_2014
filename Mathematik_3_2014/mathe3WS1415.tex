@@ -1,0 +1,104 @@
+\documentclass[a4paper, 11pt, twosite, german, titlepage]{article}
+
+% Packages 
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{wasysym} 
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{paralist}
+\usepackage{varioref}
+\usepackage{footnpag} % fussnoten seitenweise
+\usepackage{fancyhdr}
+\usepackage{newtxtext,newtxmath}
+\usepackage[margin=3.5cm]{geometry}
+\usepackage[pdftex, pdftitle={Mathe III WiSe1415}, pdfauthor={getenv}]{hyperref}
+\usepackage{pgf, tikz}
+
+
+% % % % % % % % % % % % % %
+\title{Mathematik III - Wintersemester 14/15}
+%\author{names}
+% % % % % % % % % % % % % % 
+
+% % STYLE % %
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{%
+\markboth {#1}{}}
+\fancyhead[L]{Mathe III WiSe1415} 
+\fancyhead[R]{\leftmark}	
+% % % % % % % 
+\renewcommand{\labelenumi}{\alph{enumi})}
+% % % % % % %
+
+
+% % % % % % % % % % % % % % %
+% Selbstdefinierte Befehle  %
+% bitte so eindeutig, wie   %
+% moeglich halten!			%
+% % % % % % % % % % % % % % %
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+% % Kuerzel % % % % % % % % % 
+\newcommand{\gdw}{\Leftrightarrow}
+% % Symbole % % % % % % % % %
+\newcommand{\zerovec}{\mathcal{O}} %Nullvektor
+\newcommand{\bigdot}{\,{\bullet}\,} %Verknuepfungsmal
+%
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Abb}{\mathrm{Abb}}
+% % "Konstrukte" % % % % % %
+\newcommand{\aset}[1]{\left\{#1\right\}} % Menge
+\newcommand{\abs}[1]{\left|#1\right|} % Betrag
+\newcommand{\without}[1]{\backslash \{#1\}} 
+% % Vektoren / Matrizen % % %
+\newcommand{\vct}[1]{\left(\begin{array}{c}
+#1 \end{array}\right)} % Vektor - benutze \\ fuer neue Spalte
+\newcommand{\aMatrix}[2]{\left(\begin{array}{#1}
+#2 \end{array}\right)} % Matrix - erwartet als erstes Argument so viele c's, wie die Matrix Spalten hat, also etwa \aMatrix{cc}{1 & 2 \\ 3 & 4} fuer 2x2-Matrix
+% % Textstuff % % % % % % % %
+\newcommand{\textunderset}[2]{\begin{tabular}[t]{@{}l@{}}
+#1 \\ #2 
+\end{tabular}} % Vorsicht, zweites Element unten!
+% % % % % % % % % % % % % % %
+
+
+% !! muss direkt vor \begin{document} bleiben !!
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Mathematik 2 SS14}, pdfnewwindow, colorlinks, linkcolor=black}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% Unterdrueckt Einrueckungen nach Absatz - gehoert direkt vor den Inhalt
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+
+
+% % % % % % % % % % % % %
+% 		INHALT			%
+% Hier geht es los :))	%
+% % % % % % % % % % % % %
+
+\input{14-1014-fel}
+\input{14-1015-fel}
+\input{14-1022-jon}
+\input{14-1029-jon}
+
+
+
+
+\end{document}
+
