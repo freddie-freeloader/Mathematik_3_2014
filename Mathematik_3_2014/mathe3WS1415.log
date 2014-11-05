@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2014.10.19)  29 OCT 2014 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2014.11.4)  5 NOV 2014 11:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -27,12 +27,12 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 Package: babel 2014/09/25 3.9l The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
-Language: german 2013/12/13 v2.7 German support for babel (traditional orthogra
-phy)
+Language: german 2014/10/10 v2.7b German support for babel (traditional orthogr
+aphy)
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
-Language: germanb 2013/12/13 v2.7 German support for babel (traditional orthogr
-aphy)
+Language: germanb 2014/10/10 v2.7b German support for babel (traditional orthog
+raphy)
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/09/25 3.9l Babel common definitions
@@ -40,7 +40,7 @@ File: babel.def 2014/09/25 3.9l Babel common definitions
 \U@D=\dimen103
 )
 \l@austrian = a dialect from \language\l@german 
-Package babel Info: Making " an active character on input line 107.
+Package babel Info: Making " an active character on input line 110.
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2014/04/30 v1.2b Input encoding file
@@ -602,9 +602,9 @@ Package: footnpag 1995/11/10 v2.6 numbering footnotes per page
 \f@ncyO@orf=\skip62
 )
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxtext.sty
-Package: newtxtext 2014/06/19 v1.28
+Package: newtxtext 2014/09/28 v1.29
 
-`newtxtext' v1.28, 2014/06/19 Text macros based on txfonts (msharpe)
+`newtxtext' v1.29, 2014/09/28 Text macros based on txfonts (msharpe)
 (/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty
 Package: fontaxes 2014/03/23 v1.0d Font selection axes
 LaTeX Info: Redefining \upshape on input line 29.
@@ -641,9 +641,9 @@ File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxmath.sty
-Package: newtxmath 2014/06/19 v1.28
+Package: newtxmath 2014/09/28 v1.29
 
-`newtxmath' v1.28, 2014/06/19 Math macros based on txfonts (msharpe)
+`newtxmath' v1.29, 2014/09/28 Math macros based on txfonts (msharpe)
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
@@ -653,101 +653,101 @@ Package ifluatex Info: LuaTeX not detected.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
 \tx@Isdigit=\count112
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 101.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 103.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 101.
+(Font)              `operators' in the math version `normal' on input line 103.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> T1/ntxrx/m/n on input line 101.
+(Font)                  OT1/lmr/m/n --> T1/ntxrx/m/n on input line 103.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 101.
+(Font)              `operators' in the math version `bold' on input line 103.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/ntxrx/m/n on input line 101.
+(Font)                  OT1/lmr/bx/n --> T1/ntxrx/m/n on input line 103.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/ntxrx/m/n --> T1/ntxrx/b/n on input line 102.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 108.
+(Font)                  T1/ntxrx/m/n --> T1/ntxrx/b/n on input line 104.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/qhv/m/n on input line 108.
+(Font)                  OT1/lmss/m/n --> T1/qhv/m/n on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/qhv/m/n on input line 108.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 109.
+(Font)                  OT1/lmss/bx/n --> T1/qhv/m/n on input line 110.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/ntxrx/m/it on input line 109.
+(Font)                  OT1/lmr/m/it --> T1/ntxrx/m/it on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/ntxrx/m/it on input line 109.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 110.
+(Font)                  OT1/lmr/bx/it --> T1/ntxrx/m/it on input line 111.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/ntxtt/m/n on input line 110.
+(Font)                  OT1/lmtt/m/n --> T1/ntxtt/m/n on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/ntxtt/m/n on input line 110.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 112.
+(Font)                  OT1/lmtt/m/n --> T1/ntxtt/m/n on input line 112.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 114.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/ntxrx/b/n on input line 112.
+(Font)                  OT1/lmr/bx/n --> T1/ntxrx/b/n on input line 114.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/ntxrx/b/n on input line 112.
+(Font)                  OT1/lmr/bx/n --> T1/ntxrx/b/n on input line 114.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/ntxrx/m/it --> T1/ntxrx/b/it on input line 113.
+(Font)                  T1/ntxrx/m/it --> T1/ntxrx/b/it on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/qhv/m/n --> T1/qhv/b/n on input line 114.
+(Font)                  T1/qhv/m/n --> T1/qhv/b/n on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/ntxtt/m/n --> T1/ntxtt/b/n on input line 115.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 145.
+(Font)                  T1/ntxtt/m/n --> T1/ntxtt/b/n on input line 117.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 147.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/lmm/m/it --> OML/ntxmi/m/it on input line 145.
+(Font)                  OML/lmm/m/it --> OML/ntxmi/m/it on input line 147.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/lmm/b/it --> OML/ntxmi/m/it on input line 145.
+(Font)                  OML/lmm/b/it --> OML/ntxmi/m/it on input line 147.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/ntxmi/m/it --> OML/ntxmi/b/it on input line 146.
+(Font)                  OML/ntxmi/m/it --> OML/ntxmi/b/it on input line 148.
 \symlettersA=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
-(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 159.
-LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 161.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 167.
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 161.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 163.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 169.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> OMS/ntxsy/m/n on input line 167.
+(Font)                  OMS/lmsy/m/n --> OMS/ntxsy/m/n on input line 169.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> OMS/ntxsy/m/n on input line 167.
+(Font)                  OMS/lmsy/b/n --> OMS/ntxsy/m/n on input line 169.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/ntxsy/m/n --> OMS/ntxsy/b/n on input line 168.
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 183.
+(Font)                  OMS/ntxsy/m/n --> OMS/ntxsy/b/n on input line 170.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 185.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/ntxsya/m/n on input line 183.
+(Font)                  U/msa/m/n --> U/ntxsya/m/n on input line 185.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/ntxsya/m/n on input line 183.
+(Font)                  U/msa/m/n --> U/ntxsya/m/n on input line 185.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/ntxsya/m/n --> U/ntxsya/b/n on input line 184.
-LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 192.
+(Font)                  U/ntxsya/m/n --> U/ntxsya/b/n on input line 186.
+LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 194.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
-(Font)                  U/msb/m/n --> U/ntxsyb/m/n on input line 192.
+(Font)                  U/msb/m/n --> U/ntxsyb/m/n on input line 194.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
-(Font)                  U/msb/m/n --> U/ntxsyb/m/n on input line 192.
+(Font)                  U/msb/m/n --> U/ntxsyb/m/n on input line 194.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
-(Font)                  U/ntxsyb/m/n --> U/ntxsyb/b/n on input line 193.
+(Font)                  U/ntxsyb/m/n --> U/ntxsyb/b/n on input line 195.
 \symsymbolsC=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
-(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 204.
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 206.
 Now handling font encoding LMX ...
 ... no UTF-8 mapping file for font encoding LMX
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 217.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 219.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 2
-17.
+19.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> LMX/ntxexx/m/n on input line 217.
+(Font)                  OMX/lmex/m/n --> LMX/ntxexx/m/n on input line 219.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 217
+(Font)              `largesymbols' in the math version `bold' on input line 219
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> LMX/ntxexx/m/n on input line 217.
+(Font)                  OMX/lmex/m/n --> LMX/ntxexx/m/n on input line 219.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 218.
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 220.
 \symlargesymbolsTXA=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
 
-(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 232.
-LaTeX Info: Redefining \not on input line 1609.
-LaTeX Info: Redefining \textsquare on input line 1629.
-LaTeX Info: Redefining \openbox on input line 1630.
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 234.
+LaTeX Info: Redefining \not on input line 1611.
+LaTeX Info: Redefining \textsquare on input line 1631.
+LaTeX Info: Redefining \openbox on input line 1632.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -1234,7 +1234,7 @@ LaTeX Font Info:    Try loading font information for T1+ntxrx on input line 78.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/t1ntxrx.fd
-File: t1ntxrx.fd 2012/12/25 v1.0
+File: t1ntxrx.fd 2014/08/14 v1.0
 )
 LaTeX Font Info:    Font shape `T1/ntxrx/m/n' will be
 (Font)              scaled to size 10.95pt on input line 78.
@@ -1701,6 +1701,82 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 58.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 58.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 80.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 80.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 80.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 80.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 80.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 80.
+ [8]) (./14-1105-jon.tex
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 1.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 14.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 14.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 28.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 28.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 28.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 45.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 45.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 45.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 45.
+ [9]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 52.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 61.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 61.
+LaTeX Font Info:    Try loading font information for TS1+ntxrx on input line 71
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxrx.fd
+File: ts1ntxrx.fd 2012/04/15 v1.0
+)
+LaTeX Font Info:    Font shape `TS1/ntxrx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 71.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 78.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 78.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 78.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 81.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 81.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 81.
 )
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 103.
@@ -1714,48 +1790,70 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 103.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 103.
- [8]
+ [10]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 103.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 103.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 103.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 103.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 103.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 103.
+ [11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
- (./mathe3WS1415.aux)
+
+(./mathe3WS1415.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
-Package rerunfilecheck Info: File `mathe3WS1415.out' has not changed.
-(rerunfilecheck)             Checksum: 5BBA572E794D3A0276F7F79CE3578187;1687.
 
+
+Package rerunfilecheck Warning: File `mathe3WS1415.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `mathe3WS1415.out':
+(rerunfilecheck)             Before: 1A8E2D40B5E30E4D7FE63911C4F0B97D;2045
+(rerunfilecheck)             After:  3E021409DB15C24F40F7553218CBB696;2104.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.64499pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 20284 strings out of 493103
- 355572 string characters out of 6136911
- 429486 words of memory out of 5000000
- 23173 multiletter control sequences out of 15000+600000
- 94990 words of font info for 200 fonts, out of 8000000 for 9000
+ 20365 strings out of 493105
+ 356649 string characters out of 6137072
+ 429610 words of memory out of 5000000
+ 23222 multiletter control sequences out of 15000+600000
+ 96967 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,12n,68p,846b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/newtx/ntxsups.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/newtx/rntxmi.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/newtx/rntxmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ne
-wtx/rntxmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/newtx/txex-bar.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/txmia.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
-fonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on mathe3WS1415.pdf (9 pages, 113314 bytes).
+wtx/rntxmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxr
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/newtx/rtxmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newt
+x/txex-bar.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
+utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on mathe3WS1415.pdf (12 pages, 129182 bytes).
 PDF statistics:
- 333 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 403 PDF objects out of 1000 (max. 8388607)
+ 365 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

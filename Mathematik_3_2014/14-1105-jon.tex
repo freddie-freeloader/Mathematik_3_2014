@@ -1,0 +1,86 @@
+\subsection{Bemerkung}
+Man kann auch zeigen, dass die L"osung $x$ aus Satz 2.10 eindeutig ist:
+
+Durch $\psi$: \\$\Z _M \longrightarrow Z_{m_1} \times \Z_{m_2} \times \dots \times \Z_{m_n}\\
+x \longmapsto (x \mod{m_1}, \dots, x \mod{m_n})$\\
+und es einen Ringisomophismus definiert:
+
+$psi$ ist surjektiv (zu jedem n-Tupel aus $\Z_{m_1}\times \dots \times \Z_{m_n}$ gibt es eine L"osung $x$, siehe Restsatz) und es gibt:
+
+$\underbrace{|\Z_M|}_{M}=\underbrace{|\Z_{m_1}\times \dots \times \Z_{m_n}|}_{m_1\cdot \dots \cdot m_n = M}$
+
+also ist $\psi$ bijektiv, also auch injektiv, also ist L"osung $x$ eindeutig.
+
+\subsection{Korollar}
+$M=m_1\cdot \dots \cdot m_n$, $m_i$ paarweise teilerfremd.\\
+Dann ist $\varphi(M)=\varphi(m_1)\cdot \dots \varphi(m_n),$ insbesondere:
+
+$n=^{a_1}_1 \cdot \dots \cdot p^{a_k}_k$ ($p_i$ Primzahlen, $a_1>0, p_i \neq p_j$ f"ur $i\neq j$)
+
+\underline{Beweis}
+
+Nach 2.12 ist $\Z_M \cong \Z_{m_1} \times \dots \times \Z_{m_n} mittels \psi$\\
+$\Rightarrow x$ Einheit $\Leftrightarrow \psi(x) = ( x\mod{m_1}, \dots, x \mod{m_n}) Einheit$
+\\ $\Leftrightarrow x \mod{m_i}$ Einheit $\forall i = 1 \dots n$\\
+$\Rightarrow \varphi(M) = \varphi(m_1) \cdot \dots \cdot \varphi(m_n)$\\
+$\varphi(p^a)\underbrace{=}_{\text{"Uberlegen}}p^a - p^{a-1} = p^{a-1}(p-1)$
+
+\subsection{Definition}
+Sein $K$ K"orper mit Nullelement $0$ und Einselement 1:
+\begin{enumerate}
+	\item
+	Ein \emph{Polynom "uber K} ist Ausdruck $f=a_0x^0+a_1x^1+\dots + a_nx^n$, $n\in \N_0, a_i\in K$.\\
+	$a_i$ heißen \emph{Koeffizienten} des Polynoms.
+	\begin{enumerate}
+		\item
+		Ist $a_i=0$, so kann man $0 \cdot x^i$ bei der Beschreibung weglassen.
+		\item
+		Statt $a_0x^0$ schreibt auch $a_0$
+		\item
+		Sind alle $a_i=0$, so schreibt man $f=0$, das Nullpolynom.
+		\item
+		Ist $a_i =1$ 1, so schreibt man $x^i$ statt $1 \cdot x^i$
+		\item
+		Die Reihenfolge der $a_ix^i$ kann ver"andert werden, ohne dass das Polynom sich ver"andert ($x^4+2x^3= 2x^3 +  3 + x^4$)
+	\end{enumerate} 
+	\item
+	Zwei Polynome $f$ und $g$ sind \emph{gleich}, wenn ($f=0$ und $g=0$) oder ($f=a_0 + a_1x^1+ \dots + a_nx^x, g=b_0+b_1x^1+ \dots + b_mx^m, a_n \neq  0, b_m \neq 0$ und $n=m$, $a_i = b_i$ f"ur $i=0, \dots , n$) gilt.
+	\item
+	Menge aller Polynome "uber $K: K[x]$
+\end{enumerate} 
+
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	$\underbrace{f}_{f(x)} = 3x^2 + \frac{1}{2}x -1 \in \Q [x] \land f \in \R [x]$
+	\item
+	$g= x^3 + x^2 +1 \in \Z_2[x] $ 
+\end{enumerate}
+Wir wollen in $K[x]$ wie in einem Ring rechnen k"onnen. Brauchen dazu $+$ und $\cdot$ f"ur Polynome.
+
+\subsection{Satz/Defintion}
+$K$ K"orper, dann wird $k[x]$ zu einem kommutativen Ring mit Eins durch folgende Verkn"uofungen:\\
+$f= \underbrace{\sum_{i=0}^{n} a_ix^i}_{x+2}, g=\underbrace{\sum_{j=0}^{m} b_j x^j}_{x^3 + 2x + 1}$,
+
+dann $f + g = \underbrace{\sum_{i=0}^{\max(m,n)}(a_i+b_i)x^i}_{x^3 + 3x +3}$
+
+$f \cdots g = \sum_{i=0}^{n+m} c_ix^i$ mit $c_i= a_0b_i+a_1b_{i-1}+ \dots + a_ib_0 = \sum_{j=0}^{i} a_jb_{i-j} $ (Faltungsprodukt)\\
+(setze $a_i$ mit $i>n$ bzw. $b_j$ mit $j>m$ gleich 0)
+\begin{itemize}
+	\item
+	Einselement: $f=1 (a_0=1, a_j = 0 $f"ur$ i\geq 1)$
+	\item
+	Nullelement: $f= 0$
+\end{itemize}
+$K[x]$ heißt der \emph{Polynomring} in einer Variablen "uber $K$.\\
+Beweis: Ringeigenschaften nachrechnen.
+
+\subsection{Bemerkung}
+Die +-Zeichen in der Beschreibung der Polynome entsprechen der Ring-Addition der \emph{Monome} $a_0, ax, a_2x^2, \dots, a_nx^n$
+
+\subsection{Beispiel}
+
+\begin{enumerate}
+	\item 
+	in $\Q$
+\end{enumerate}
