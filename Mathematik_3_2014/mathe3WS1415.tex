@@ -66,6 +66,7 @@
 #1 \end{array}\right)} % Vektor - benutze \\ fuer neue Spalte
 \newcommand{\aMatrix}[2]{\left(\begin{array}{#1}
 #2 \end{array}\right)} % Matrix - erwartet als erstes Argument so viele c's, wie die Matrix Spalten hat, also etwa \aMatrix{cc}{1 & 2 \\ 3 & 4} fuer 2x2-Matrix
+\newcommand{\sPer}[3]{\aMatrix{ccc}{1 & 2 & 3 \\ #1 & #2 & #3}}
 % % Textstuff % % % % % % % %
 \newcommand{\textunderset}[2]{\begin{tabular}[t]{@{}l@{}}
 #1 \\ #2 
