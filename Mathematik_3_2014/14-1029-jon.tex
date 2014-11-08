@@ -1,47 +1,49 @@
  
- \subsection{Beispiel}
+ \subsection{Beweis}
  \begin{enumerate}
  \item
- Wir k"onnen annehmen, dass $1 \leq a < n $ (denn $a^{\Phi(n)} \mod{n}= (a \mod{n})^{\Phi(n)})$\\
- wegen ggT$(a,n)=1$ ist $a \in \Z^*_n$, das ist eine ednliche Gruooe.
+ Wir k"onnen annehmen, dass $1 \leq a < n $ (denn $a^{\varphi(n)} \mod{n}= (a \mod{n})^{\varphi(n)})$\\
+ wegen ggT$(a,n)=1$ ist $a \in \Z^*_n$, das ist eine endliche Gruppe.
  
- $\Rightarrow a^{|\Z^*_n|}=1(=e) \hspace{1.5cm} a \odot a \odot \dots$\\
- $\Rightarrow a^{\Phi(n)} \equiv 1 (\mod{n}) \hspace{0.7cm} a \cdot a \cdot \dots $ 
+ $\stackrel{\ref{zyklischeGruppe}(iii)}{\Rightarrow} a^{|\Z^*_n|}=1(=e) \hspace{1.5cm} a \odot a \odot \dots$\\
+ $\Rightarrow a^{\varphi(n)} \equiv 1 (\mod{n}) \hspace{0.7cm} a \cdot a \cdot \dots $ 
  \item
  Folgt aus (i) $(n=p,\; \varphi (p) = -1)$
 
 \end{enumerate}
 \section{Algebraische Strukturen mit 2 Verkn"upfungen: Ringe und K"orper}
 
-\subsection[Definition: Ring]{Definition}
-Sei $R \neq \varnothing$ eine Menge mit zwei Verkn"upfungen $+$ und $\cdot$.
+\subsection[Definition: Ring]{Definition} \label{ring}
+Sei $R \neq \varnothing$ eine Menge mit zwei Verkn"upfungen $+$ und $\bigdot$.
+{\renewcommand{\labelenumi}{(\roman{enumi})}
 \begin{enumerate}
 	\item
-	Wir nennen $(R, +, \cdot)$ einen \emph{Ring}, falls gilt:\\
-	\begin{enumerate}
+	Wir nennen $(R, +, \cdot)$ einen \emph{Ring}, falls gilt:
+	%TODO 1), 2) etc
+	{\renewcommand{\labelenumi}{\arabic{enumi})}\begin{enumerate}
 		\item
 		$(R,+)$ ist eine abelsche Gruppe (Eselsbr"ucke: KAIN)\\
-		Das neutrale Element bezeichnen wir hier mit $0$, das zu $a \in \R$ Inverse mit $-a$ (schreibe auch $a-b$ f"ur $a=(-b)$.
+		Das neutrale Element bezeichnen wir hier mit $0$, das zu $a \in \R$ Inverse mit $-a$ (schreibe auch $a-b$ f"ur $a+(-b)$.
 		\item
-		$(R,\cdot)$ ist eine Halbgurppe.
+		$(R,\cdot)$ ist eine Halbgruppe.
 		\item
 		Es gelten die Distributivgesetze:\\
 		$a\cdot (b+c) = (a \cdot b) + (a \cdot c) = ab + ac\\
-		(a+b) \cdot c - (a \cdot c) + (b \cdot c) = ac = bc$
-	\end{enumerate}
+		(a+b) \cdot c - (a \cdot c) + (b \cdot c) = ac = bc$ \qquad $\forall a, b, c \in R$
+	\end{enumerate}}
 	\item
-	Ein Ring $(R,+, \cdot)$ heißt \emph{kommutativ} falls $\cdot$ ebenfalls kommutativ ist, also falls $\forall a,b \in \R: a \cdot b = b \cdot a$
+	Ein Ring $(R,+, \cdot)$ heißt \emph{kommutativ} falls $\cdot$ ebenfalls kommutativ ist, also falls ${\forall a,b \in \R: a \cdot b = b \cdot a}$
 	\item
-	Ein Ring $(R,+, \cdot)$ heißt \emph{Ring mit Eins}, falls $(R, \cdot)$ ein Monoid ist mit neutralen Element $1\neq 0$ ($\forall a \in R: a \cdot 1 = 1 \cdot a = a$).
+	Ein Ring $(R,+, \cdot)$ heißt \emph{Ring mit Eins}, falls $(R, \cdot)$ ein Monoid ist mit neutralen Element $1\neq 0$ \;($\forall a \in R: a \cdot 1 = 1 \cdot a = a$).
 	\item
 	Ist $(R, +, \cdot)$ Ring mit Eins, dann heißen die bez"uglich $\cdot$ invertierbaren Elemente \emph{Einheiten}. Das zu $a$ bez"ugliche $\cdot$
-	invertierbare Elemente bezeichnen wir mit $a^{-1}$.\\ $R^* :=$ Menge der Einheiten in $R$.
-\end{enumerate}
+	invertierbare Element bezeichnen wir mit $a^{-1}$.\\ $R^* :=$ Menge der Einheiten in $R$.
+\end{enumerate}}
 \subsection{Beispiel}
 \begin{enumerate}
 	\item
 	($\Z, +, \cdot$) ist kommutativer Ring mit Eins (1)\\
-	$\Z^* = \{1,-1\}$\\
+	$\Z^* = \{1,-1\}$,
 	$(\Q, +, \cdot), (\R, +, \cdot)$ ebenso\\
 	$\Q^*=\Q \backslash \{0\}, \R^* = \R \backslash \{0\}$.
 	\item
@@ -49,32 +51,34 @@ Sei $R \neq \varnothing$ eine Menge mit zwei Verkn"upfungen $+$ und $\cdot$.
 	\item
 	trivialer Ring $(\{0\},+, \cdot)$ ohne Eins
 	\item
-	$n \in \N, n \geq (\Z_n, \oplus, \odot)$ kommutativer Ring mit Eins
+	$n \in \N, n \geq 2,  (\Z_n, \oplus, \odot)$ kommutativer Ring mit Eins
 	\item
-	$(\R, \underbrace{+\; ,\; \cdot}_{\text{Komponentenweise}})$; allgemein: $R_1, \dots , R_n$ Ringe, dann $R_1, \times \cdots \times R_n$ Ring.
+	$(\R^n, \underbrace{+\; ,\; \cdot}_{\text{Komponentenweise}})$; allgemein: $R_1, \dots , R_n$ Ringe, dann $R_1, \times \cdots \times R_n$ Ring.
 	\item
-	$Mn (\R)$ - Menge aller $n \times n$-Matrizen  "uber $\R$, mit Matrixaddition und -multiplikation ist Ring mit Eins (=$E_n$), nicht kommutativ f"ur $ n \geq 2$.
+	$M_n (\R)$ - Menge aller $n \times n$-Matrizen  "uber $\R$, mit Matrixaddition und -multiplikation ist Ring mit Eins (=$E_n$), nicht kommutativ f"ur $ n \geq 2$.
 \end{enumerate}
 \subsection[Satz: Rechnen mit Ringen]{Satz (Rechnen mit Ringen)}
 Sei $(R, +, \cdot)$ ein Ring, $a,b,c \in R$. Dann gilt:
-\begin{enumerate}
+{\renewcommand{\labelenumi}{(\roman{enumi})}\begin{enumerate}
 	\item
-	$a \times 0 = 0 \times a = 0$
+	$a \cdot 0 = 0 \cdot a = 0$
 	\item 
 	$(-a)\cdot b = a \cdot (-b) = -(a \cdot b)$
 	\item
 	$(-a) \cdot (-b) = a \cdot b$
 \end{enumerate}
-\underline{Beweis:}
+
+\subsubsection*{Beweis}
+
 \begin{enumerate}
 	\item
-	$a \cdot 0 = a \cdot (0+0) \underset{2.1(3)}{=}a \cdot 0 + a \cdot 0$\\
-	addiere $-(a \cdot 0)$ (Inverses von $a \cdot 0$) auf beiden Seiten $\Rightarrow$ erhalte $0=a \cdot 0$\\
+	$a \cdot 0 = a \cdot (0+0) \underset{\ref{ring}(3)}{=}a \cdot 0 + a \cdot 0$\\
+	addiere $-(a \cdot 0)$ (Inverses von $a \cdot 0$) auf beiden Seiten,  erhalte $0=a \cdot 0$\\
 	Analog $0 \cdot a = 0$
 	\item
-	$(-a)\cdot b + a \cdot b \underset{2.1(3)}{=} (-a+a) \cdot b = 0 \cdot b \overset{(i)}{=}0$\\
+	$(-a)\cdot b + a \cdot b \underset{\ref{ring}(3)}{=} (-a+a) \cdot b = 0 \cdot b \overset{(i)}{=}0$\\
 	also ist $(-a \cdot b)$ Inverses zu $a \cdot b$, also $=-(a \cdot b)$.\\
 	Analog $a \cdot (-b) = -(a \cdot b)$
 	\item
-	$(-a) \cdot (-b) \underset{(ii)}{=} -(a \cdot (-b)) \underset{(ii)}{=}   $
-\end{enumerate}
+	$(-a) \cdot (-b) \underset{(ii)}{=} -(a \cdot (-b)) \underset{(ii)}{=}-(-(a \cdot b)) = a \cdot b   $
+\end{enumerate} } \qed
