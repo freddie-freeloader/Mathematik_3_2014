@@ -1,0 +1,170 @@
+\subsection{Beispiele}
+
+\begin{enumerate}
+	
+	\item
+	$(\N_0, + 0)$ ist keine Gruppe aber $(\Z, +, 0), (\Q, +, 0), (\R, + 0)$ sind Gruppen.
+	
+	\item
+	$(\Z, \bigdot, 1)$ ist keine Gruppe.
+	\\ Die Menge der invertierbaren Elemente ist $\aset{1, -1}$, diese bilden eine Gruppe.
+	
+	\item
+	$(\Q, \bigdot, 1)$ ist keine Gruppe, aber $(\Q \without{0}, \bigdot, 1), (\R \without{0}, \bigdot, 1)$ sind Gruppen.
+	
+	\item
+	$A^*$ ist keine Gruppe, nur $\lambda$ ist invertierbar.
+	
+\end{enumerate}
+
+\subsection{Beipsiele}
+
+\begin{enumerate}
+	
+	\item
+	$(\Z_n, \oplus, 0)$ ist Gruppe (was ist das Inverse zu $x \in \Z_n$? Siehe PÜ1, A9)
+	
+	\item
+	Sei $n \geq 2$. $(Z_n, \odot, 1)$ ist Monoid aber keine Gruppe. 
+	
+	Wann ist ein Elemtent aus $Z_n$ invertierbar bezüglich $\odot$?
+	
+	$\begin{array}{lcl}
+	z \in \Z_n \text{ invertierbar} 
+		&\gdw&
+		\exists x \in \Z_n : z \odot x = 1 \\
+		&\gdw&
+		 \exists x \in \Z: (z \cdot x) \mod{n} = 1 \\
+		&\gdw&
+		\exists x, q \in \Z: z \cdot x = q \cdot n + 1 \\
+		&\gdw&
+		z \cdot x + (-q \cdot n) = 1 \\
+		&\stackrel{\text{Mathe I}}{\gdw}&
+		\ggT(z, n) = 1 
+	\end{array}$
+	
+	also sind nur zu $n$ teilerfremde Elemente invertierbar!
+	
+	(vgl. $(Z_6, 0, 1)$: $0, 2, 3, 4$ nicht invertierbar, $1, 5$ invertierbar)
+	
+	\underline{Bezeichnung:}
+	\[Z_n^* = \aset{z \in \Z_n \;|\; \ggT(z, n) = 1}\]
+	%
+	ist Gruppe bezüglich $\odot$ (vgl. Bemerkung \ref{invbarkeitMonoid}) mit Ordnung $\abs{Z_n^*}=\varphi(n)$ (''phi von $n$'', Eulersche $\varphi$-Funktion) = Anzahl aller $z \in \N$, die teilerfremd zu $n$ sind und $1 \leq z \leq n$.
+	
+	$\varphi(3) = 2, \varphi(4)=2, \varphi(7) = 6$
+
+	Wie berechnet man das Inverse von $z \in \Z_n^*$?
+	
+	Mathe I, Erweiterter Euklidischer Algorithmus (WHK, S. 80/81) liefert zu $z$ und $n$ $(\ggT(z, n) = 1)$ Zahlen $s, t \in \Z$ mit 
+	
+	$\begin{array}{cl}
+	& z \cdot s + n \cdot t = 1 \\
+	\Rightarrow & (z \cdot s) \mod n = 1 \\
+	\Rightarrow & (z^{-1}) = s \mod n
+	\end{array}$
+	
+	Beispiel:
+	
+	$n=8$: $(\Z_8, \odot)$, $z=5$ ist invertierbar, $\ggT(8, 5) = 1$
+	
+	EEA: $5 \cdot (-3) + 8 \cdot 2 = 1 \Rightarrow z^{-1} = -3 \mod 8 \Rightarrow z^{-1} = 5$
+
+
+	\item
+	$\Abb(M, M)$: invertierbare Elemente sind genau die \emph{bijektiven} Abbildungen auf $M, \mathrm{Bij}(M)$ (Mathe I)
+	
+	Speziell: $M = \aset{1, 2, \dots, n}$, dann heißt $\mathrm{Bij}(M)$ die symmetrische Gruppe von Grad $n$, $S_n$
+	
+	$\abs{S_n} = n!$, Elemente heißen Permutationen.
+	
+	\underline{Bsp:} $n=2$
+	\[S_2= \aset{
+	\underbrace{\aMatrix{cc}{
+	1 & 2 \\ 
+	1 & 2}}_{\id},
+	\aMatrix{cc}{
+	1 & 2 \\
+	2 & 1}}\]
+	%
+	$n=3$
+	%
+	\[S_3 = \aset{
+	\underbrace{\sPer{1}{2}{2}}_{\id},
+	\sPer{1}{3}{2},
+	\sPer{3}{2}{1},
+	\sPer{2}{1}{3},
+	\sPer{2}{3}{1},
+	\sPer{3}{1}{2}
+	}\]
+	
+	$\pi = \sPer{1}{3}{2}, \varrho = \sPer{3}{1}{2} \in S_3$
+	
+	$\pi \circ \varrho = \sPer{2}{1}{3},\; \varrho \circ \pi = \sPer{3}{2}{1}$ (nicht kommutativ!)
+	
+	$\pi^{-1} = \sPer{1}{3}{2} = \pi,\; \varrho^{-1}= \sPer{2}{3}{1}$
+\end{enumerate}
+
+\subsection[Satz: Gleichungen lösen in Gruppen]{Satz (Gleichungen lösen in Gruppen)}
+
+	Sei $G$ Gruppe, $a, b \in G$
+	
+	{\renewcommand{\labelenumi}{(\roman{enumi})}
+	\begin{enumerate}
+		\item
+		Es gibt genau ein $x \in G$ mit $ax = b$ (nämlich $x = a^{-1}b$)
+		\item
+		Es gibt genau ein $y \in G$ mit $ya = b$ (nämlich $y=ba^{-1}$)
+		\item
+		Ist $\underset{ya=yb}{ax=bx}$ für ein $\underset{y \in G}{x \in G}$, dann gilt $a=b$ (Kürzungsregel)
+	\end{enumerate}
+	
+	\begin{proof}
+	\begin{enumerate}
+		\item
+		\begin{itemize}
+			\item
+			$x=a^{-1}$ ist Lösung (prüfe $ax=b$):
+			
+			$a \cdot \underbrace{a^{-1}b}_{x} \stackrel{\text{AG}}{=}(a \cdot a^{-1}) \cdot b = e \cdot b = b$
+			
+			\item Es gibt genau eine Lösung:
+			
+			Es gelte $ax=b$
+			\\ $\Rightarrow x = ex = (a^{-1}a)x\stackrel{\text{AG}}{=}a^{-1}(ax) = a^{-1}= b$
+		\end{itemize}
+		
+		\item
+		analog
+		
+		\item
+		Multipliziere von \textunderset{rechts}{links} mit $\underset{y^{-1}}{x^{-1}}$
+	\end{enumerate}
+	\end{proof}
+	
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
