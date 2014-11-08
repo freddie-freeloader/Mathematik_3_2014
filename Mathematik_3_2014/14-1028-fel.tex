@@ -1,0 +1,186 @@
+\subsection[Lemma: Mächtigkeit von Untergruppen]{Lemma}
+\label{maechtigkeituntergruppen}
+$G$ Gruppe, $U$ endliche Untergruppe von $G$, $x \in G$
+
+Dann ist $\abs{U} = \abs{Ux}$
+
+\subsubsection*{Beweis}
+
+$\begin{array}[b]{rrcl}
+\Abb \; \varphi: 	& U &\to& Ux \\
+				& u &\mapsto& ux
+\end{array}$
+\\ist surjektiv
+und injektiv 
+(falls $u_1x=u_2x$, dann ist $u_1 = u_2$ (Satz \ref{gLösenGruppen} (iii), Kürzungsregel))
+
+Also ist $\varphi$ bijektiv, also $U, Ux$ gleich mächtig.
+
+\subsection[Theorem: Satz von Lagrange]{Theorem (Satz von Lagrange)} \label{lagrange}
+
+$G$ endliche Gruppe, $U \leqslant G$
+
+Dann gilt $\abs{U}$ ist Teiler von $\abs{G}$ und $q = \frac{\abs{G}}{\abs{U}}$ ist die Anzahl der Rechtsnebenklassen von $U$ in $G$
+
+\subsubsection*{Beweis}
+
+Seien $Ux_1, \dots, Ux_q$ die $q$ verschiedenen Rechtsnebenklassen von $U$ in $G$
+
+\[\begin{split}
+\text{Mathe I \& \ref{rechtsnebenklassen}}\Rightarrow G = \bigcup_{i=1}^{q}Ux_i \text{ (disjunkte Vereinigung der Äquivalenzklassen)}
+\\\Rightarrow \abs{G} = \sum_{i=1}^{q}\underbrace{\abs{Ux_i}}_{\abs{U}} \stackrel{\ref{maechtigkeituntergruppen}}{=} q \cdot \abs{U} \end{split}\]
+
+
+\subsection[Definition: Potenzen]{Definition}
+
+$(G, \bigdot, e)$ Gruppe, $a \in G$
+
+Definiere
+$\begin{array}[t]{lcll}
+a^0	&:=& e \\
+a^1 &:=& a \\
+a^m &:=& a^{m-1} \cdot a & \text{für } m \in \N \\
+a^m &:=& (a^{-1})^{-1} 	& \text{für } m \in \Z^-
+\end{array}$
+
+(Potenzen von $a$)
+
+Bei additiver Schreibweise:
+$\begin{array}[t]{lcl}
+0 \cdot a &=& e \\
+1 \cdot a &=& a \\
+m \cdot a &=& 
+\begin{cases}
+(m-1) \cdot a + a & \text{für } m \in \N \\
+(-m) \cdot (-a) 	& \text{für } m \in \Z^-
+\end{cases}
+\end{array}$
+
+\subsection[Satz: Potenzgesetze]{Satz}
+\label{potenzgesetze}
+$G, a$ wie oben
+
+{\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+	\item
+	$(a^{-1})^m = (a^m)^{-1} = a^{-m} \quad \forall m \in \Z$
+	
+	\item
+	$a^m \cdot a^n = a^{m+n} \quad \forall m, n \in \Z$
+	
+	\item
+	$(a^m)^n=a^{m \cdot n} \quad \forall m, n \in \Z$
+\end{enumerate}
+
+\subsubsection*{Beweis}
+\begin{enumerate}
+	\item
+	$m \in \N: (a^{-1})^m \cdot a^m = \underbrace{a^{-1} \cdot a^{-1}\cdot \dots \cdot a^{-1}}_{m \text{ mal}} \cdot \underbrace{a \cdot \dots \cdot a \cdot a}_{m \text{ mal}} = e$
+	
+	$\Rightarrow (a^{-1})^m = (a^m)^{-1}$ (Inverses von $a^m$)
+	
+	nach Definition ist $a^{-m} = (a^{-1})^m$
+	\\ $\Rightarrow $ (i) gilt $\forall m \in \N$
+	
+	$m = 0: \; e = e = e \checkmark$
+	
+	$m \in \Z^-$: dann ist $-m \in \N$
+	\\ Wende den bewiesenen Teil an auf $a^{-1}$ statt $a$ und $-m$ statt $m$, Behauptung folgt.
+	
+	\item[(ii), (iii)]
+	per Induktion und mit (i) \qed
+\end{enumerate}}
+
+\subsection[Satz und Definition: Ordnung, zyklische Gruppe]{Satz und Definition}
+
+$G$ endliche Gruppe, $g \in G$
+
+{\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+	\item
+	Es existiert eine kleinste natürliche Zahl $n$ mit $g^n = e$, diese heißt die \emph{Ordnung} $\mathrm{o}(g)$ von $g$ 
+	
+	\item
+	Die Menge $\aset{g^0 = e, g^1 = g, g^2, \dots, g^{n-1}}$ ist eine Untergruppe von $G$, die von $g$ erzeugte zyklische Gruppe $<g>$
+	
+	Es gilt $\mathrm{o}(g) = \abs{<g>} = n \text{ teilt } \abs{G}$
+	
+	\item
+	$g^{\abs{G}} = e$
+	
+	Bemerkung: Eine endliche Gruppe heißt \emph{zyklisch}, falls sie von einem Element erzeugt werden kann.
+\end{enumerate}
+
+\subsubsection*{Beweis}
+
+\begin{enumerate}
+	\item
+	$G$ endlich $\Rightarrow \exists i, j \in \N, i > j$ mit $g^i=g^j$
+	
+	Dann ist $g^{i-j} \stackrel{\ref{potenzgesetze} ii)}{=} g^i \cdot g^{-j} \stackrel{\ref{potenzgesetze}}{=}\underbrace{g^i}_{=g^j} \cdot (g^j)^{-1} = e$
+	
+	\item
+	Das Produkt zweier Elemente aus $<g>$ liegt wieder in $<g>$
+	
+	Neutrales Element ist $g^0 = e$
+	
+	Inverses Element zu $g^i$ ist $(g^i)^{-1} = g^{n-i}$
+	
+	$\Rightarrow <g> \leqslant G$
+	
+	\item
+	Satz von Lagrange (\ref{lagrange}): $n = \mathrm{o}(g)= \abs{<g>} \;\Big|\; \abs{G}$
+	
+	Also ist $\abs{G} = n \cdot k$ für ein $k \in \N$
+	
+	$g^{\abs{G}} = g^{n \cdot k} = (g^{n})^k = e^k = e$ 
+\end{enumerate}} \qed
+
+
+\subsection{Beispiel}
+
+$(\Z_3 \without{0}, \odot, 1)$
+
+\begin{itemize}
+
+	\item[$g=1$:]
+	$<1> = \aset{g^0 = 1^0 = 1},\; \mathrm{o}(1) = 1$
+	
+	\item[$g=2$:]
+	$<2> = \aset{g^0 = 1, g^1 = 2},\; \mathrm{o}(2)=2$
+
+\end{itemize}
+
+$(\Z_5 \without{0}, \odot, 1)$
+
+\begin{itemize}
+	\item[$g=2$:]
+	$<2> = \aset{2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 3}, \; \mathrm{o}(2)=4$
+\end{itemize}
+
+\subsection{Korollar}
+
+{\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+	\item
+	\underline{Satz von Euler}
+	
+	Sei $n\in \N, a \in \Z, \ggT(a, n) = 1$	
+	\\Dann ist \[a^{\varphi(n)} \equiv 1 (\mod n)\]
+	
+	\item
+	\underline{Kleiner Satz von Fermat}
+	
+	Ist $p$ eine Primzahl, $a \in \Z, p \nmid a$, dann gilt
+	\[a^{p-1} \equiv 1 (\mod p)\]
+	
+\end{enumerate}}
+
+
+
+
+
+
+
+
+
