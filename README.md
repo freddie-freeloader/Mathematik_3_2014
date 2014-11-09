@@ -14,4 +14,4 @@ Du TeXst du schon "Mathematik 3" mit oder wuerdest zukuenftig einige Vorlesungen
 
 Wenn du Lust hast uns ein wenig Arbeit abzunehmen, indem du die eine oder andere Vorlesung mitTeXst und die betreffenden ".tex"-Files uns zur Verfuegung stellst, waere das einfach nur grossartig. ;-)
 
-Um vorzubeugen, dass wir teilweise redundant arbeiten, schreib doch einfach eine Mail, wenn du Lust hast "Collaborator" zu werden.
+Um vorzubeugen, dass wir redundant arbeiten, schreib doch einfach eine Mail, wenn du Lust hast "Collaborator" zu werden.
