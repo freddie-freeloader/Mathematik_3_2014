@@ -1,16 +1,178 @@
 ...
 
-\subsection{Definition}
+\subsection[Definition: Körper]{Definition}
+
+Ein kommutativer Ring $(K, +, \cdot)$ heißt \emph{Körper}, wenn jedes Element $0 \neq x \in K$ eine Einheit ist, also wenn
+%
+\[K^* = K \without{0}\]
 
 \subsection{Beispiele}
 
-\subsection{Satz}
+\begin{enumerate}
+	\item
+	$(\Q, +, \cdot), (\R, +, \cdot)$ sind Körper. $(\Z, +, \cdot)$ ist kein Körper.
+	
+	\item
+	vgl. Beispiel \ref{gruppenbeispiele} b)
+	\[\Z_n^* = \aset{z \in \Z_n \;|\; \ggT(z, n) = 1}\]
+	ist Gruppe bezüglich $\odot$
+	
+	$\Rightarrow (\Z_n, \oplus, \odot)$ ist genau dann ein Körper, wenn $n$ eine Primzahl ist.
+\end{enumerate}
 
-\subsection{Definition}
+\subsection[Satz: Rechnen im Körper, Nullteilerfreiheit]{Satz (Rechnen im Körper, Nullteilerfreiheit)}
+
+Sei $(K, +, \cdot)$ ein Körper, $a, b \in K$
+
+Dann gilt 
+\[a \cdot b= 0 \gdw a = 0 \text{ oder } b = 0 \]
+%
+Gegenbeispiel: $(\Z_6, \oplus, \odot)$ ist kein Körper. 
+Hier gilt $2 \odot 3 = 0$, aber weder $2=0$, noch $3=0$
+
+\subsubsection*{Beweis}
+\begin{itemize}
+
+	\item[''$\Leftarrow$'':]
+	klar: $0 \cdot b = 0$ oder $a \cdot 0 = 0$ \;\;(Satz \ref*{rechnenmitringen} (i), Rechenregeln für Ringe)
+	
+	\item[''$\Rightarrow$'':]
+	Sei $a \cdot b = 0$.
+	Angenommen $a \neq 0$ (d.h. $a$ hat Inverses)
+	
+	Dann ist 
+	$\begin{array}[t]{l@{}c@{}l}
+	b	&=& 1 \cdot b = (a^{-1} \cdot a) \cdot b \\
+		&=& a^{-1} \cdot (a \cdot b) \\
+		&=& a^{-1} \cdot 0 \\
+		&\stackrel{\ref{rechnenmitringen}(i)}{=}& 0
+	\end{array}$
+	
+\end{itemize} \qed
+
+
+\subsection[Definition: Homomorphismus, Isomorphismus]{Definition}
+
+Seien $(R, + \cdot)$ und $(\tilde{R}, \boxplus, \boxdot)$ Ringe.
+
+{\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+	\item
+	$\varphi: R \to \tilde{R}$ heißt (Ring-)\emph{Homomorphismus}, falls gilt:
+	\[\varphi(\underbrace{x+y}_{\in R}) = \underbrace{\varphi(x)}_{\in \tilde{R}} \boxplus \underbrace{\varphi(y)}_{\in \tilde{R}}
+	\text{\;\; und \;\;}
+	\varphi(x \cdot y) = \varphi(x) \boxdot \varphi(y) \quad \forall x, y \in R\]
+	
+\end{enumerate}}
 
 \subsection{Beispiel}
 
-\subsection{Satz}
+$\begin{array}[b]{r@{\;}c@{\;}l}
+	\varphi(\Z, +, \cdot) &\to&  (\Z_n, \oplus, \odot) \\
+	x	&\mapsto& x \mod n 
+\end{array}$
+ist Ringhomomorphismus (kein Isomorphismus), da $\varphi$ nicht injektiv ist, z.B. $n=5: \varphi(1)= \varphi(6) = \varphi(11) \dots$
+
+
+\subsection[Satz: Chinesischer Restsatz]{Satz (Chinesischer Restsatz)} \label{chin.restsatz}
+
+Seien $m_1, \dots, m_n \in \N$ paarweise teilerfremd,
+$M := m_1 \cdot \dots \cdot m_n, \;\; a_1, \dots, a_n \in \Z$
+
+Dann existiert ein $x$, $0 \leq x < M$ mit 
+
+$\begin{array}{lcll}
+x &\equiv& a_1	& (\mod m_1) \\
+x &\equiv& a_2	& (\mod m_2) \\
+\dots \\
+x &\equiv& a_n	& (\mod m_n)
+\end{array}$
+
+
+\subsubsection*{Beweis}
+Für jedes $i \in \aset{1, \dots, n}$ sind die Zahlen $m_i$ und $M_i := \frac{M}{m_i}$ teilerfremd.
+
+$\Rightarrow$ EEA liefert $s_i$ und $t_i \in \Z$ mit $t_i \cdot m_i + s_i \cdot M_i = 1$
+
+Setze $e_i := s_i \cdot M_i$, dann gilt:
+\[\begin{array}{ll}
+	e_i \equiv 1	& (\mod m_i) \\
+	e_i \equiv 0 	& (\mod m_j) \;\; (j \neq i)
+\end{array}\]
+%
+Die Zahl $x := \sum_{i=1}^{n}a_ie_i (\mod M)$ ist dann die Lösung der simultanen Kongruenz. \qed
+
 
 \subsection{Beispiel}
+
+\begin{enumerate}
+
+	\item
+	Finde $0 \leq x < 60$ mit 
+	$x \equiv \begin{cases}
+	2 & (\mod 3) \\
+	3 & (\mod 4) \\
+	2 & (\mod 5)
+	\end{cases}$
+	
+	$M = 3 \cdot 4 \cdot 5 = 60$
+	
+	\[\begin{array}{lr@{\quad\Rightarrow\;}l}
+	M_1 = \frac{60}{3} = 20 & 7 \cdot 3 + (-1) \cdot 20 = 1	& e_1 = -20 \\
+	M_2 = \frac{60}{4} = 15 & 4 \cdot 4 + (-1) \cdot 15 = 1	& e_2 = -15 \\
+	M_3 = \frac{60}{5} = 12	& 5 \cdot 5 + (-2) \cdot 12 = 1	& e_3 = -24
+	\end{array}\]
+	
+	$x = (2 \cdot (-20) + 3 \cdot (-15) + 2 \cdot (-24)) \mod 60 = 47$
+	
+	\item
+	Was ist $2^{1000} \mod \underbrace{1155}_{3 \cdot 5 \cdot 7 \cdot 11}$
+	
+	\begin{enumerate}
+		\item
+		Berechne $2^{1000} \mod 3, 5, 7, 11$
+		
+		$\begin{array}{lcrcl}
+		2^{1000} \mod 3 &=& (-1)^{1000} \mod 3 &=& 1 \\
+		2^{1000} \mod 5 &=& 4^{500} \mod 5 = (-1)^{500} \mod 5 &=& 1 \\
+		2^{1000} \mod 7 &=& 2^{3 \cdot 333+1} \mod 7 = (8^{333} \cdot 2) \mod 7 = (1 \cdot 2) \mod 7 &=& 2 \\
+		2^{1000} \mod 11 &=& 2^{5 \cdot 200} \mod 11 = 32^{200} \mod 11 = (-1)^{200} \mod 11 &=& 1
+		\end{array}$
+		
+		\item
+		Suche $0 \leq x < 1155$ mit
+		$x \equiv \begin{cases}
+			1 & (\mod 3) \\
+			1 & (\mod 5) \\
+			2 & (\mod 7) \\
+			1 & (\mod 11)
+			\end{cases}$ 
+			
+		Der chinesische Restsatz liefert $x = 331$
+	\end{enumerate}
+	
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
