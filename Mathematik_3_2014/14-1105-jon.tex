@@ -1,11 +1,15 @@
-\subsection{Bemerkung}
-Man kann auch zeigen, dass die L"osung $x$ aus Satz 2.10 eindeutig ist:
+\subsection{Bemerkung} \label{chinsatzeindeutig}
+Man kann auch zeigen, dass die L"osung $x$ aus Satz \ref{chin.restsatz} eindeutig ist:
 
-Durch $\psi$: \\$\Z _M \longrightarrow Z_{m_1} \times \Z_{m_2} \times \dots \times \Z_{m_n}\\
-x \longmapsto (x \mod{m_1}, \dots, x \mod{m_n})$\\
-und es einen Ringisomophismus definiert:
+Durch 
+$\begin{array}[t]{lr@{\;}c@{\;}l}
+\psi:&	\Z_M &\to&  Z_{m_1} \times \Z_{m_2} \times \dots \times \Z_{m_n} \\
+&	x	&\mapsto& (x \mod{m_1}, \dots, x \mod{m_n})
+\end{array}$
 
-$psi$ ist surjektiv (zu jedem n-Tupel aus $\Z_{m_1}\times \dots \times \Z_{m_n}$ gibt es eine L"osung $x$, siehe Restsatz) und es gibt:
+wird ein Ringisomophismus definiert:
+
+$\psi$ ist surjektiv (zu jedem n-Tupel aus $\Z_{m_1}\times \dots \times \Z_{m_n}$ gibt es eine L"osung $x$, siehe Restsatz) und es gilt:
 
 $\underbrace{|\Z_M|}_{M}=\underbrace{|\Z_{m_1}\times \dots \times \Z_{m_n}|}_{m_1\cdot \dots \cdot m_n = M}$
 
@@ -15,19 +19,19 @@ also ist $\psi$ bijektiv, also auch injektiv, also ist L"osung $x$ eindeutig.
 $M=m_1\cdot \dots \cdot m_n$, $m_i$ paarweise teilerfremd.\\
 Dann ist $\varphi(M)=\varphi(m_1)\cdot \dots \varphi(m_n),$ insbesondere:
 
-$n=^{a_1}_1 \cdot \dots \cdot p^{a_k}_k$ ($p_i$ Primzahlen, $a_1>0, p_i \neq p_j$ f"ur $i\neq j$)
+$n=p^{a_1}_1 \cdot \dots \cdot p^{a_k}_k$ ($p_i$ Primzahlen, $a_1>0, p_i \neq p_j$ f"ur $i\neq j$)
 
-\underline{Beweis}
+\subsubsection*{Beweis}
 
-Nach 2.12 ist $\Z_M \cong \Z_{m_1} \times \dots \times \Z_{m_n} mittels \psi$\\
-$\Rightarrow x$ Einheit $\Leftrightarrow \psi(x) = ( x\mod{m_1}, \dots, x \mod{m_n}) Einheit$
+Nach \ref{chinsatzeindeutig} ist $\Z_M \cong \Z_{m_1} \times \dots \times \Z_{m_n}$ mittels $\psi$\\
+$\Rightarrow x$ Einheit $\Leftrightarrow \psi(x) = ( x\mod{m_1}, \dots, x \mod{m_n})$ Einheit
 \\ $\Leftrightarrow x \mod{m_i}$ Einheit $\forall i = 1 \dots n$\\
 $\Rightarrow \varphi(M) = \varphi(m_1) \cdot \dots \cdot \varphi(m_n)$\\
 $\varphi(p^a)\underbrace{=}_{\text{"Uberlegen}}p^a - p^{a-1} = p^{a-1}(p-1)$
 
 \subsection[Definition: Polynom]{Definition}
-Sein $K$ K"orper mit Nullelement $0$ und Einselement 1:
-\begin{enumerate}
+Sei $K$ K"orper mit Nullelement $0$ und Einselement 1:
+{\renewcommand{\labelenumi}{(\roman{enumi})}\begin{enumerate}
 	\item
 	Ein \emph{Polynom "uber K} ist Ausdruck $f=a_0x^0+a_1x^1+\dots + a_nx^n$, $n\in \N_0, a_i\in K$.\\
 	$a_i$ heißen \emph{Koeffizienten} des Polynoms.
@@ -39,15 +43,15 @@ Sein $K$ K"orper mit Nullelement $0$ und Einselement 1:
 		\item
 		Sind alle $a_i=0$, so schreibt man $f=0$, das Nullpolynom.
 		\item
-		Ist $a_i =1$ 1, so schreibt man $x^i$ statt $1 \cdot x^i$
+		Ist $a_i =1$, so schreibt man $x^i$ statt $1 \cdot x^i$
 		\item
-		Die Reihenfolge der $a_ix^i$ kann ver"andert werden, ohne dass das Polynom sich ver"andert ($x^4+2x^3= 2x^3 +  3 + x^4$)
+		Die Reihenfolge der $a_ix^i$ kann ver"andert werden, ohne dass das Polynom sich ver"andert ($x^4+2x^3 + 3= 2x^3 +  3 + x^4$)
 	\end{enumerate} 
 	\item
-	Zwei Polynome $f$ und $g$ sind \emph{gleich}, wenn ($f=0$ und $g=0$) oder ($f=a_0 + a_1x^1+ \dots + a_nx^x, g=b_0+b_1x^1+ \dots + b_mx^m, a_n \neq  0, b_m \neq 0$ und $n=m$, $a_i = b_i$ f"ur $i=0, \dots , n$) gilt.
+	Zwei Polynome $f$ und $g$ sind \emph{gleich}, wenn ($f=0$ und $g=0$) oder (${f=a_0 + a_1x^1+ \dots + a_nx^n},\\ {g=b_0+b_1x^1+ \dots + b_mx^m}, {a_n \neq  0, b_m \neq 0}$ und $n=m$, ${a_i = b_i}$ f"ur $i=0, \dots , n$) gilt.
 	\item
-	Menge aller Polynome "uber $K: K[x]$
-\end{enumerate} 
+	Die	Menge aller Polynome "uber $K$ bezeichnet man als $K[x]$
+\end{enumerate} }
 
 \subsection{Beispiel}
 \begin{enumerate}
@@ -56,19 +60,20 @@ Sein $K$ K"orper mit Nullelement $0$ und Einselement 1:
 	\item
 	$g= x^3 + x^2 +1 \in \Z_2[x] $ 
 \end{enumerate}
-Wir wollen in $K[x]$ wie in einem Ring rechnen k"onnen. Brauchen dazu $+$ und $\cdot$ f"ur Polynome.
+Wir wollen in $K[x]$ wie in einem Ring rechnen k"onnen. Wir brauchen dazu $+$ und $\cdot$ f"ur Polynome.
 
 \subsection[Satz und Definition: Polynomring]{Satz und Definition}
-$K$ K"orper, dann wird $k[x]$ zu einem kommutativen Ring mit Eins durch folgende Verkn"uofungen:\\
-$f= \underbrace{\sum_{i=0}^{n} a_ix^i}_{x+2}, g=\underbrace{\sum_{j=0}^{m} b_j x^j}_{x^3 + 2x + 1}$,
+$K$ K"orper, dann wird $K[x]$ zu einem kommutativen Ring mit Eins durch folgende Verkn"upfungen:\\
+$f= \underbrace{\sum_{i=0}^{n} a_ix^i}_{\text{z.B. }x+2}, \;\;\;g=\underbrace{\sum_{j=0}^{m} b_j x^j}_{x^3 + 2x + 1}$,
 
-dann $f + g = \underbrace{\sum_{i=0}^{\max(m,n)}(a_i+b_i)x^i}_{x^3 + 3x +3}$
+dann \[f + g = \underbrace{\sum_{i=0}^{\max(m,n)}(a_i+b_i)x^i}_{x^3 + 3x +3}\]
 
-$f \cdots g = \sum_{i=0}^{n+m} c_ix^i$ mit $c_i= a_0b_i+a_1b_{i-1}+ \dots + a_ib_0 = \sum_{j=0}^{i} a_jb_{i-j} $ (Faltungsprodukt)\\
+\[f \cdot g = {\sum_{i=0}^{n+m} c_ix^i}\] 
+\[\text{mit } c_i= a_0b_i+a_1b_{i-1}+ \dots + a_ib_0 = \sum_{j=0}^{i} a_jb_{i-j}  \tag{Faltungsprodukt}\]
 (setze $a_i$ mit $i>n$ bzw. $b_j$ mit $j>m$ gleich 0)
 \begin{itemize}
 	\item
-	Einselement: $f=1 (a_0=1, a_j = 0 $f"ur$ i\geq 1)$
+	Einselement: $f=1 \;(a_0=1, a_j = 0 \;\;$f"ur $ j\geq 1)$
 	\item
 	Nullelement: $f= 0$
 \end{itemize}
@@ -82,5 +87,58 @@ Die +-Zeichen in der Beschreibung der Polynome entsprechen der Ring-Addition der
 
 \begin{enumerate}
 	\item 
-	in $\Q$
+	in $\Q[x], \R[x]$ Addition, Multiplikation klar
+	
+	\item
+	in $\Z_3[x]$:
+	$f = 2x^3 + 2x + 1$,
+	$g = 2x^3 + x$
+	
+	$\begin{array}{lcl}
+	f + g &=& x^3 + 1 \\
+	f \cdot g &=& (2x^3 + 2x + 1)(2x^3 + x) \\
+	&=& x^6 + 2x^4 + x^4 + 2x^2 + 2x^3 + x \\
+	&=& x^6 + 2x^3 + 2x^2 + x
+	\end{array}$
+	
+	\item
+	in $\Z_2[x]$:
+	$f = x^2 + 1$,
+	$g = x + 1$
+	
+	$\begin{array}{lcl}
+	f+g &=& x^2 + x \\
+	f+f &=& 0 \\
+	g \cdot g &=& x^2 + 1
+	\end{array}$
+	
+	
 \end{enumerate}
+
+
+\subsection[Definition: Grad eines Polynoms]{Definition}
+
+Sei $0 \neq f \in K[x]$
+
+$f=a_0 + a_1x + \dots + a_nx^n$ mit $a_n \neq 0$
+
+Dann heißt $n$ der \emph{Grad} von $f$ Grad($f$)
+
+Grad($0$) $:= - \infty$ \\
+Grad($f$) $=0$ \quad \emph{konstante Polynome $\neq 0$}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
