@@ -1,0 +1,44 @@
+\subsection{Satz} Euklidischer Algorithmus in $K[x] \rightarrow$ siehe ,,Blatt''
+\subsection{Satz} EEA in $K[x] \rightarrow$ siehe ,,Blatt''
+
+\subsection{Beispiel}
+$g=x^4+x^3 + 2x^2+1,  h= x^3+2x^2+2 \in \Z_3 [x]$\\
+\dots
+
+\subsection{Definition}
+$k$ K"orper. Ein Polynom $p\in K[x]$, Grad$(p)\geq 1$ (d.h. $p\neq 0$, $p$ nicht konst., also keine Einheit) heißt \emph{irreduzibel}, falls golt: \\
+Ist $p=f \cdot g$ ($f,g\in K[x]$), so ist Grad($f)= 0$ oder Grad($g)=0$ (d.h. $f$ oder $g$ ist konst. Polynom).
+
+Bemerkung: $p= a \cdot a^{-1} \cdot p$ f"ur $a \in K \backslash \{0\}$ geht immer.
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	$ax+b$ ($a \neq 0$) ist irreduzibel in $K[x]$ f"ur jeden K"orper $K$
+	\item
+	$x^2-2 \in \Q[x]$ ist irreduzibel:\\
+	angenommen nicht, dann $(x^2-2) = (ax+b)(cx+d)$ mit $a,b,c \in \Q \land a,c \neq 0$\\
+	$(ax+b)$ hat Nullstelle $-\frac{b}{a}$, also m"usste auch $(x^2-2)$ Nullstelle $\underbrace{-\frac{b}{a}}_{\in \Q}$ haben.
+	Nullstellen von $(x^2-2)$ sind aber nur $\sqrt{2}$ und $-\sqrt{2}$, beide nicht in $\Q$ !
+	\item
+	$x^2-2 \in \R[x]$ ist nicht irreduzibel.\\
+	$x^2-2 = \underbrace{(x+ \sqrt{2})}_{\in \R[x]} \cdot \underbrace{(x-\sqrt{2})}_{\in \R[x]}$
+	\item
+	$x^2+1 \in \R[x]$ ist irreduzibel
+	\item
+	$x^2+1 \in \Z_5[x]$ ist nicht irreduzibel:\\
+	$(x^2 +1) = (x+2) \cdot (x+3) = (x^2 + 3x +2x +1) = (x^2+1)$\\
+	$2 \Rightarrow (x^2+1)$ ist teilbar durch $(x-2) \hat{=} (x+3)$
+\end{enumerate}
+
+\subsection{Abschlussbemerkung}
+\begin{enumerate}
+	\item
+	Irreduzibel Polynome in $K[x]$ entsprechen den Primzahlen in $\Z$. Man kann zeigen:
+	$f = \sum_{i=0}^{n} a_i x^i \in K[x]$, $a_n \neq 0, n \geq 1$.\\
+	Dann existieren eindeutig bestimmte irreduzibel Polynome $p_1, \dots, p_e$ und nat"urlichen Zahlen $m_1, \dots , m_e \in \N$ mit $f= a_n \cdot p_1^{m_1} \cdot \dots \cdot p_e^{m_e}$
+	\item
+	geg: Primzahl $p$, dann gibt es K"orper mit $p$ Elementen:\\
+	$(\Z_p, \oplus, \odot)$
+	
+	Man kann zeigen: zu jeder Primzahlpotenz $p^a$ gibt es K"orper mit $p^a$ Elementen, diesen konstruiert man "uber irreduzible Polynome in $\Z_p[x]$. 
+\end{enumerate}
