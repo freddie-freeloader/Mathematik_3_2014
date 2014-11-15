@@ -1,3 +1,6 @@
+ %1.25 - 1.31
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
 \subsection[Lemma: Mächtigkeit von Untergruppen]{Lemma}
 \label{maechtigkeituntergruppen}
 $G$ Gruppe, $U$ endliche Untergruppe von $G$, $x \in G$
@@ -40,7 +43,7 @@ $\begin{array}[t]{lcll}
 a^0	&:=& e \\
 a^1 &:=& a \\
 a^m &:=& a^{m-1} \cdot a & \text{für } m \in \N \\
-a^m &:=& (a^{-1})^{-1} 	& \text{für } m \in \Z^-
+a^m &:=& (a^{m})^{-1} 	& \text{für } m \in \Z^-
 \end{array}$
 
 (Potenzen von $a$)
@@ -98,7 +101,7 @@ $G$ endliche Gruppe, $g \in G$
 {\renewcommand{\labelenumi}{(\roman{enumi})}
 \begin{enumerate}
 	\item
-	Es existiert eine kleinste natürliche Zahl $n$ mit $g^n = e$, diese heißt die \emph{Ordnung} $\mathrm{o}(g)$ von $g$ 
+	Es existiert eine kleinste natürliche Zahl $n$ mit $g^n = e$, diese heißt die \emph{Ordnung} $\mathrm{o}(g)$ von $G$ 
 	
 	\item
 	Die Menge $\aset{g^0 = e, g^1 = g, g^2, \dots, g^{n-1}}$ ist eine Untergruppe von $G$, die von $g$ erzeugte zyklische Gruppe $<g>$
@@ -115,7 +118,7 @@ $G$ endliche Gruppe, $g \in G$
 
 \begin{enumerate}
 	\item
-	$G$ endlich $\Rightarrow \exists i, j \in \N, i > j$ mit $g^i=g^j$
+	$G$ endlich $\Rightarrow \exists i, j \in \N, i > j$ mit $g^i=g^j$ \quad(Schubfachschluss \emph{-Editor})
 	
 	Dann ist $g^{i-j} \stackrel{\ref{potenzgesetze} ii)}{=} g^i \cdot g^{-j} \stackrel{\ref{potenzgesetze}}{=}\underbrace{g^i}_{=g^j} \cdot (g^j)^{-1} = e$
 	
