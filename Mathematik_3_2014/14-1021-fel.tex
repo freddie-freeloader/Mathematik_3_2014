@@ -1,9 +1,12 @@
+ %1.17 - 1.19
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
 \subsection{Beispiele}
 
 \begin{enumerate}
 	
 	\item
-	$(\N_0, + 0)$ ist keine Gruppe aber $(\Z, +, 0), (\Q, +, 0), (\R, + 0)$ sind Gruppen.
+	$(\N_0, +, 0)$ ist keine Gruppe aber $(\Z, +, 0), (\Q, +, 0), (\R, +, 0)$ sind Gruppen.
 	
 	\item
 	$(\Z, \bigdot, 1)$ ist keine Gruppe.
@@ -27,7 +30,7 @@
 	\item
 	Sei $n \geq 2$. $(Z_n, \odot, 1)$ ist Monoid aber keine Gruppe. 
 	
-	Wann ist ein Elemtent aus $Z_n$ invertierbar bezüglich $\odot$?
+	Wann ist ein Element aus $Z_n$ invertierbar bezüglich $\odot$?
 	
 	$\begin{array}{lcl}
 	z \in \Z_n \text{ invertierbar} 
@@ -38,7 +41,7 @@
 		&\gdw&
 		\exists x, q \in \Z: z \cdot x = q \cdot n + 1 \\
 		&\gdw&
-		z \cdot x + (-q \cdot n) = 1 \\
+		\exists x, q \in \Z: z \cdot x + (-q \cdot n) = 1 \\
 		&\stackrel{\text{Mathe I}}{\gdw}&
 		\ggT(z, n) = 1 
 	\end{array}$
@@ -90,7 +93,7 @@
 	$n=3$
 	%
 	\[S_3 = \aset{
-	\underbrace{\sPer{1}{2}{2}}_{\id},
+	\underbrace{\sPer{1}{2}{3}}_{\id},
 	\sPer{1}{3}{2},
 	\sPer{3}{2}{1},
 	\sPer{2}{1}{3},
@@ -131,7 +134,7 @@
 			\item Es gibt genau eine Lösung:
 			
 			Es gelte $ax=b$
-			\\ $\Rightarrow x = ex = (a^{-1}a)x\stackrel{\text{AG}}{=}a^{-1}(ax) = a^{-1}= b$
+			\\ $\Rightarrow x = ex = (a^{-1}a)x\stackrel{\text{AG}}{=}a^{-1}(ax) = a^{-1}b$
 		\end{itemize}
 		
 		\item
