@@ -1,0 +1,85 @@
+\section{Der K"orper der $\C$ der Komplexen Zahlen} 
+\subsection{Definition}
+Eine komplexe Zahl $\Z$ ist von der Form $z=x+i\cdot y$ mit $x, y \in \R$ und einer ,,Zahl'' $i$ mit $i^2=-1$ (,,imagin"are Einheit''). $x$ heißt Realteil von $z$, $x=$Re $z$\\
+$y$ heißt Imagin"arteil, $y=$In $z$.
+
+Die Menge aller komplexen Zahlen bezeichnen wie mit $\C$ und definieren auf $\C$ Addtition und Multiplikatio wie folgt:
+
+F"ur $z=x+iy$ und $w=a+ib$ ist \\$z+w:= (x+a) + i (y+b)$, \\$z-w:= (x-a) + i (y-b)$ und \\$z\cdot w:= (xa-yb) + i(xb+ya).$
+
+Erl"auterung zur Multiplikation: $((x+iy)(a+ib) = xa + xib + iya + i^2yb = (xa-yb) + i(xb+ya)$.
+
+Mit diesen Verkn"upfungen ist $\C$ ein K"orper:
+\begin{enumerate}
+	\item
+	AG, kG, DG: nachrechnen
+	\item
+	$0=0+i\cdot 0$
+	\item
+	additiv Inverses: $-z = -x-iy$
+	\item
+	$1=1+i\cdot 0$
+	\item
+	multiplikativ Inverses: $z^{-1}= \frac{1}{z}= \frac{1}{x+y}=\frac{1}{x+iy}\cdot\frac{x-iy}{x-iy}= \frac{x-iy}{x^2+y^2}=\underbrace{\frac{x}{x^2+y^2}}_{\in \R}+ i \cdot \underbrace{\frac{-y}{x^2+y^2}}_{\in \R}$
+\end{enumerate}
+	Man nennt f"ur $z=x+iy$ die Zahl $ \overline{z} = x-iy$ die zu $z$ \emph{konjugiert komplexe Zahl} und $|z| := \sqrt{x^2+y^2}$ den \emph{Betrag} von $z$
+
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	$z= 2+3i$ mit Re$(z)=2$ und Im$(z)=3$.\\
+	$\overline{z} = 2-3i, |z|=\sqrt{2^2+3^2}= \sqrt{13}$\\
+	$z \cdot \overline{z}=(2+3i)\cdot(2-3i)\\
+	=4-6i+6i-9i^2
+	=4+9=13$
+	\item
+	$w= 1+i = 1+1i$ mit Re$(w)=1$, Im$(w)=1$, $\overline{w} 1-i, |w|=\sqrt{1^2+1^2}=\sqrt{2}$
+	\item
+	Selbst nachrechnen: $u=7=7+0 \cdot i,\; v= 5i=0+5i$
+	\item
+	$u+w+z = 7+ (1+i) + (2+3i) = 10 + 4i$\\
+	$u \cdot w = 7 \cdot (1+i) = 7+7i$\\ 
+	$ \frac{w}{z}= \frac{1+i}{2+3i}= \frac{(1+i)\cdot(2-3i)}{4+9} = \frac{2-3i+2i=3i^2}{13}= \frac{5-i}{13}=\frac{5}{13}-\frac{1}{13}i$
+\end{enumerate}
+
+\subsection{Bemerkung: komplexe Zahlenebene}
+%TODO Tikz-Action
+Man kann $\C$ veranschaulichen in der ,,Gaußschen Zahlenebene'':\\
+Betrachte $z=x+iy$ als Punkt $(x|y)$ in $\R^2$:
+%TODO Some more tikzzzz 
+
+\subsection{Satz: Eigenschaften}
+$w,z \in \C$
+\begin{enumerate}
+	\item
+	$\overline{w \pm z } = \overline{w} \pm \overline{z}$\\
+	$\overline{w \cdot z} = \overline{w } \cdot \overline{z}$\\
+	$\overline{\frac{w}{z}} = \frac{\overline{w}}{\overline{z}}\; (z \neq 0)$\\
+	$\overline{\overline{z}} = z$
+
+	Anmerkung: $\C \rightarrow \C$ $z \mapsto \overline{z}$ ist K"orperisomorphismus.
+	\item
+	$|z| \geq 0, |z|= 0 nur f"ur z=0$
+	\item
+	$|z| = |\overline{z} = \sqrt{z\overline{z}}$
+	\item
+	$|w\cdot z| = |w| \cdot |z|$
+	\item
+	$|w+z| \leq |w| + |z|$ (Dreiecksungleichung)\\
+	$|w+z| \geq ||w| - |z||$
+\end{enumerate}
+Beweis: nachrechnen\\
+(z.B. d)): sei $z= x+iy$ mit $x,y \in \R \Rightarrow \overline{z} = x - iy$, $|z|= \sqrt{x^2+y^2}$, $|\overline{z}|= \cdots$
+\subsection{Bemerkung}
+\begin{enumerate}
+	\item
+	In $\C$ existiert $\sqrt{-1}: \pm i$, d.h. $x^2+1=0$ ist l"osbar in $\C$, das Polynom $x^2+1$ ist nicht irreduzibel in $\C[x]$: $ x^2+1 = (x+i)(x-i)$
+	\item
+	Mann kann jede quadratische Gleichung $ax^2+bx+c$ ($a,b,c\in \R$) in $\C$ l"osen:\\
+	$x_{1|2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$\\
+	Jedes $b^2-4ac < 0$ ist, schreibe:\\
+	$\frac{-b \pm \sqrt{4ac-b^2}\cdot i}{2a}$
+	\item
+	Es gilt sogar: Fundamentalsatz der Algebra:\\
+	Jedes Polynom $f\in \C[x]$ vom Grad $n\geq 1$ hat genau $n$ Nullstellen in $\C$. 
+\end{enumerate}
