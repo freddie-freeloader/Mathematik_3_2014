@@ -1,0 +1,114 @@
+\section{Wiederholung und Erweiterung der linearen Algebra aus Mathe II}
+
+\subsection{Beispiel}
+
+\begin{enumerate}
+	\item
+	$ K = \Z , V_1= \Z_2^2=\aset{
+	\vct{x_1 \\ x_2} : x_1, x_2 \in \Z_2}$
+
+	$V_1$ hat 4 Elemente: $
+	\vct{0 \\0},\vct{0 \\ 1},\vct{1 \\ 0},\vct{1 \\ 1}$
+	
+	$\zerovec= \vct{0 \\ 0}, \vct{0 \\ 1} + \vct{0 \\ 1}= \vct{0 \\ 0},$ d.h. $-\vct{0 \\ 1} = \vct{0 \\ 1}, \vct{0 \\ 1} + \vct{1 \\ 1}=\vct{0 \\ 1}$
+	 
+	$\forall v \in V: 0 \cdot v = \zerovec = \vct{0 \\ 0}$ und $1\cdot v = v$
+	\item
+	$K = \Z_5, V_2=\Z_5^3=\aset{\vct{x_1 \\ x_2 \\ x_3}}$
+	
+	$v=\vct{0 \\ 1\\ 2 }, w = \vct{3 \\ 2 \\ 4} \in \Z_5^3$
+	
+	$-v= \vct{0 \\ 4 \\ 3}, -w = \vct{2 \\ 3 \\ 1}, v + w  \vct{3 \\ 2 \\ 1} $
+	
+	$1 \cdot w = w, 2 \cdot w = \vct{1 \\ 4 \\ 3}, 3 \cdot w = \cdots$
+	
+	$|V| = 5 \cdot 5 \cdot 5 = 125$
+	\item 
+	$U = \dots$ %TODO
+ 
+	 \item
+	 $\Z_3^3:\\
+	 \vct{0 \\ 0 \\ 0}$ l.a., $\vct{0 \\ 1 \\2}$ l.u., $\vct{0 \\ 1 \\ 2}, \vct{0 \\ 2 \\ 1}$ sind l.a.
+	 \item
+	 Kanonische Basis von $V_2$ (Bsp. b)):
+	 
+	 $B_1 = \underbrace{\aset{e_1 = \vct{1 \\ 0 \\ 0}, e_2 = \vct{0 \\ 1 \\ 0}, e_3= \vct{0 \\ 0 \\ 1}}}_{\text{geordnete Basis}},\; \dim V_2 = 3$
+	 
+	 z.B.: $\vct{2 \\ 3 \\ 1}= \alpha \cdot e_1 + \beta \cdot e_2 + \gamma \cdot e_3$ mit $\alpha = 2, \;\beta = 3, \;\gamma =1 $ und $\alpha, \; \beta, \; \gamma $ sind die kartesischen Koordinaten.
+	 
+	 Eine andere (geordnete) Basis, z.B.:
+	 
+	 $B_2 = \aset {\vct{2 \\ 0 \\ 0}, \vct{0 \\ 1 \\ 1}, \vct{1 \\2 \\ 3}}$
+	 
+	 Zeige Vektoren sind linear unabh"angig:
+	 
+	 $\alpha \cdot \vct{2 \\ 0 \\ 0} + \beta \cdot \vct{0 \\  1\\ 1} + \gamma \cdot \vct{1 \\ 2 \\ 3} = \zerovec$
+	 
+	 $\Rightarrow  \cdots  \Rightarrow \cdots \Rightarrow \alpha = \beta = \gamma = 0$
+	 
+	 Koordinaten von $\vct{2 \\ 3 \\ 1}$ in $B_2$?
+	 
+	 Stelle LGS auf und l"ose es \dots
+	 \end{enumerate}
+	 
+	 \subsection{Definition}
+	 
+	 $A \in M_{n,n}(K)$ heißt \emph{invertierbar}, falls $\exists  A^{-1} \in M_{n,n}(K)$ mit $A^{-1} \cdot A = A \cdot A^{-1} = E_n$
+	 
+% % % % % % % % % %
+% %  2014-11-25 % %
+% % % % % % % % % %
+%TODO Create another file for this code
+
+\section{Lineare Abbildungen}
+
+\subsection{Definition}
+
+Seien $V,W$ $K$-Vektorr"aume.
+\begin{enumerate}
+	\item
+	$\varphi: V \rightarrow$ heißt \emph{lineare} Abbildung ($VR$-Homomorphismus), falls:
+	\begin{itemize}
+		\item
+		$\forall v_1, v_2 \in V: \varphi(v_1+v_2) = \phi(v_1) + \phi(v_2)$ (Additivit"at)
+		\item
+		$\forall v \in V, \forall \lambda \in K: \varphi(\lambda \cdot v) = \lambda \cdot \varphi(v)$ (Homogenit"at)
+	\end{itemize}
+	\item
+	Ist die lineare Abbildung $\varphi: V \rightarrow W$ bijektiv, so heißt $\varphi$ \emph{Isomorphismus}, $V$ und $W$ heißen dann \emph{isomorph}, $V \cong W$.
+\end{enumerate}
+
+\subsection{Bemerkung}
+$\varphi: V \rightarrow W$ ist eine lineare Abbildung:
+\begin{enumerate}
+	\item
+	$\varphi( \zerovec) = \zerovec$
+	\item
+	$\varphi \left(\sum_{i=1}^{n} \lambda_i v_i \right) = \sum_{i=1}^{n} \lambda_i \varphi(v_i)$ 
+\end{enumerate}
+
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	Nullabbildung:\\
+	$\varphi V \rightarrow W, v \mapsto \zerovec$
+	\item
+	$\phi : V \rightarrow V, v \mapsto \lambda v$ f"ur jedes festes $\lambda \in K$ ist lineare Abbildung $(\lambda = 1: \varphi = \id_V )$
+	\item
+	$\varphi : \R^3 \rightarrow \R^3, \vct{x_1\\ x_2\\ x_3}\mapsto \vct{x_1 \\ x_2 \\ z_3}$ ist eine lineare Abbildung (Spiegelung an $x_1, x_2$-Ebene) 
+	\item
+	$\phi : \R^ 2 \rightarrow R^2, \left(	\vct{x_1 \\ x_2} \mapsto \vct{(x_1)^2 \\ x_2 }\right)$ ist nicht linear
+	
+	$v= \vct{x_1 \\ x_2}, \lambda =3:$
+	
+	 $\varphi(3v)= \varphi\left(\vct{3 \\ 6}\right)=  \vct{9 \\ 6} \neq \vct{3 \\ 9} = 3 \cdot \vct{1\\2}= 3 \cdot \varphi \left(\vct{1\\2} \right) = 3 \cdot \varphi(v)$
+	 \\
+
+\end{enumerate}
+
+\subsection{Satz}
+%TODO
+\subsection{}
+\subsection{}
+\subsection{}
+\subsection{}

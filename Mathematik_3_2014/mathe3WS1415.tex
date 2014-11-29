@@ -62,11 +62,11 @@
 \newcommand{\abs}[1]{\left|#1\right|} % Betrag
 \newcommand{\without}[1]{\backslash \{#1\}} 
 % % Vektoren / Matrizen % % %
-\newcommand{\vct}[1]{\left(\begin{array}{c}
-#1 \end{array}\right)} % Vektor - benutze \\ fuer neue Spalte
 \newcommand{\aMatrix}[2]{\arraycolsep=1.8pt\def\arraystretch{0.8}\left(\begin{array}{#1}
 #2 \end{array}\right)} % Matrix - erwartet als erstes Argument so viele c's, wie die Matrix Spalten hat, also etwa \aMatrix{cc}{1 & 2 \\ 3 & 4} fuer 2x2-Matrix
 \newcommand{\sPer}[3]{\aMatrix{ccc}{1 & 2 & 3 \\ #1 & #2 & #3}}
+% Definiere \vct ueber \aMatrix{c}{...}
+\newcommand{\vct}[1]{\aMatrix{c}{#1}} % Vektor - benutze \\ fuer neue Spalte
 % % Textstuff % % % % % % % %
 \newcommand{\textunderset}[2]{\begin{tabular}[t]{@{}l@{}}
 #1 \\ #2 
@@ -122,7 +122,10 @@
 \input{14-1112-jon}
  %3.1  - 3.5
 \input{14-1118-jon}
-
+ %?? - ??
+\input{14-1119-jon}
+ % 4.1 - 5.8
+\input{14-1125_26-jon}
 
 \end{document}
 
