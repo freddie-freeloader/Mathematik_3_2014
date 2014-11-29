@@ -1,6 +1,7 @@
  %1.20 - 1.24
  % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
- 
+
+ % % % 1.20
  \subsection{Beispiel}
  $
  \aMatrix{ccc}{
@@ -41,6 +42,7 @@
   }
   $
 
+% % % 1.21
 \subsection[Definition: Untergruppe]{Definition}
 
 $(G,\cdot)$ Gruppe, $\varnothing \neq U \subseteq G$ Teilmenge.
@@ -57,6 +59,7 @@ Dann ist $f^{-1} \cdot f= f \cdot f^{-1} = e$ und $f\cdot f = f$.
 
 $\Rightarrow f = e \cdot f = (f^{-1} \cdot f) \cdot f = f^{-1} \cdot (f \cdot f) = f^{-1} \cdot f = e$
 
+% % % 1.22
 \subsection{Beispiele}
 \begin{enumerate}
 	\item
@@ -86,15 +89,18 @@ $\Rightarrow f = e \cdot f = (f^{-1} \cdot f) \cdot f = f^{-1} \cdot (f \cdot f)
 	$\Rightarrow (\pi, \text{id})\leqslant S_3$
 	
 \end{enumerate}
+
+% % % 1.23	
+\subsection[Satz und Definition: Rechtsnebenklassen]{Satz und Definition}
 	
-	\subsection[Satz und Definition: Rechtsnebenklassen]{Satz und Definition}
-	$G$ Gruppe, $U \leqslant G$
-	{\renewcommand{\labelenumi}{(\roman{enumi})}
-	\begin{enumerate}
+$G$ Gruppe, $U \leqslant G$
+{\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
 		\item
 		{Durch} $x \sim y \Leftrightarrow \mathunderset{x \cdot y^{-1} \in U}{x + (-y) \in U}$ \textunderset{}{(bei additiver Verknüpfung)}\\
 		wird auf $G$ eine "Aquivalenzrelation definiert
-		
+
+		% % % 		
 		\subsubsection*{Beweis}
 		
 		$\sim$ ist reflexiv: $x \sim x$ gilt $\forall x \in G$, denn $x \cdot x^{-1}= e \in U \; \checkmark$
@@ -120,6 +126,7 @@ $\Rightarrow f = e \cdot f = (f^{-1} \cdot f) \cdot f = f^{-1} \cdot (f \cdot f)
 			$x,y \in G$, dann ist entweder $Ux = Uy$ oder $Ux \cap Uy = \varnothing $
 		\end{enumerate}
 		
+		% % % 
 		\subsubsection*{Beweis}
 		\begin{enumerate}
 			\item
@@ -133,6 +140,7 @@ $\Rightarrow f = e \cdot f = (f^{-1} \cdot f) \cdot f = f^{-1} \cdot (f \cdot f)
 
 \end{enumerate}}
 
+% % % 1.24
 \subsection{Beispiel}
 
 $G = (\Z, +), 3 \Z = \{\dots, -3,0,3,6,\dots\}\\
@@ -150,20 +158,3 @@ $x=2 : U+2 = \aset{u + 2 \;|\; u \in U} = \aset{\dots, -1, 2, 5, 8, 11, \dots} =
 $x=3: U+3 = U+0 = 0$
 
 \dots
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   

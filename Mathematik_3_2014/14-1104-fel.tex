@@ -3,12 +3,14 @@
 
 ...
 
+% % %  2.5
 \subsection[Definition: Körper]{Definition}
 
 Ein kommutativer Ring $(K, +, \cdot)$ heißt \emph{Körper}, wenn jedes Element $0 \neq x \in K$ eine Einheit ist, also wenn
 %
 \[K^* = K \without{0}\]
 
+% % % 2.6
 \subsection{Beispiele}
 
 \begin{enumerate}
@@ -23,6 +25,7 @@ Ein kommutativer Ring $(K, +, \cdot)$ heißt \emph{Körper}, wenn jedes Element 
 	$\Rightarrow (\Z_n, \oplus, \odot)$ ist genau dann ein Körper, wenn $n$ eine Primzahl ist.
 \end{enumerate}
 
+% % % 2.7
 \subsection[Satz: Rechnen im Körper, Nullteilerfreiheit]{Satz (Rechnen im Körper, Nullteilerfreiheit)}
 
 Sei $(K, +, \cdot)$ ein Körper, $a, b \in K$
@@ -53,7 +56,7 @@ Hier gilt $2 \odot 3 = 0$, aber weder $2=0$, noch $3=0$
 	
 \end{itemize} \qed
 
-
+% % %  2.8
 \subsection[Definition: Homomorphismus, Isomorphismus]{Definition}
 
 Seien $(R, + \cdot)$ und $(\tilde{R}, \boxplus, \boxdot)$ Ringe.
@@ -68,6 +71,7 @@ Seien $(R, + \cdot)$ und $(\tilde{R}, \boxplus, \boxdot)$ Ringe.
 	
 \end{enumerate}}
 
+% % % 2.9
 \subsection{Beispiel}
 
 $\begin{array}[b]{r@{\;}c@{\;}l}
@@ -76,7 +80,7 @@ $\begin{array}[b]{r@{\;}c@{\;}l}
 \end{array}$
 ist Ringhomomorphismus (kein Isomorphismus), da $\varphi$ nicht injektiv ist, z.B. $n=5: \varphi(1)= \varphi(6) = \varphi(11) \dots$
 
-
+% % % 2.10
 \subsection[Satz: Chinesischer Restsatz]{Satz (Chinesischer Restsatz)} \label{chin.restsatz}
 
 Seien $m_1, \dots, m_n \in \N$ paarweise teilerfremd,
@@ -91,7 +95,6 @@ x &\equiv& a_2	& (\mod m_2) \\
 x &\equiv& a_n	& (\mod m_n)
 \end{array}$
 
-
 \subsubsection*{Beweis}
 Für jedes $i \in \aset{1, \dots, n}$ sind die Zahlen $m_i$ und $M_i := \frac{M}{m_i}$ teilerfremd.
 
@@ -105,7 +108,7 @@ Setze $e_i := s_i \cdot M_i$, dann gilt:
 %
 Die Zahl $x := \sum_{i=1}^{n}a_ie_i (\mod M)$ ist dann die Lösung der simultanen Kongruenz. \qed
 
-
+% % % 2.11
 \subsection{Beispiel}
 
 \begin{enumerate}
