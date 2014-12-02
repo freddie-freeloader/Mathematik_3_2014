@@ -54,28 +54,41 @@ Betrachte $z=x+iy$ als Punkt $(x|y)$ in $\R^2$:
 %TODO Some more tikzzzz 
 
 % % % 3.4
-\subsection{Satz: Eigenschaften}
-$w,z \in \C$
-\begin{enumerate}
-	\item
-	$\overline{w \pm z } = \overline{w} \pm \overline{z}$\\
-	$\overline{w \cdot z} = \overline{w } \cdot \overline{z}$\\
-	$\overline{\frac{w}{z}} = \frac{\overline{w}}{\overline{z}}\; (z \neq 0)$\\
-	$\overline{\overline{z}} = z$
+\subsection{Satz (Eigenschaften)}
 
-	Anmerkung: $\C \rightarrow \C$ $z \mapsto \overline{z}$ ist K"orperisomorphismus.
+
+\begin{enumerate}
+	\item %a
+	$\left.
+	\begin{array}{cl}
+	\overline{w+z} &= \overline{w} + \overline{z}\\
+	\overline{w\cdot z} &= \overline{w} \cdot \overline{z}\\
+	\overline{\frac{w}{z}} &= \frac{\overline{w}}{\overline{z}} \quad (z \neq 0)\\
+	\overline{\overline{z}} &= z
+	\end{array}
+	\right\rbrace \mathbb{C} \rightarrow \mathbb{C}, z \mapsto \overline{z}\; \text{ist Körperisomorphismus}$
+	
+	\item %b
+	$Re(z) = \frac{z+\overline{z}}{2}, Im(z)= \frac{z - \overline{z}}{2i}$
+	\item %c
+	$|z| \geq 0,\; |z| = 0$ nur für $z = 0$
 	\item
-	$|z| \geq 0, |z|= 0 nur f"ur z=0$
+	$|z| = |\overline{z}| = \sqrt{z \cdot \overline{z}}$
 	\item
-	$|z| = |\overline{z} = \sqrt{z\overline{z}}$
+	$|w \cdot z| = |w| \cdot |z|$
 	\item
-	$|w\cdot z| = |w| \cdot |z|$
-	\item
-	$|w+z| \leq |w| + |z|$ (Dreiecksungleichung)\\
-	$|w+z| \geq ||w| - |z||$
+	$|w + z| \leq |w|+|z|$ (Dreiecksungleichung)
+	
+	$|w + z| \geq \bigg | |w|-|z| \bigg |$
 \end{enumerate}
-Beweis: nachrechnen\\
-(z.B. d)): sei $z= x+iy$ mit $x,y \in \R \Rightarrow \overline{z} = x - iy$, $|z|= \sqrt{x^2+y^2}$, $|\overline{z}|= \cdots$
+
+\subsubsection*{Beweis}
+
+z.B.: d) sei $z = x + iy \quad x,y \in \mathbb{R}$
+
+$\Rightarrow \overline{z} = x - iy, \quad |z| = \sqrt{x^2+y^2}$
+
+$|\overline{z}|=\dots$
 
 % % % 3.5
 \subsection{Bemerkung}
