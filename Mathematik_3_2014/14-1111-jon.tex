@@ -1,5 +1,31 @@
 % % % 2.20
 \subsection{TBD}
+\subsection{Satz}
+\label{sub:satz}
+
+$K$ Körper, $f,g \in K[x]$
+
+Dann ist $Grad(f\cdot g) = Grad(f) + Grad(g)$
+
+(Konvention: $-\infty + (-\infty) = -\infty + n = -\infty$)
+
+\par\bigskip
+\underline{Beweis}
+
+\begin{itemize}
+	\item
+	stimmt für $f = 0$ oder $g = 0$
+	
+	\item
+	\[f = a_0 + a_1x^1 + \ldots +  a_nx^n \quad \text{mit} \quad  a_n \neq 0\]
+	\[g = b_0 + b_1x^1 + \ldots +  b_mx^m \quad \text{mit} \quad  b_m \neq 0\]
+	\[f \cdot g = (\cdots) \cdot (\cdots) = \cdots + \underbrace{(a_nb_n)}_ {\mathclap{\substack{\neq 0, \\ \text{(siehe Satz 2.7
+					Nullteilerfreiheit in Körpern)}}}}\cdot x^{n+m}\]
+	
+	Höhere Potenzen mit Koeffizienten $\neq 0$ gibt es nicht
+	
+	$\Rightarrow Grad(f \cdot g) = n + m$
+\end{itemize}
 
 % % % 2.21
 \subsection{TBD}

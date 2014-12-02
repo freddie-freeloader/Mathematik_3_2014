@@ -214,51 +214,101 @@ $\varphi: V \rightarrow W$ lineare Abbildung
 
 \begin{enumerate}[(i)]
 	\item
-	$ker(\varphi) := \{v \in V \big | \varphi(v) = 0\}$
+	$\ker(\varphi) := \{v \in V\; \big |\; \varphi(v) = \zerovec\}$
 	
-	(alle Vektoren die von $\varphi$ auf $0$ abgebildet werden)
+	(alle Vektoren die von $\varphi$ auf $\zerovec$ abgebildet werden)
 	
 	heißt der \underline{Kern von $\varphi$} und ist ein UR von $V$.
 	
 	\item
-	$\varphi:$ injektiv $\Leftrightarrow ker(\varphi) = \{0\}$
-\end{enumerate}\bigskip
+	$\varphi:$ injektiv $\Leftrightarrow \ker(\varphi) = \{\zerovec\}$
+\end{enumerate}
 
-\underline{Beweis:}
+\subsubsection*{Beweis}
 
 \begin{enumerate}[(i)]
 	\item
-	$ker(\varphi)$ ist UR:
+	$\ker(\varphi)$ ist UR:
 	
 	\begin{itemize}
 		\item
-		$ker(\varphi) \neq \emptyset$, da $\varphi(0) = 0$
+		$\ker(\varphi) \neq \emptyset$, da $\varphi(\zerovec) = \zerovec$
 		
 		\item
-		sei $u,v \in ker(\varphi)$, d.h. $\varphi(u) = 0, \varphi(v) = 0$, seien $\lambda, \mu \in K$
+		seien $u,v \in \ker(\varphi)$, d.h. $\varphi(u) = \zerovec, \varphi(v) = \zerovec$, seien $\lambda, \mu \in K$
 		
-		$\Rightarrow \lambda u + \mu v \in ker(\varphi)$, dann:
+		$\Rightarrow \lambda u + \mu v \in \ker(\varphi)$, dann:
 		
-		$\varphi(\lambda u + \mu v) \underset{\text{lin. Abb.}}{=} \lambda \underbrace{\varphi(u)}_{0} +
-		\underbrace{\varphi(v)}_{0} = 0$
+		$\varphi(\lambda u + \mu v) \underset{\text{lin. Abb.}}{=} \lambda \cdot \underbrace{\varphi(u)}_{\zerovec} +
+		\mu \cdot \underbrace{\varphi(v)}_{\zerovec} = \zerovec$
 	\end{itemize}
 	
 	\item
-	"$\Rightarrow$"
+	"$\Rightarrow$"\\
+	$\varphi(\zerovec) = \zerovec$, wegen Injektivität kann kein weiteres Element auf $\zerovec$ abgebildet werden.
 	
-	$\varphi(0) = 0$, wegen Injektivität kann kein weiteres Element auf $0$ abgebildet werden.
+	"$\Leftarrow$"\\
+	Angenommen es gibt $v_1,v_2 \in V$ mit $\varphi(v_1) = \varphi(v_2)$, dann ist $\zerovec = \varphi(v_1) - \varphi(v_2) \\= \varphi(v_1 - v_2)$ (lineare Abbildung!)
 	
-	"$\Leftarrow$"
-	
-	angenommen es gibt $v_1,v_2 \in V$ mit $\varphi(v_1) = \varphi(v_2)$ dann ist $0 = \varphi(v_1) - \varphi(v_2) =
-	\varphi(v_1 - v_2)$ (lineare Abbildung!)
-	
-	$\Rightarrow v_1 - v_2 = 0$ (nur 0 wird auf 0 abgebildet)
+	$\Rightarrow v_1 - v_2 = \zerovec$ (nur $\zerovec$ wird auf $\zerovec$ abgebildet)
 	
 	$\Rightarrow v_1 = v_2$
 	
-	$\Rightarrow \varphi$ injektiv $ _\square$
+	$\Rightarrow \varphi$ injektiv
 \end{enumerate}
+\qed
 
 % % % 5.8
-\subsection{}
+\subsection{Beispiel}
+
+$\varphi: \mathbb{R}^3 \rightarrow \mathbb{R}^3, \;
+\begin{pmatrix}
+x_1\\x_2\\x_3
+\end{pmatrix} \rightarrow
+\begin{pmatrix}
+x_1\\2x_1\\x_1 + x_2 + 2x_3
+\end{pmatrix}
+\;$
+ ist lineare Abbildung\bigskip
+
+$
+A =
+\begin{pmatrix}
+1 & 0 & 0 \\
+2 & 0 & 0 \\
+1 & 1 & 2 \\
+\end{pmatrix}
+$\bigskip
+
+$U = \big <e_2,e_3\big >, \quad \dim(U) = 2$\bigskip
+
+$\varphi(U),\; dim(\varphi(U)),\; ker(\varphi)$?\bigskip
+
+$\varphi(U) = \big <\varphi(e_2), \varphi(e_3)\big > = \bigg <
+\color{red}
+\begin{pmatrix}
+0\\0\\1
+\end{pmatrix}\color{black},\color{blue}
+\begin{pmatrix}
+0\\0\\2
+\end{pmatrix}\color{black}\bigg > = \bigg <
+\begin{pmatrix}
+0\\0\\1
+\end{pmatrix}\bigg > = x_3$-Achse\bigskip
+
+$\varphi(e_2) = \varphi(
+\begin{pmatrix}
+0\\1\\0
+\end{pmatrix}) = \color{red}
+\begin{pmatrix}
+0\\0\\1
+\end{pmatrix} \color{black} \quad
+\varphi(e_3) = \varphi(
+\begin{pmatrix}
+0\\0\\1
+\end{pmatrix}) = \color{blue}
+\begin{pmatrix}
+0\\0\\2
+\end{pmatrix}\color{black}$\bigskip
+
+$\dim(\varphi(U)) = 1$
