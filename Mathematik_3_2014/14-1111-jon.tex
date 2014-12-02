@@ -1,55 +1,182 @@
 % % % 2.20
-\subsection{TBD}
 \subsection{Satz}
 \label{sub:satz}
 
 $K$ Körper, $f,g \in K[x]$
 
-Dann ist $Grad(f\cdot g) = Grad(f) + Grad(g)$
+Dann ist $\Grad(f\cdot g) = \Grad(f) + \Grad(g)$
 
 (Konvention: $-\infty + (-\infty) = -\infty + n = -\infty$)
 
-\par\bigskip
-\underline{Beweis}
+\subsubsection*{Beweis}
 
-\begin{itemize}
-	\item
-	stimmt für $f = 0$ oder $g = 0$
 	
-	\item
-	\[f = a_0 + a_1x^1 + \ldots +  a_nx^n \quad \text{mit} \quad  a_n \neq 0\]
-	\[g = b_0 + b_1x^1 + \ldots +  b_mx^m \quad \text{mit} \quad  b_m \neq 0\]
-	\[f \cdot g = (\cdots) \cdot (\cdots) = \cdots + \underbrace{(a_nb_n)}_ {\mathclap{\substack{\neq 0, \\ \text{(siehe Satz 2.7
-					Nullteilerfreiheit in Körpern)}}}}\cdot x^{n+m}\]
+	Stimmt für $f = 0$ oder $g = 0$
+	
+	\begin{align*}
+		f &= a_0 + a_1x^1 + \ldots +  a_nx^n \quad &\text{mit} \quad  a_n \neq 0\\
+		g &= b_0 + b_1x^1 + \ldots +  b_mx^m \quad &\text{mit} \quad  b_m \neq 0\\
+		f \cdot g &= (\ldots) \cdot (\ldots) = \ldots + \underbrace{(a_nb_n)}_ {\mathclap{\substack{\neq 0, \\ \text{(siehe Satz 2.7
+						Nullteilerfreiheit in Körpern)}}}}\cdot x^{n+m}
+	\end{align*}
+	
 	
 	Höhere Potenzen mit Koeffizienten $\neq 0$ gibt es nicht
 	
-	$\Rightarrow Grad(f \cdot g) = n + m$
-\end{itemize}
+	$\Rightarrow \Grad(f \cdot g) = n + m$
 
 % % % 2.21
-\subsection{TBD}
+\subsection{Korollar}
+
+$K$ Körper, dann
+$K[x]^* = \{f \in K[x]\; |\; \Grad(f) = 0\}$,
+
+d.h. nur die konstanten Polynome $\neq 0$ sind in $K[x]$ bez"uglich $\cdot$ invertierbar.
+
+\[\underbrace{f}_{\mathclap{\Grad \;n}} \cdot \underbrace{f^{-1}}_{\text{müsste Grad $-n$ haben}} = \underbrace{1}_{\mathclap{\Grad \;0}} \leftarrow \text{geht nicht}\]
 
 % % % 2.22
-\subsection{TBD}
+\subsection{Definition}
+
+
+Sei $b \in K$
+
+ $\varphi_b: K[x] \rightarrow K$, 
+$f := \sum\limits_{i = 0}^n a_ix^i \mapsto f(b) := \sum\limits_{i = 0}^n a_ib^i$
+
+ist ein surjektiver Ringhomomorphismus, der sogenannte \emph{Auswertungshomomorphismus} an der Stelle $b$.
+
+(setze $b$ für $x$ ein)
+
 
 % % % 2.23
-\subsection{TBD}
+\subsection{Definition}
+
+$K$ Körper, $f, g \in K[x]$
+
+$f$ \underline{teilt} $g$, $f|g$, falls ein $q \in K[x]$ existiert mit $g = q \cdot f$
+
+(Nach \ref{sub:satz} ist dann $\Grad(f) \leq \Grad(g)$, falls $g \neq 0$)
 
 % % % 2.24
-\subsection{TBD}
+\subsection{Definition (Division mit Rest)}
+
+$K$ Körper, $0 \neq f \in K[x],\; g \in K[x]$
+
+Dann existieren eindeutig bestimmte Polynome $q, r \in K[x]$ mit
+$g = q \cdot f + r \; \text{und} \;\\ \Grad(r) < \Grad(f)$.
+
+Bezeichnung:
+\begin{align*}
+	 r &=: g \mod f\\
+	 q &=: g\; \text{div}\;  f
+\end{align*}
+
+\subsubsection*{Beweis}
+Vgl. Mathe I für $\mathbb{Z}$, siehe z.B. WHK Satz 4.69
 
 % % % 2.25
-\subsection{TBD}
+\subsection{Beispiel}
+\label{sub:2.25}
+
+\begin{enumerate}[a)]
+	\item
+	\begin{align*}
+	g &= x^4+2x^3-x+2 \quad \in \mathbb{Q}[x]\\
+	f &= 3x^2-1 \quad \in \mathbb{Q}[x]
+	\end{align*}
+	
+	Rechne:
+		
+	\polylongdiv[style=C, div=:]{x^4+2x^3+0x^2-x+2}{3x^2-1}
+	\item
+	\[g = x^4+x^2+1 \quad \quad f=x^2+x \quad \in \mathbb{Z}_2[x]\]
+	Rechne:
+	\[(x^4+x^2+1) : x^2+x= \underbrace{x^2+x}_{q}\]
+	
+	
+\end{enumerate}
+
 
 % % % 2.26
-\subsection{TBD}
+\subsection{Korollar}
+
+$K$ Körper, $a \in K$
+
+$f \in K[x]$ ist genau dann durch $(x - a)$ teilbar, wenn $f(a) = 0$ ist (d.h. $a$ ist \underline{Nullstelle} von $f$).
+
+\subsubsection*{Beweis}
+
+"$\Rightarrow$" $\quad$ sei $f$ durch $(x - a)$ teilbar, d.h.
+\[f = q \cdot (x - a) \Rightarrow f(a) = q(a) \cdot (\underbrace{a-a}_{0}) = 0 \quad q \in K\]
+
+"$\Leftarrow$" $\quad$ Division mit Rest: $f = q(x - a) + r$, wobei
+$\Grad(r) < \underbrace{\Grad(x-a)}_{1}$
+
+$\Rightarrow r$ ist konstantes Polynom ($\Grad \; 0$) oder Nullpolynom $(\Grad \;(-\infty)$) also $r \in K$
+
+\[0 = f(a) = q(a) \cdot 0 + r \Rightarrow r = 0 \quad \]
+\qed
 
 % % % 2.27
-\subsection{TBD}
+\subsection{Definition}
+
+$K$ Körper
+
+\begin{enumerate}[(i)]
+	\item
+	Ein Polynom dessen höchster von $0$ verschiedener Koeffizient gleich $1$ ist, heißt normiert.
+	
+	\item
+	$g, h \in K[x]$, nicht beide $0$ 
+	
+	$f \in K[x]$ heißt \emph{größter gemeinsamer Teiler} von $g$ und $h$ ($f=\ggT(g,h)$), falls
+	$f$ normiertes Polynom von maximalem Grad ist, das $g$ und $h$ teilt.
+	
+	\item
+	$g, h \in K[x] \;\backslash\; \{0\}$ beide nicht $0$
+	
+	$f \in K[x]$ heißt \emph{kleinstes gemeinsames Vielfaches} von $g$ und $h$\\ ($f = kgV(g,h)$), falls
+	$f$ normiertes Polynom von kleinstem Grad ist, das von $g$ und $h$ geteilt wird.
+\end{enumerate}
+
 
 % % % 2.28
-\subsection{TBD}
+\subsection{Bemerkung}
+
+\begin{enumerate}[a)]
+	\item
+	$f = \sum\limits_{i = 0}^n a_ix^i, a_n \neq 0$, dann ist $a_n^{-1}f = x^n + \ldots\;$ normiertes Polynom.
+	
+	(z.B.: $f = 3x^2+x+7 \in \mathbb{R}[x]$)
+	
+	dann $\frac{1}{3}f = x^2+\frac{x}{3} + \frac{7}{3}$ normiert.
+	
+	In $\mathbb{Z}_{11}[x]: \underbrace{4}_{\mathclap{\text{Inverses von 3, denn $3\cdot 4 = 12 \equiv 1 \pmod{11}$}}}f = x^2+4x_6$ normiert.
+	
+	\item
+	$\kgV(g,h)$ existiert und ist eindeutig:
+	
+	\begin{align*}
+	\text{sei}\; f_1 &= \kgV(g,h), \; f_2 = \kgV(g,h)\\
+	&\Rightarrow g,h | f_1, \quad g,h | f_2\\
+	&\Rightarrow g,h | (f_1-f_2)
+	\end{align*}
+	
+	\item
+	$\ggT(g,h)$ existiert. Beweis Eindeutigkeit wie in $\mathbb{Z}$ (Mathe I), folgt aus.
+\end{enumerate}
+
 
 % % % 2.29
-\subsection{TBD}
+\subsection{Satz (von Bezout)}
+\label{sub:satz_von_bezout_}
+
+$K$ Körper, $g, h \in K[x]$, nicht beide $0$.
+
+Dann existieren $s, t \in K[x]$, sodass
+\[f = s \cdot g + t\cdot h\]
+
+ein $\ggT$ von $g$ und $h$ ist.
+
+(Beweis: EEA in $K[x]$, später)

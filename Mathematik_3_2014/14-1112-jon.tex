@@ -14,7 +14,8 @@ $g=x^4+x^3 + 2x^2+1,  h= x^3+2x^2+2 \in \Z_3 [x]$\\
 
 % % % 2.33
 \subsection{Definition}
-$k$ K"orper. Ein Polynom $p\in K[x]$, Grad$(p)\geq 1$ (d.h. $p\neq 0$, $p$ nicht konst., also keine Einheit) heißt \emph{irreduzibel}, falls golt: \\
+$k$ K"orper. Ein Polynom $p\in K[x]$, Grad$(p)\geq 1$ (d.h. $p\neq 0$, $p$ nicht konst., also keine Einheit) heißt \emph{irreduzibel}, falls gilt: 
+
 Ist $p=f \cdot g$ ($f,g\in K[x]$), so ist Grad($f)= 0$ oder Grad($g)=0$ (d.h. $f$ oder $g$ ist konst. Polynom).
 
 Bemerkung: $p= a \cdot a^{-1} \cdot p$ f"ur $a \in K \backslash \{0\}$ geht immer.
@@ -27,7 +28,7 @@ Bemerkung: $p= a \cdot a^{-1} \cdot p$ f"ur $a \in K \backslash \{0\}$ geht imme
 	\item
 	$x^2-2 \in \Q[x]$ ist irreduzibel:\\
 	angenommen nicht, dann $(x^2-2) = (ax+b)(cx+d)$ mit $a,b,c \in \Q \land a,c \neq 0$\\
-	$(ax+b)$ hat Nullstelle $-\frac{b}{a}$, also m"usste auch $(x^2-2)$ Nullstelle $\underbrace{-\frac{b}{a}}_{\in \Q}$ haben.
+	$(ax+b)$ hat Nullstelle $-\frac{b}{a}$, also m"usste auch $(x^2-2)$ Nullstelle $-\frac{b}{a}$ ($\in \Q$) haben.
 	Nullstellen von $(x^2-2)$ sind aber nur $\sqrt{2}$ und $-\sqrt{2}$, beide nicht in $\Q$ !
 	\item
 	$x^2-2 \in \R[x]$ ist nicht irreduzibel.\\
@@ -46,9 +47,9 @@ Bemerkung: $p= a \cdot a^{-1} \cdot p$ f"ur $a \in K \backslash \{0\}$ geht imme
 	\item
 	Irreduzibel Polynome in $K[x]$ entsprechen den Primzahlen in $\Z$. Man kann zeigen:
 	$f = \sum_{i=0}^{n} a_i x^i \in K[x]$, $a_n \neq 0, n \geq 1$.\\
-	Dann existieren eindeutig bestimmte irreduzibel Polynome $p_1, \dots, p_e$ und nat"urlichen Zahlen $m_1, \dots , m_e \in \N$ mit $f= a_n \cdot p_1^{m_1} \cdot \dots \cdot p_e^{m_e}$
+	Dann existieren eindeutig bestimmte irreduzibel Polynome $p_1, \dots, p_e$ und nat"urlichen Zahlen $m_1, \dots , m_e \in \N$ mit $f= a_n \cdot p_1^{m_1} \cdot \ldots \cdot p_e^{m_e}$
 	\item
-	geg: Primzahl $p$, dann gibt es K"orper mit $p$ Elementen:\\
+	Gegeben: Primzahl $p$, dann gibt es K"orper mit $p$ Elementen:\\
 	$(\Z_p, \oplus, \odot)$
 	
 	Man kann zeigen: zu jeder Primzahlpotenz $p^a$ gibt es K"orper mit $p^a$ Elementen, diesen konstruiert man "uber irreduzible Polynome in $\Z_p[x]$. 
