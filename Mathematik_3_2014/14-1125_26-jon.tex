@@ -25,8 +25,16 @@
 	
 	$|V| = 5 \cdot 5 \cdot 5 = 125$
 	\item 
-	$U = \dots$ %TODO
- 
+	$U = \left\lbrace 
+	\vct{x_1 \\ x_2} \in V_1: x_1 \oplus x_2 = 0 \right\rbrace$ ist UR von $V_1$
+	\begin{itemize}
+		\item
+		$U = \left\lbrace 
+		\vct{0 \\ 0}, \vct{1 \\ 1}  \right\rbrace \neq \emptyset$
+		\item
+		Sei $u= \vct{u_1 \\ u_2} \in U $, d.h. $u_1 \oplus u_2 = 0$ 
+	\end{itemize}
+	 $\Rightarrow$ f"ur $\lambda \cdot u= \vct{\lambda u_1 \\ \lambda u_2}$ gilt $\lambda u_1 \oplus \lambda u_2 = \lambda \cdot \underbrace{(u_1 \oplus u_2)}_{0}=0$ 
 	 \item
 	 $\Z_3^3:$
 	 
@@ -209,6 +217,7 @@ Dann heißt die $\dim(\varphi(V))$ der \underline{Rang von $\varphi$}, $\rg(\var
 
 % % % 5.7
 \subsection{Definition/Satz}
+	\label{kern}
 
 $\varphi: V \rightarrow W$ lineare Abbildung
 
@@ -220,6 +229,7 @@ $\varphi: V \rightarrow W$ lineare Abbildung
 	
 	heißt der \underline{Kern von $\varphi$} und ist ein UR von $V$.
 	
+
 	\item
 	$\varphi:$ injektiv $\Leftrightarrow \ker(\varphi) = \{\zerovec\}$
 \end{enumerate}

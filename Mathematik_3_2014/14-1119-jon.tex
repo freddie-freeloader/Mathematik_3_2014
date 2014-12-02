@@ -1,1 +1,79 @@
-TBD :,(
+ % 3.6 - 3.11
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% % % 3.6
+\subsection{Polarkoordinaten}
+
+Eine andere M"oglichkeit, komplexe Zahlen zu beschreiben:
+
+Angabe von Winkel ($\varphi$) und Abstand $r$ zum Nullpunkt.\\
+Zu jedem $z \in \C$ gibt es ein eindeutig bestimmtes $r \leq 0$ und ein $\varphi \in \R$ mit \\$z=r(\cos\varphi+i \cdot \sin \varphi)$ (Polarkoordinatendarstellung von $z$) und zwar ist $r=|z|=\sqrt{x^2 + x^2}$ f"ur $z = x + iy, \;\frac{x}{r}= \cos\varphi, \; \frac{y}{r}=\sin \varphi$:
+\begin{align*}
+	z &= x +iy\\
+	&= r \cdot \cos\varphi + i \cdot r \cdot \sin\varphi\\
+	&= r \cdot (\cos\varphi + i \cdot\sin\varphi)
+\end{align*}
+
+Aus den Additionstheoremen f"ur $\sin, \, \cos$ folgt (P"U6):
+
+\begin{align*}
+z_1 \cdot z_2 &= |z_1| \cdot |z_2|\cdot (\cos(\varphi_1 + \varphi_2)+i \cdot \sin(\varphi_1 + \varphi_2))\\
+z^2 &= |z|^2 \cdot (\cos(2\varphi)+ i \cdot \sin(2\varphi))\\
+\pm \sqrt{z} &= \sqrt{|z|} \cdot (\cos (\frac{\varphi}{2}) + i \cdot \cos (\frac{\varphi}{2}))
+\end{align*}
+
+% % % 3.7
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	$z_1=1,\; r_1=1, \; \varphi_1= 0 \Rightarrow z_1 = 1 \cdot (\cos 0+ i \cdot \sin 0 )$
+	\item
+	$z_2=i, \; r_2=1, \; \varphi_2=\frac{\pi}{2}\Rightarrow z_2 = 1 \cdot (\cos \frac{\pi}{2}+ i \cdot \sin \frac{\pi}{2} )$
+	\item
+	$z_3=1+i, \; r_2=\sqrt{2}, \; \varphi_2=\frac{\pi}{4}\Rightarrow z_3 = \sqrt{2} \cdot (\cos \frac{\pi}{4}+ i \cdot \sin \frac{\pi}{4} )$
+\end{enumerate}
+
+% % % 3.8
+\subsection{Definition/Schreibweise}
+
+$e^{i\varphi}:= \cos \varphi + i \cdot \sin \varphi$
+
+$z= \underbrace{r}_{\mathclap{\text{Betrag}}} \cdot e^{i\varphi}$
+
+% % % 3.9
+\subsection{Bemerkung}
+
+Statt Defintion 3.8:
+
+Man kann auch die Definition von Folgen, Konvergenz, Grenzwert von $\R$ auf $\C$ "ubertragen, alles aus Mathe II (Analysis!), u.a. auch Potenzreihen, insbesondere die Exponentialfunktion definieren.
+
+F"ur alle $z \in \C$ konvergiert $\sum_{k=0}^{\infty}\frac{z^k}{k!} := \exp(z), \; e^z $
+
+Mit den Methoden aus Mathe II - ,,2. Teil'' kann man dann zeigen, dass \[e ^it = \cos t + i \cdot \sin t \; \forall t \in \R \; \text{(Eulersche Formel)}\]
+\[z_1\cdot z_2 = (r_1\cdot r_2)\cdot (\cos(\varphi_1 + \varphi_2)+i \cdot \sin (\varphi_1 + \varphi_2)) = \underline{(r_1\cdot r_2) \cdot e^{i (\varphi_1 + \varphi_2)} }\]
+
+% % % 3.10
+\subsection{Beispiele}
+
+\begin{enumerate}
+	\item
+	$1 \cdot e^{i\cdot 0 } = 1$
+	\item
+	$e^{i\pi} = -1 $ (und: $e^{i\pi}+1 = 0 $ \smiley)
+	\item
+	$2 \cdot e^{2\pi} = 2$ 
+	\item
+	$\ldots$ %TODO Koennte man hier noch verfolgestaendigen
+	
+\end{enumerate}
+
+% % % 3.11
+\subsection{Bemerkung}
+
+$\C$ hat alle algrebraischen und analystischen Eigenschaften wie $\R$ (oder besser), außer:
+
+Es gibt auf $\C$ keine vollst"andige Ordnung $\leq$, die mit + und $\cdot$ vertr"aglich ist, d.h. f"ur die gelten w"urde:
+\begin{align*}
+a \leq b, c \leq d&\Rightarrow a+c \leq b+d\\
+a \leq b, r \geq 0&\Rightarrow ra \leq rb
+\end{align*}

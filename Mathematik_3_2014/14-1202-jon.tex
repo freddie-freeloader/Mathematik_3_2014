@@ -1,6 +1,125 @@
+% % % 5.9
 \subsection{Satz}
 
 $V,W$ $K$-VR, $\dim(V)=n$
 
-$\{v_1, \dots, v_n\}$ Basis von $V$. $w_1,\dots, w_2 $ Vektoren aus $W$ (nivht notwendig verschieden)\\
-Dann $\exists$ lineare Abbildung $\varphi$
+$\{v_1, \dots, v_n\}$ Basis von $V$ \\
+$w_1,\dots, w_2 $ Vektoren aus $W$ (nicht notwendig verschieden)
+
+Dann $\exists!$ lineare Abbildung
+
+
+
+$\varphi: V \rightarrow W \;$mit$\; \varphi(v_i) = w_i \; (i=1,...,n)$
+
+und zwar: 
+
+$\left.
+\begin{array}{l}
+\varphi: V \rightarrow W\\
+v=\sum_{i=1}^{n} \lambda_i v_i \mapsto \sum_{i=i}^{n} \lambda_i w_i
+\end{array}
+\right\rbrace$\huge*\normalsize\\
+
+D.h.: wenn man weiß, wie die Basisvektoren abgebildet werden, dann kennt man die lineare Abbildung vollständig.
+
+% % % 
+\subsubsection*{Beweis}
+Für $\varphi$ aus * gilt:
+\begin{itemize}
+	\item $\varphi$ ist linear
+	\item $\varphi(v_i) = w_i$\\
+	$\varphi(v_1)=\varphi(1\cdot v_1 + 0 \cdot v_2 + ... + 0 \cdot v_n) = 1 \cdot w_1 + 0 \cdot w_2 + ... + 0 \cdot w_n = 1 \cdot w_1 = w_1$ usw.
+	\item $\varphi$ ist eindeutig.
+	
+	Angenommen $\exists \;\psi: V \rightarrow W$ lin. Abb. mit $\psi(v_i) = w_i \; \forall i=1...n$
+	
+	Dann ist $\psi(\sum_{i=1}^{n} \lambda_i v_i) = \sum_{i=1}^{n} \lambda_i(\psi(v_i)) = \sum_{i=1}^{n} \lambda_i w_i = \varphi(\sum_{i=1}^{n} \lambda_i v_i) $
+	\qed
+\end{itemize}
+
+% % % 5.10
+\subsection{Beispiel}
+
+$V = \R^2, \varphi$ Drehung um Winkel $\alpha\; (0 \leq \alpha < 2 \pi)$ um Nullpunkt gegen den Uhrzeigersinn.
+
+$\varphi$ ist lin. Abb.:\\
+$\varphi(\alpha_1 + \alpha_2) = \varphi(\alpha_1) + \varphi(\alpha_2)$\\
+$\varphi(\lambda \alpha) = \lambda \varphi(\alpha)$\\
+
+$\varphi: e_1 = \vct{1\\0} \mapsto \vct{\cos \alpha\\\sin \alpha}$
+
+$e_2 = \vct{0\\1} \mapsto \vct{-\sin \alpha\\\cos \alpha}$
+
+allg. Vektor $x = \vct{x_1\\x_2} = x_1 \cdot \vct{1\\0} + x_2 \cdot \vct{0\\1}$
+\begin{align*}
+\varphi: x \mapsto& \;x_1 \cdot \varphi(e_1) + x_2 \cdot \varphi(e_2)\\
+=&\; x_1 \cdot \vct{\cos \alpha \\ \sin \alpha} + x_2 \cdot 
+\vct{-\sin \alpha \\ \cos \alpha}\\
+=& \vct{x_1 \cdot \cos \alpha - x_2 \cdot \sin \alpha \\
+	x_1 \cdot \sin \alpha + x_2 \cdot \cos \alpha}\\
+=&\; A \cdot x
+\end{align*}
+ mit $A = \begin{bmatrix}
+\cos \alpha & \sin \alpha\\
+-\sin \alpha & \cos \alpha
+\end{bmatrix}$
+
+% % % 5.11
+\subsection{Satz (Dimensionsformel)}
+\label{dimensionsformel}
+
+$V$ endl. dim. $K$-VR, $\varphi: V \rightarrow W$ lin. Abb.
+
+Dann gilt: \\$\dim(V) = \dim(\ker(\varphi)) +  \underbrace{\rg(\varphi)}_{\mathclap{\dim(\varphi(V))}}$
+
+% % %
+\subsubsection*{Beweis}
+Sei $u_1,...,u_k$ Basis von ker($\varphi$)
+
+Ergänze zu Basis $u_1,...,u_n$ von V (Mathe 2, Basisergänzungssatz)
+
+Setze $U:= \left< u_{k+1},..., u_n \right>$
+
+Dann ist $\ker(\varphi) \cap U = \{ \zerovec \}$, \\d.h. kein Element außer $\zerovec$ liegt in U, \\also hat die Abb. $\varphi|_U$ den 
+
+$\ker(\varphi|_U) = \{ \zerovec \}$, 
+
+ist damit nach Satz 5.7 (ii) injektiv. \\
+Deshalb ist dim(U) = dum($\varphi(U)$). 
+
+Außerdem ist $\varphi(U) = \varphi(V)$\\
+$\Rightarrow \dim(V) = \dim(\ker(\varphi)) + \underbrace{\dim(U)}_{\mathclap{\dim(\varphi(U)) = \dim(\varphi(V)) = \rg(\varphi)}}$
+
+\qed
+% % % 5.12
+\subsection{Korollar}
+$V,\; W$ endlich. dim. $K$-VR mit $\dim V = \dim W, \; \\\varphi: V \rightarrow W$ lin. Abb. 
+
+Dann sind folgende Aussagen äquivalent:
+\begin{enumerate}[(i)]
+	\item $\varphi$ ist surjektiv
+	\item $\varphi$ ist injektiv
+	\item $\varphi$ ist bijektiv
+\end{enumerate}
+
+% % % 
+\subsubsection*{Beweis}
+$\dim V = \dim W = n$\\
+
+Nach \ref{dimensionsformel} gilt:\\
+$n = \dim(\ker(\varphi)) + \rg(\varphi)$
+
+Also: $\underbrace{\rg(\varphi)=n}_{\mathclap{\varphi \text{ surjektiv}}} \Leftrightarrow \underbrace{\dim(\ker(\varphi))}_{\mathclap{\varphi \text{ injektiv (Satz~\ref{kern}})}} = 0\\
+\Rightarrow$ Beh.
+\qed
+
+% % % 5.13
+\subsection{Zusammenhang lin. Abb. und hom. LGS, Matrizen, Rang}
+\begin{itemize}
+	\item homogenes LGS: $A \in M_{m,n}(K)$ gesucht: \\
+	Menge aller $x \in K^n$ mit $Ax = \zerovec$
+	\item lin. Abb. dazu:\\
+	 $\varphi: K^n \rightarrow K^m, x \mapsto Ax$
+\end{itemize}
+Dann ist der Lösungsraum des homogenen LGS = $\ker(\varphi)$
