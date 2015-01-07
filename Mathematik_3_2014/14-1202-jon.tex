@@ -40,6 +40,7 @@ Für $\varphi$ aus * gilt:
 
 % % % 5.10
 \subsection{Beispiel}
+\label{beispiel:drehung}
 
 $V = \R^2, \varphi$ Drehung um Winkel $\alpha\; (0 \leq \alpha < 2 \pi)$ um Nullpunkt gegen den Uhrzeigersinn.
 
@@ -120,6 +121,38 @@ Also: $\underbrace{\rg(\varphi)=n}_{\mathclap{\varphi \text{ surjektiv}}} \Leftr
 	\item homogenes LGS: $A \in M_{m,n}(K)$ gesucht: \\
 	Menge aller $x \in K^n$ mit $Ax = \zerovec$
 	\item lin. Abb. dazu:\\
-	 $\varphi: K^n \rightarrow K^m, x \mapsto Ax$
+	 $\varphi: K^n \rightarrow K^m, x \mapsto Ax$\\
+	Dann ist der Lösungsraum des homogenen LGS = $\ker(\varphi)$
 \end{itemize}
-Dann ist der Lösungsraum des homogenen LGS = $\ker(\varphi)$
+
+Dimensionsformel:
+
+$\underbrace{\dim(\ker(\varphi))}_{\mathclap{\dim(\text{Lösungsraum LGS})}} = \underbrace{\dim(K^n)}_{n} -
+\underbrace{rg(\varphi)}_{\dim(\varphi(K^n))}$\bigskip
+\begin{align*}
+\varphi(K^n) &= \big < \varphi(e_1),\cdots,\varphi(e_n)\big>_K\\
+&= \big < Ae_1,\cdots,Ae_n \big >
+\end{align*}
+
+($Ae_i$ ist gerade die i-te Spalte $S_i$ von A)
+
+$\binom{1\quad2\quad3}{4\quad5\quad6} \cdot
+\vct{1 \\ 0\\ 0} = \vct{1\\4} $\
+
+Also:\\
+ $\rg(\varphi) = \dim\big(\big < s_1,\cdots,s_n \big >_K\big) =$ Maximale Anzahl linear unabhängiger Spalten von A.\bigskip
+
+Also: $\dim($Lösungsraum) $= n - $ Spaltenrang von A
+
+Mathe II: $\dim($Lösungsraum) $= n - $ Zeilenrang von A
+
+$\Rightarrow$ für beliebige $A \in M_{m,n}(K)$ gilt:
+
+\begin{align*}
+\text{Zeilenrang von } A &= \text{Spaltenrang von } A\\
+&= \text{Zeilenrang von } A\\\\
+\Rightarrow\text{f"ur beliebigen } A \in M_{m,n}(K) \text{ gilt:}\\
+&= \text{Rang von A}\\
+&= \rg(\varphi) \text{ mit } \varphi \text{ wie oben}
+\end{align*}
+

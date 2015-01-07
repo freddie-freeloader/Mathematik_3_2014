@@ -1,0 +1,134 @@
+ %6.1 - 6.4
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+ 
+ 
+ 
+% % %  6
+\section{Matrizen und lineare Abbildungen}
+
+% % %  6.1
+\subsection{Definition}
+
+Seien $V,W$ endlich dimensionale VR mit geordneter Basis
+
+\[\mathcal{B} = (v_1,\cdots,v_n) \text{ von } V\] und
+\[\mathcal{C} = (w_1,\cdots,w_n) \text{ von } W\] Sei
+\[\varphi:V\rightarrow W \text{ lineare Abbildung}\]
+\\
+Stelle die Bilder $\underbrace{\varphi(v_1)}_{\in W}, \ldots, \underbrace{\varphi(v_n)}_{\in W}$ bzgl. Basis $C$ dar:
+
+\begin{align*}
+\varphi(v_1) &= a_{11} \cdot w_1 + \cdots + a_{11}w_m\\
+\vdots\\
+\varphi(v_n) &= a_{1n} \cdot w_1 + \cdots + a_{n1}w_m\\
+\end{align*}
+
+Dann heißt die $m\times n$ Matrix
+\[\left. A_\varphi^{\mathcal{B},\mathcal{C}} :=
+\begin{pmatrix}
+a_{11} \cdots a_{1n}\\
+\vdots \hspace{1cm} \vdots\\
+a_{m1}\cdots a_{m,n}
+\end{pmatrix}\right. \;\text{(Spalte $i$ enthält Koordinaten von $\varphi(v_i)$ bzgl. $\mathcal{C}$)}\]
+
+die \emph{Darstellungsmatrix} von $\varphi$ bzgl. der Basen $\mathcal{B}$ und $\mathcal{C}$ \\(Schreibweise f"ur den Fall $\mathcal{B} =
+\mathcal{C}$, dann auch  $A_\varphi^\mathcal{B}$)
+
+Bemerkung: $\varphi$ durch $A_\varphi^{\mathcal{B},\mathcal{C}}$ eindeutig bestimmt, vgl. \ref{kern}
+
+% % %  6.2
+\subsection{Beispiel}
+
+\begin{enumerate}[a)]
+	\item
+	\[V=W=\mathbb{R}^2, \quad \mathcal{B}=\mathcal{\color{red}C\color{black}}=(e_1,e_2) =
+	\bigg ( \color{red}\weirdvct{1}{0}\color{black},\color{red}\weirdvct{0}{1}\color{black}\bigg )\]
+	\[\varphi: V \rightarrow V, \quad v \mapsto 2v\]
+	
+	\[A_\varphi^{\mathcal{B},\mathcal{C}} = A_\varphi^{\mathcal{B}} = \text{?}\]
+	\begin{align*}
+	\begin{rcases}
+	\varphi\left(\weirdvct{1}{0}\right) &= \weirdvct{2}{0} = \underline{2} \color{red}\weirdvct{1}{0}\color{black} +
+	\underline{0} \color{red}\weirdvct{0}{1}\color{black}\\
+	\varphi\left(\weirdvct{0}{1}\right) &= \weirdvct{0}{2} = \underline{0} \color{red}\weirdvct{1}{0}\color{black} +
+	\underline{2} \color{red}\weirdvct{0}{1}\color{black}\\
+	\end{rcases}
+	A_\varphi^\mathcal{B} = \weirdvct{2\quad0}{0\quad2}
+	\end{align*}
+	
+	andere Basis $\mathcal{D} = \left( \weirdvct{1}{2},\weirdvct{0}{2}\right) \quad
+	A_\varphi^{\mathcal{B},\color{green}\mathcal{D}\color{black}}$
+	
+	\begin{align*}
+	\begin{rcases}
+	\varphi\left(\weirdvct{1}{0}\right) &= \weirdvct{2}{0} = \underline{2} \color{green}\weirdvct{1}{2}\color{black} -
+	\underline{2} \color{green}\weirdvct{0}{2}\color{black}\\
+	\varphi\left(\weirdvct{0}{1}\right) &= \weirdvct{0}{2} = \underline{0} \color{green}\weirdvct{1}{2}\color{black} +
+	\underline{1} \color{green}\weirdvct{0}{2}\color{black}\\
+	\end{rcases}
+	A_\varphi^{\mathcal{B},\color{green}\mathcal{D}\color{black}} = \weirdvct{2\quad0}{-2\quad1}
+	\end{align*}
+	
+	\item
+	$V = W$ mit $\dim V = n,\;\; \mathcal{B}$ bel. Basis,$\;\; \varphi = id_V,$ dann ist: \[A_\varphi^\mathcal{B} = E_n\]
+	
+	\item
+	$V = W = \mathbb{R}^2,\; \mathcal{B} = \mathcal{C}= (e_1,e_2)$
+		
+	$\varphi$ Drehung um Nullpunkt um $\alpha$ gegen Uhrzeigersinn
+	
+	\[\Rightarrow A_\varphi^\mathcal{B} = \weirdvct{\cos \alpha \quad -\sin \alpha}{\sin \alpha\quad \cos \alpha}\]
+	Vgl. Beispiel \ref{beispiel:drehung}
+	
+	\item
+	$V=W=\mathbb{R}^2,\; \mathcal{B} = (e_1,e_2)$
+	
+	%TODO Finished until here
+	$\varphi:$ Spiegelung an der $\underbrace{\big<e_1\big>}_{\mathclap{x_1-\text{Achse}}}$, d.h. $\varphi:\weirdvct{x_1}{x_2}\mapsto \weirdvct{x_1}{-x_2}\quad
+	A_\varphi^\mathcal{B} = \weirdvct{1\quad0}{0\quad-1}$
+	
+	andere Basis $\mathcal{B}' = \big(\weirdvct{1}{1},\weirdvct{1}{-1}\big)$
+	
+	$A_\varphi^{\mathcal{B},\mathcal{B}'} =$ ?
+	
+	\begin{align*}
+	\varphi(\weirdvct{1}{0}) &= \weirdvct{1}{0} = a_{11}\weirdvct{1}{1} + a_{21}\weirdvct{1}{-1}\\
+	\varphi(\weirdvct{0}{1}) &= \weirdvct{0}{-1} = a_{12}\weirdvct{1}{1} + a_{22}\weirdvct{1}{-1}\\
+	\end{align*}
+	
+	$\rightarrow$ LGS, ausrechnen, erhalte:
+	\[A_\varphi^{\mathcal{B},\mathcal{B}'} = \weirdvct{\frac{1}{2}\quad \frac{1}{2}}{-\frac{1}{2}\quad \frac{1}{2}}\]
+	
+	\item
+	andersrum:
+	
+	$V=W=\mathbb{R}, \quad \mathcal{B}=(e_1,e_2)$
+	
+	$A_\varphi^\mathcal{B} = \weirdvct{1\quad2}{3\quad4}$
+	
+	was ist $\varphi(\weirdvct{7}{-5})$
+	
+	$\varphi(\weirdvct{1}{0}) = \weirdvct{1}{3}$
+	
+	$\varphi(\weirdvct{0}{1}) = \weirdvct{2}{4} = \varphi(7 \weirdvct{1}{0} - 5 \weirdvct{0}{1}) = 7 \varphi(\weirdvct{1}{0}) -
+	5 \varphi(\weirdvct{0}{1}) = 7 \weirdvct{1}{5} + (-5) \weirdvct{2}{4} = \weirdvct{-3}{1}$\bigskip
+	
+	\underline{Gegeben:}
+	
+	Koordinaten eines Punktes bzgl. Basis $\mathcal{B}$ (z.B. Roboterkoordinaten) Abbildung $\varphi$
+	
+	\underline{Gegeben:}
+	
+	Koordinaten dieses Punktes bzgl. Basis $\mathcal{C}$ (Weltkoordinatensystem) $\rightarrow$ später
+	
+	Koordinaten des mit $\varphi$ abgebildeten Punktes bzgl $\mathcal{C} \rightarrow$ jetzt
+	
+\end{enumerate}
+
+
+
+% % %  6.3
+\subsection{}
+
+% % %  6.4
+\subsection{}
