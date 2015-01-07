@@ -83,52 +83,106 @@ Bemerkung: $\varphi$ durch $A_\varphi^{\mathcal{B},\mathcal{C}}$ eindeutig besti
 	\item
 	$V=W=\mathbb{R}^2,\; \mathcal{B} = (e_1,e_2)$
 	
-	%TODO Finished until here
 	$\varphi:$ Spiegelung an der $\underbrace{\big<e_1\big>}_{\mathclap{x_1-\text{Achse}}}$, d.h. $\varphi:\weirdvct{x_1}{x_2}\mapsto \weirdvct{x_1}{-x_2}\quad
 	A_\varphi^\mathcal{B} = \weirdvct{1\quad0}{0\quad-1}$
 	
-	andere Basis $\mathcal{B}' = \big(\weirdvct{1}{1},\weirdvct{1}{-1}\big)$
+	andere Basis $\mathcal{B}' = \left( \weirdvct{1}{1},\weirdvct{1}{-1} \right)$
 	
 	$A_\varphi^{\mathcal{B},\mathcal{B}'} =$ ?
 	
 	\begin{align*}
-	\varphi(\weirdvct{1}{0}) &= \weirdvct{1}{0} = a_{11}\weirdvct{1}{1} + a_{21}\weirdvct{1}{-1}\\
-	\varphi(\weirdvct{0}{1}) &= \weirdvct{0}{-1} = a_{12}\weirdvct{1}{1} + a_{22}\weirdvct{1}{-1}\\
+	\varphi\left(\weirdvct{1}{0}\right) &= \weirdvct{1}{0} = a_{11}\weirdvct{1}{1} + a_{21}\weirdvct{1}{-1}\\
+	\varphi\left(\weirdvct{0}{1}\right) &= \weirdvct{0}{-1} = a_{12}\weirdvct{1}{1} + a_{22}\weirdvct{1}{-1}\\
 	\end{align*}
 	
-	$\rightarrow$ LGS, ausrechnen, erhalte:
+	$\Rightarrow$ LGS, ausrechnen, erhalte:
 	\[A_\varphi^{\mathcal{B},\mathcal{B}'} = \weirdvct{\frac{1}{2}\quad \frac{1}{2}}{-\frac{1}{2}\quad \frac{1}{2}}\]
 	
 	\item
-	andersrum:
+	andersherum:
 	
 	$V=W=\mathbb{R}, \quad \mathcal{B}=(e_1,e_2)$
 	
 	$A_\varphi^\mathcal{B} = \weirdvct{1\quad2}{3\quad4}$
 	
-	was ist $\varphi(\weirdvct{7}{-5})$
+	Was ist $\varphi\left(\weirdvct{7}{-5}\right)$
 	
-	$\varphi(\weirdvct{1}{0}) = \weirdvct{1}{3}$
+	$\varphi\left(\weirdvct{1}{0}\right) = \weirdvct{1}{3}$
 	
-	$\varphi(\weirdvct{0}{1}) = \weirdvct{2}{4} = \varphi(7 \weirdvct{1}{0} - 5 \weirdvct{0}{1}) = 7 \varphi(\weirdvct{1}{0}) -
-	5 \varphi(\weirdvct{0}{1}) = 7 \weirdvct{1}{5} + (-5) \weirdvct{2}{4} = \weirdvct{-3}{1}$\bigskip
+	$\varphi\left(\weirdvct{0}{1}\right) = \weirdvct{2}{4} = \varphi\left(7 \weirdvct{1}{0} - 5 \weirdvct{0}{1}\right) = 7 \varphi\left(\weirdvct{1}{0}\right) -
+	5 \varphi\left(\weirdvct{0}{1}\right) = 7 \weirdvct{1}{5} + (-5) \weirdvct{2}{4} = \weirdvct{-3}{1}$\\
 	
 	\underline{Gegeben:}
 	
-	Koordinaten eines Punktes bzgl. Basis $\mathcal{B}$ (z.B. Roboterkoordinaten) Abbildung $\varphi$
+	Koordinaten eines Punktes bzgl. Basis $\mathcal{B}$ (z.B. Roboterkoordinaten), Abbildung $\varphi$\\
 	
 	\underline{Gegeben:}
 	
 	Koordinaten dieses Punktes bzgl. Basis $\mathcal{C}$ (Weltkoordinatensystem) $\rightarrow$ später
 	
-	Koordinaten des mit $\varphi$ abgebildeten Punktes bzgl $\mathcal{C} \rightarrow$ jetzt
+	Koordinaten des mit $\varphi$ abgebildeten Punktes bzgl. $\mathcal{C} \rightarrow$ jetzt
 	
 \end{enumerate}
 
 
 
 % % %  6.3
-\subsection{}
+\subsection{Satz}
 
-% % %  6.4
-\subsection{}
+$V,W,\mathcal{B},\mathcal{C},\varphi$ wie in 6.1\bigskip
+
+Sei $v \in V,K_B(v)$ sei Koordinatenvektor von $v$ bzgl. $\mathcal{B}$ (enthält Koordinaten von $v$ bzgl. $\mathcal{B}$)
+
+Dann lässt sich der Koordinatenvektor von $\varphi(b)$ bzgl. $\mathcal{C}$ berechnen als
+\[K_\mathcal{C}(\varphi(V)) = A_\varphi^{\mathcal{B},\mathcal{C}} \cdot K_\mathcal{B}(v)\]
+
+\emph{Beweis}: nacher
+
+% % % 6.4
+\subsection{Beispiel}
+
+$\dim(V) = 3 \quad \mathcal{B} = (v_1,v_2,v_3) \quad \varphi: V \rightarrow W$\\
+$\dim(W) = 2 \quad \mathcal{C} = (w_1,w_2)$
+
+mit
+\[A_\varphi^{\mathcal{B},\mathcal{C}} \weirdvct{1\quad1\quad-2}{2\quad0\quad3}\]
+
+$v = \underline{5}\cdot v_1 \underline{-2} \cdot v_2 +\underline{4} \cdot v_3$, d.h. Koordinaten von $v$ bzgl. $\mathcal{B}$ sind $5,-2,4$
+
+\[K_\mathcal{B} =
+\aMatrix{c}
+{5\\-2\\4}
+\]
+
+Was sind Koordinaten von $\varphi(v)$ in Basis $\mathcal{C}$?
+
+\[
+K_\mathcal{C} = \aMatrix{ccc}{1 & 1 & -2 \\ 2 & 0 & 3}\cdot
+\aMatrix{c}{5\\-2\\4}= \weirdvct{-5}{22}
+\]
+
+d.h. $\varphi(v) = -5 \cdot w_1 + 22 \cdot w_2$\bigskip
+
+\subsubsection*{Beweis}
+
+\begin{align*}
+A_\varphi^{\mathcal{B},\mathcal{C}} =
+\aMatrix{c}{a_{11}\cdots a_{1n}\\\vdots\\a_{m1}\cdots a_{mn}},
+\quad v = \sum\limits_{i=0}^n \lambda_i v_i, \quad K_\mathcal{B}(v) =
+\aMatrix{c}{\lambda_1\\\vdots\\\lambda_n}
+\end{align*}
+\begin{align*}
+A_\varphi^{\mathcal{B},\mathcal{C}} \cdot K_\mathcal{B}(v) =
+\aMatrix{c}{\sum\limits_{i=1}^n a_{1i}\lambda_i\\\vdots\\\sum\limits_{i=1}^n a_{mi}\lambda_i}
+\end{align*}
+\begin{align*}
+\varphi(v) &= \varphi\left(\sum\cdots\right)\\
+&= \sum\limits_{i=1}^n \lambda_i \underbrace{\varphi(v_i)}_{\mathclap{\sum\limits_{k=1}^m a_{ki}w_k}}\\
+&= \sum\limits_{k=1}^m \underbrace{\left(\sum\limits_{i=1}^n \lambda_i a_{ki}\right)}_{\mathclap{\text{Koordinaten von }
+		\varphi(v) \text{ bzgl. } \mathcal{C}}} \cdot w_k\\
+\end{align*}
+\begin{align*}
+K_\varphi(\varphi(v)) =
+\aMatrix{c}{\sum\limits_{i=1}^n \lambda_i a_{1i}\\\vdots\\\sum\limits_{i=1}^n \lambda_i a_{mi}}
+\end{align*}
+\qed
