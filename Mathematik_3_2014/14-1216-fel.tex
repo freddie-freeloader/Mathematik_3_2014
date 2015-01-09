@@ -179,23 +179,30 @@ $A = \aMatrix{cc}{a & b \\ c & d} \in M_2(\R) \Rightarrow A^{-1} = \frac{1}{\det
 
 Sei $A \in M_n(K)$.
 
-Ein Skalar $\lambda \in K$ heißt \emph{Eigenwert} von $A$, wenn es einen Vektor $\zerovec \neq x \in K^n$ gibt (''nichttrivial'', d.h. $\neq 0$) mit
-%
-\[A\cdot x = \lambda x\]
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+Ein Skalar $\lambda \in K$ heißt \emph{Eigenwert} von $A$, wenn es einen Vektor $\zerovec \neq x \in K^n$ gibt (,,nichttrivial'', d.h. $\neq 0$) mit
+
+\[A\cdot x = \lambda x\].
+
+Jedes solche $x$ heißt dann ein za $lambda$ geh``origer \emph{Eigenvektor} von $A$ und $\Eig(\lambda)=\Eig_A(\lambda)=\{x \in K^n | Ax=\lambda\}$ (alle zu $lambda$ geh''or. EV \& der Nullvektor $\zerovec$) der $\lambda$ zugeordnete $\emph{Eigenraum}$.
+
+% % % 8.2
+\subsection{Satz}
+
+$\lambda \in K$ ist Eigenwert von $A \in A \in M_n(K) \Leftrightarrow \det(A-\lambda \cdot E_n) = \zerovec)$,
+
+und die zu $\lambda$ geh``origen Eigenvektoren sind genau die nichttrivialen L''osungen des LGS.
+
+$[A - \lambda \cdot E_n] x = \zerovec$, also $\Eig_A(\lambda_ = \ker(A- \lambda \cdot E_n)$.
+
+\subsubsection{Beweis}
+
+$Ax = \lambda x \Leftrightarrow Ax = \lambda \cdot E_n \cdot x \Leftrightarrow (A - \lambda E_n) x = \zerovec$
+
+Also: $\lambda$ Eigenwert von $A \Leftrightarrow (A- \lambda \cdot E_n)x = \zerovec$ hat noch andere L``osungen als 
+
+$x = \zerovec$\\
+$\underbrace{\Leftrightarrow}_{\text{Mathe III}} \rg(A-\lambda \cdot E_n) < n$\\
+$\underbrace{\Leftrightarrow}_{6.8}(A-\lambda \cdot E_n) \; \text{nicht invertierbar}$\\
+$\underbrace{\Leftrightarrow}_{7.9}\det(A-\lambda \cdot E_n) = 0$
+
+$x$ Eigenvektor $\Leftrightarrow x \neq \zerovec$ und $(A- \lambda \cdot E_n) x = \zerovec$
