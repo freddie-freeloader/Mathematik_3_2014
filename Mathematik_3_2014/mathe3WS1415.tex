@@ -1,3 +1,4 @@
+
 \documentclass[a4paper, 11pt, twosite, german, titlepage]{article}
 
 % Packages 
@@ -43,17 +44,15 @@
 % bitte so eindeutig, wie   %
 % moeglich halten!			%
 % % % % % % % % % % % % % % %
+
+% % Mengen % % % % % % % % % %
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
+
 % % Kuerzel % % % % % % % % % 
-\newcommand{\gdw}{\Leftrightarrow}
-% % Symbole % % % % % % % % %
-\newcommand{\zerovec}{\mathcal{O}} %Nullvektor
-\newcommand{\bigdot}{\,{\bullet}\,} %Verknuepfungsmal
-%
 \newcommand{\id}{\mathrm{ id }}
 \newcommand{\Abb}{\mathrm{ Abb }}
 \newcommand{\ggT}{\mathrm{ ggT }}
@@ -62,16 +61,24 @@
 \newcommand{\rg}{\mathrm{ rg }}
 \newcommand{\Grad}{\mathrm{ Grad }}
 \renewcommand{\mod}{\;\mathrm{ mod }\;}
+\newcommand{\gdw}{\Leftrightarrow}
+
+% % Symbole % % % % % % % % %
+\newcommand{\zerovec}{\mathcal{O}} %Nullvektor
+\newcommand{\bigdot}{\,{\bullet}\,} %Verknuepfungsmal
+
 % % "Konstrukte" % % % % % %
 \newcommand{\aset}[1]{\left\{#1\right\}} % Menge
 \newcommand{\abs}[1]{\left|#1\right|} % Betrag
 \newcommand{\without}[1]{\backslash \{#1\}} 
+
 % % Vektoren / Matrizen % % %
 \newcommand{\aMatrix}[2]{\arraycolsep=1.8pt\def\arraystretch{0.8}\left(\begin{array}{#1}
 #2 \end{array}\right)} % Matrix - erwartet als erstes Argument so viele c's, wie die Matrix Spalten hat, also etwa \aMatrix{cc}{1 & 2 \\ 3 & 4} fuer 2x2-Matrix
 \newcommand{\sPer}[3]{\aMatrix{ccc}{1 & 2 & 3 \\ #1 & #2 & #3}}
 % Definiere \vct ueber \aMatrix{c}{...}
 \newcommand{\vct}[1]{\aMatrix{c}{#1}} % Vektor - benutze \\ fuer neue Spalte
+% etwas andere Spaltenvektor Definition
 \newcommand{\weirdvct}[2]{\aMatrix{c}{#1\\#2}} % Vektor - benutze \\ fuer neue Spalte
 % % Textstuff % % % % % % % %
 \newcommand{\textunderset}[2]{\begin{tabular}[t]{@{}l@{}}
