@@ -1,0 +1,157 @@
+ % 10.1 - 10.7
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+ 
+% % % %
+% 10  %
+% % % %
+
+
+\section{Orthogonalsysteme}
+
+% % % % % % % % %
+% % % 10.1    % %
+% % % % % % % % %
+\subsection{Definition: orthogonal, Orthogonalsystem, Orthonormalsystem, Orthonormalbasis}
+V euklid. VR
+\begin{enumerate}
+\item
+$v,w \in V$ heißen \textbf{orthogonal} (senkrecht), $v \perp w$, fallso $(v|w)=0$ gilt.\\
+(d.h. $v=\mathcal{O}$ oder $w=\mathcal{O}$ oder winkel zw. v und w ist $\frac{\pi}{2}$) ($\mathcal{O}$ ist $\perp$ zu allen Vektoren)
+
+\item
+$M\subseteq V$ heißt \textbf{Orthogonalsystem} (OGS), falls $(v|w)=0 \ \forall v,w \in M, \ v\neq w$, gilt.\\
+(gilt zusätzlich $||v||=1 \ \forall v\in M$, so heißt M \textbf{Orthonormalsystem} (ONS))
+
+\item
+Ist V endlich dimensional, so heißt M \textbf{Orthogonalbasis} (ONB von V, falls M ONS und Basis von V ist.
+\end{enumerate}
+
+% % % % % % % % %
+% % % 10.2    % %
+% % % % % % % % %
+\subsection{Bemerkung}
+Jedes ONS ist l.u.:\\
+$v_1,\dots,v_k$ ONS, $\lambda_1v_1+\dots+\lambda_kv_k=\mathcal{O}$
+dann ist\\
+$0 = (v_1|\underbrace{\lambda_1v_2+\dots+\lambda_kv_k}_0) $\\
+$= \lambda_1\underbrace{(v_1|v_1)}_0 + \lambda_2\underbrace{(v_1|v_2)}_0+\dots+\lambda_k(v_1|v_k)$\\
+$ = \lambda_1$\\
+$\Rightarrow \lambda_1=0$\\
+analog für $\lambda_2,\dots,\lambda_k$, alle =0\\
+$\Rightarrow v_1,\dots,v_k$ l.u.
+
+\subsection*{}
+Man kann zu jedem Unterraum eines euklidischschen VR eine ONB berechnen.\\
+Geg.: $v_1\dots v_k\in V$\\
+Ges.: $w_1,\dots, w_k\in V$ (ONS) mit $<v_1,\dots,v_k>=<w_1,\dots,w_k>$\\
+\textbf{Idee:} starte mit 1. Vektor, $w_1=v_1$\\
+Baue $w_2$ aus $w_1$ und $v_2$:\\
+$w_2=v_2+\lambda w_1$ mit $\lambda$ so, dass $w_2 \perp w_1$.\\
+$w_1,w_2$ bilden dann OGS, $\frac{w_1}{||w_1||}$, $\frac{w_2}{||w_2||}$ bilden dann ONS.\\
+$w_1 \perp w_2 \Leftrightarrow (w_1|v_2+\lambda w_1)=0$\\
+$\Leftrightarrow (w_1|v_2)+\lambda\underbrace{(w_1|w_1)}_{||w_1||^2}=0$\\
+$\Leftrightarrow \lambda=\frac{-(w_1|v_2)}{||w_1||^2}$
+
+
+% % % % % % % % %
+% % % 10.3    % %
+% % % % % % % % %
+\subsection{Satz: Orthogonalisierungsverfahren von Gram-Schmidt}
+geg.: $v_1,\dots,v_k\in V$\\
+def.: $w_1,\dots,w_k\in V$ wie folgt:\\
+$w_1=v_1$\\
+$w_{r+1}:=v_{r+1}+\sum_{i=1}^r \lambda_i^{(r+1)}w_i$\\
+mit $\lambda_i^{(r+1)} := \frac{-(w_i|v_{r+1}}{||w_i||^2}$ falls $w_i\neq 0$\\
+und $y_1,y_2\in V$ als $y_r:=\frac{w_r}{||w_r||}$ (falls $w_r\neq \mathcal{O}$)
+
+\textbf{Dann gilt:}\begin{enumerate}
+\item
+Bricht die Iteration nach k Schritten nicht ab (d.h. $w_i\neq 0$ für $i=1\dots k$), so bilden $w_1,\dots,w_k$ ein OGS und $y_1,\dots,y_k$ ein ONS mit $<v_1,\dots,v_k>=<w_1,\dots,w_k>=<y_1,\dots,y_k>$
+
+\item
+Bricht die Iteration nach r Schritten ab (d.h. $w_r=\mathcal{O}$), so gilt: $v_1,\dots,v_{r-1}$ sind l.u., $v_1,\dots,v_r$ l.a.
+\end{enumerate}
+
+% % % % % % % % %
+% % % 10.4    % %
+% % % % % % % % %
+\subsection{Beispiel}
+$v_1=\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}, v_2=\begin{pmatrix}1 \\ 3 \\ 2\end{pmatrix} \in \mathbb{R}^3$
+
+gesucht:
+\begin{enumerate}
+\item
+ONB für die Ebene $<v_1,v_2>$
+\item
+Vektor $v_3$, der diese ONB zu einer ONB von $\mathbb{R}^3$ ergänzt.
+\end{enumerate}
+
+Lösung:
+\begin{enumerate}
+\item
+$w_1=v_1=\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}$\\
+$r=1, w_{r+1}=w_2$\\
+$w_2=v_2+\sum_{i=1}^1 \lambda_i^{(2)} = v_2+\lambda_1^{(2)}w_1$\\
+mit $\lambda_1^{(2)} = \frac{-(w_1|v_2)}{||w_1||^2}$\\
+$(w_1|v_2)=1*1+1*3+0*2=4$\\
+$||w_1||^2=1^2+1^2=2$\\
+$\Rightarrow w_2=\begin{pmatrix}1 \\ 3 \\ 2\end{pmatrix}-\frac{4}{2}*\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}=\begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}$\\
+$\Rightarrow$ OGB $\left\lbrace \begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix},\begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}\right\rbrace$\\
+$\Rightarrow$ ONB $\left\lbrace \frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}, \frac{1}{\sqrt{6}}\begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}\right\rbrace$
+
+\item
+Vektor, der $\lbrace w_1,w_2\rbrace$ zu Basis ergänzt, ist z.B.\\
+$v_3=\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}$\\
+(denn z.B. so zeigen: $\mathrm{det}\begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 0 \\ 0 & 2 & 0\end{pmatrix}=1*\mathrm{det}\begin{pmatrix}1 & 1 \\ 0 & 2\end{pmatrix}=1*2\neq 0 \Rightarrow w_1,w_2,w_3$ l.u.)
+
+$w_2=v_3-\frac{(w_1|v_3)}{||w_1||^2}*w_1-\frac{(w_2|v_3)}{||w_2||^2}*w_2 = \begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}-\frac{1}{2}*\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}+\frac{1}{6}*\begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}=\begin{pmatrix}\frac{1}{3} \\ -\frac{1}{3} \\ \frac{1}{3}\end{pmatrix}$,\\
+$||w_3||=\sqrt{\frac{1}{3}}$\\
+$y_3=\sqrt{3}\begin{pmatrix}\frac{1}{3} \\ -\frac{1}{3} \\ \frac{1}{3}\end{pmatrix}$
+\end{enumerate}
+
+% % % % % % % % %
+% % % 10.5    % %
+% % % % % % % % %
+\subsection{Definition: orthogonale Matrix}
+Eine Matrix $A\in M_n(\mathbb{R})$ heißt orthogonal, falls ihre Spektralvektoren eine ONB des $\mathbb{R}^n$ bilden.
+
+% % % % % % % % %
+% % % 10.6    % %
+% % % % % % % % %
+\subsection{Beispiel}
+$\mathbb{R}^2:$\\
+$A=\begin{pmatrix}\cos \alpha & -\sin \alpha\\ \underbrace{\sin \alpha}_{s_1} & \underbrace{\cos \alpha}_{s_2}\end{pmatrix} \ \ (\alpha\in\mathbb{R})$ ist orthogonal\\
+$(s_1|s_2)=\cos \alpha*(-\sin \alpha) + \sin \alpha*\cos\alpha = 0$\\
+$||s_1|| = ||s_2||\sqrt{\cos^2 \alpha + \sin^2 \alpha}=1$
+
+% ***DATE: 2015-01-20***
+
+% % % % % % % % %
+% % % 10.7    % %
+% % % % % % % % %
+\subsection{Satz: Eigenschaften von orthogonalen Matrizen}
+Sei $A\in M_n(\mathbb{R})$ orthogonal
+\begin{enumerate}
+\item $A^TA=E_n$
+\item A invertierbar, $A^{-1}=A^T$
+\item $||Av||=||v||$ (zugehörige Abb. ist ''Längentreu``)
+\item $|\mathrm{det}A|=1$
+\end{enumerate}
+\textbf{Beweis:}
+\begin{enumerate}
+\item $s_1,\dots,s_n$ Spalten von A\\
+bilden ONB $\Rightarrow (s_i|s_j)=\left\lbrace\begin{array}{ll}
+1 & \text{für } i=j\\
+0 & \text{für } i\neq j
+\end{array}\right.$\\
+$\Rightarrow A^TA=E_n$
+
+\item
+folgt aus (i)
+
+\item
+$||Av||^2 = (Av|Av) = (Av)^T*Av = v^TA^TAv \stackrel{(i)}{=} v^TE_nv = v^Tv = (v|v) = ||v||^2$
+
+\item
+$1=\mathrm{det}E_n \stackrel{(i)}{=} \mathrm{det}(A^TA) = \mathrm{det}(A^T)*\mathrm{det}(A) = \mathrm{det}(A)*\mathrm{det}(A) = (\mathrm{det}(A))^2$
+\end{enumerate}

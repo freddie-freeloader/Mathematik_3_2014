@@ -1,0 +1,156 @@
+ % 12.1 - 12.7
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+ 
+% % % %
+% 12  %
+% % % %
+\vspace*{0.5cm}
+\hspace*{1cm}
+\emph{Jetzt wieder 1-dimensionale Analysis:}
+\section{Taylorpolynome und Taylorreihe}
+
+% % % % % % % % %
+% % % 12.1   % %
+% % % % % % % % %
+\subsection{Definition}
+$I\subseteq \mathbb{R}$ Intervall, $x_0\in I, \ f:I\rightarrow\mathbb{R}$
+\begin{enumerate}
+	\item
+	$f^{(0)}:=f$\\
+	$f^{(1)}=f'$, falls f diffbar auf I\\
+	$\vdots$\\
+	$f^{(n)}=(f^{(n-1)})'$, falls $f^{(n-1)}$ diffbar auf I
+	
+	(f \textbf{n-mal differenzierbar}, $f^{(n)}$ \textbf{n-te Ableitung}
+	
+	\item
+	f heißt \textbf{unendlich oft differenzierbar}, falls f n-mal diffbar $\forall n\in\mathbb{N}$.\\
+	(Bez. auch $f^{(1)}=f',f^{(2)}=f'',\dots)$
+\end{enumerate}
+
+% % % % % % % % %
+% % % 12.2    % %
+% % % % % % % % %
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	$f(x)=x^2 \ \ \infty$ oft diffbar\\
+	$f'(x)=2x, \ f''(x)=2, \ f^{(n)}=0 \forall n\ge 3$
+	
+	\item
+	$f(x)=e^x$\\
+	$f^{(n)}(x)=e^x \forall n\in\mathbb{N}_0$
+	
+	\item
+	$f(x)=\left\lbrace\begin{array}{ll}
+	\frac{1}{2}x^2 & x\ge n\\
+	-\frac{1}{2}x^2 & x< 0
+	\end{array}\right.$\\
+	$f'(x)=\left\lbrace\begin{array}{ll}
+	x & x\ge 0\\
+	-x & x<0
+	\end{array}\right. = |x|$, nicht diffbar in $x=0$
+	
+	\item
+	$f:\mathbb{R}^+\rightarrow\mathbb{R}^+, \ \ f(x)=x^\alpha \ \ (\alpha\in\mathbb{R})$\\
+	$f'(x)=\alpha*x^{\alpha-1}$\\
+	$f^{(n)}=\alpha*(\alpha-1)*\dots*(\alpha-n+1)*x^{\alpha-n} = n!\underbrace{\begin{pmatrix}\alpha \\ n\end{pmatrix}}_{\text{binom.}}*x^{\alpha-n} \ \ \forall n\in\mathbb{N}_0$
+\end{enumerate}
+
+% % % % % % % % %
+% % % 12.3    % %
+% % % % % % % % %
+\subsection{Motivation}
+Polynome sind besonders einfach zu handhaben.\\
+Wir wollen komplizierte Funktonen möglichst gut mittels Polynome beschreiben / annähern.\\
+Damit zwei Funktionen ''ähnlich`` sind, sollten nicht nur ihre Funktionswerte in einigen Punkten übereinstimmen, sondern möglichst auch ihre Ableitung in diesen Punkten.
+
+
+\subsection*{}
+\textbf{gegeben:} Funktion $f: \ I\rightarrow \mathbb{R}, \ x_o\in I$\\
+\textbf{gesucht:} Polynom $T_n(x)$ vom Grad n, das f gut annähert, insbesondere an der Stelle $x_0$.\\
+Wie muss $T_n$ aussehen?
+\begin{enumerate}
+	\item[für $n=0$:]
+	(Grad 0, d.h. $T_0(x)$ ist Gerade)\\
+	$T_0(x)=f(x_0)$ (dann wenigstens Übereinstimmung in $x_0$):\\
+	$T_0(x_0)f(x_0)$
+	
+	\item[für $n=1$:]
+	$T_1(x)=f(x_0)+f'(x_0)*(x-x_0)$ Polynome vom Grad 1 $\surd$\\
+	$T_1(x_0)=f(x_0)+f'(x_0)$ (Übereinstimmung in $x_o$) $\surd$\\
+	$T_1'(x)=f'(x_0)$\\
+	$\Rightarrow T_1'(x_0)=f'(x_0)$ (Übereinstimmung der 1. Ableitung in $x_0$)
+	
+	\item[für $n=2$:]
+	$t_2(x)=f(x_0)+f'(x_0)*(x-x_0)+\frac{1}{2}*f''(x_0)*(x-x_0)^2$ Polynom vom Grad 2 $\surd$\\
+	$T_2(x_0)=f(x_0)+0+0$ (Übereinstimmung in $x_0$) $\surd$\\
+	$T_2'(x)=f'(x_0)+2*\frac{1}{2}*f**(x_0)*(x-x_o)^1=f'(x_0)+f''(x_0)(x-x_0)$\\
+	$T_2''(x)=f''(x_0)$\\
+	$T_2'(x_0)=f'(x_0)$\\
+	$T_2''(x_0)=f''(x_0)$ $T-2$ und f stimmen in 1. und 2. Ableitung an der Stelle $x_0$ überein.
+\end{enumerate}
+
+% % % % % % % % %
+% % % 12.4    % %
+% % % % % % % % %
+\subsection{Definition: Taylorpolynom}
+$F:I\rightarrow \mathbb{R}$ n-mal differenzierbar auf I, $x_0\in I$\\
+Dann heißt \[T_n(x):=\sum_{k=0}^n \frac{f^{(k)}(x_0)}{x-x_0}^k\] das \textbf{n-te Taylorplynome von f}, entwickelt um den Punkt $x_0\in I$.\\
+oben für $n=0,1,2$ gesehen:\\
+Für $T_n(x)$ gilt: $T_n(x_n)=f(x_n)$ und $T_n^{(k)}(x_0)=f^{(k)}(x_0)$ für $k=1\dots n$
+
+$T_n(x)$ nähert also f an. Wie gut?
+
+% % % % % % % % %
+% % % 12.5    % %
+% % % % % % % % %
+\subsection{Satz: Formel von Taylor mit Lagrange-Restglied}
+$f:I\rightarrow \mathbb{R}$ (n-1)-mal differenzierbar auf I, $x_0\in I$\\
+Sei $R_n(x):=f(x)-T_n(x)$\\
+der Fehler zwischen f un dem n-ten Taylorpolynom von f entwickelt um den Punkt $x_0$. (''Restglied``)\\
+Dann gibt es zu jedem $x\in I$ eine Stelle $\xi$ zwischen $x_0$ und $x$, so dass \[R_n(x)=\frac{f^{(n+1)}(\xi)}{n+1}*(x-x_0)^{n+1}\]
+(Merkregel: (n+1)-ter Term von $t_{n+1}(x)$ mit $\xi$ statt $x_0$)\\
+also ist f darstellbar durch das n-te Taylorpolynom mittels \[f(x)=\underbrace{\sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k}_{\text{Polynom vom Grad n}} + \underbrace{\frac{f^{(n+1)}(\xi)}{(n+1)!}}_{R_n(x)}(x-x_0)^{n+1}\]
+(Taylorentwicklung von f an der Stelle $X_0$)
+
+\textbf{Beweis:}\\
+Sei $g(x)=(x-x_)^{n+1}$\\
+Es gilt $R_n^{(k)}(x_0)=0$ und $g^{(k)}(x_0)=0 \ \forall k=0\dots n$\\
+$\frac{R(x)}{g(x)}=\frac{R(x)-R(x_0)}{g(x)-g(x_0)} \stackrel{*}{=} \frac{R'(\xi_1)}{g'(\xi_1)}$ für ein $\xi_1$ zwischen $x$ und $x_0$ (*: 2. Mittelwertsatz aus Mathe II)\\
+$=\frac{R'(\xi_1)-R'(x_0)}{g'(\xi_1)-g'(x_0)} \stackrel{*}{=} \frac{R''(\xi_2)}{g''(\xi_2)}$ für ein $\xi_2$ zw. $\xi_1$ und $x_0$\\
+$=\dots = \frac{R^{(n+1)}(\xi_{n+1})}{g^{(n+1)}(\xi_{n+1})} = \frac{f^{(n+1)}(\xi_{n+1})}{(n+1)!}$ für ein $\xi_{n+1}$ zwischen $\xi_n$ und $x_0$\\
+setze $\xi=\xi_{n+1}$, Behauptung folgt
+
+% % % % % % % % %
+% % % 12.6    % %
+% % % % % % % % %
+\subsection{Bemerkung}
+\begin{enumerate}
+	\item
+	Der Satz besagt:\\
+	$f(x)$ kann bis auf $R_n(x)$ als Polynom n-ten Grades dargestellt werden.\\
+	Je größer n, desto besser sollte diese Annäherung sein. Insbesondere ist interessant: gilt $R_n(x)\rightarrow 0$ für $n\rightarrow \infty$?
+	
+	\item
+	Es gibt auch andere Darstellungen des Restglieds, z.B: mit Integral.
+\end{enumerate}
+
+% % % % % % % % %
+% % % 12.7    % %
+% % % % % % % % %
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	$f(x)=e, \ x_0=0$\\
+	$f^{(k)}=e^x \ \forall k\in \mathbb{N}_0$\\
+	$f^{(k)}(x_0)=e^0=1$\\
+	$\Rightarrow T_n(x)=\sum_{k=0}^n \frac{f^{(k)}(0)}{k!}(x-0)^k = \sum_{k=0}^n \frac{1}{k!}x^k$\\
+	$\Rightarrow \underbrace{e^x}{f(x)}=\underbrace{\sum_{k=0}^n \frac{x^k}{k!}}_{T_n(x)}+\underbrace{\frac{e^\xi}{(n+1)!}*x^{n+1}}_{R_n(x)}$ ($\xi$ zwischen 0 und x)\\
+	$e^\xi$ ist beschränkt durch $e^0$ oder $e^x$, $\frac{x^{n+1}}{(n+1)!}\rightarrow 0$ für $n\rightarrow \infty$
+	
+	Also:\\
+	%
+	\[e^x=\sum_{k=0}^\infty \frac{x^k}{k!} \ \ \forall x\in\mathbb{R}\]
+	% 
+\end{enumerate}

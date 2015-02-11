@@ -1,0 +1,85 @@
+ % 9.1 - 9.6
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+ 
+
+% % %
+% 9 %
+% % %
+
+% % % 9.1
+\section{Norm- und Skalarprodukt}
+In diesem Kapitel betrachten wir nur $\mathbb{R}$-VR
+
+% % % 9.2
+\subsection{Definition: Norm}
+Für $v=\begin{pmatrix}v_1 \\ \vdots \\ v_n\end{pmatrix}\in\mathbb{R}^n$ heißt $||v|| := (\sum_{i=1}^n v_i^2)^{\frac{1}{2}}$ die \textbf{Norm} oder \textbf{Länge}
+
+% % % 9.3
+\subsection{Eigenschaften}
+\begin{enumerate}
+	\item
+	$||v|| \ge 0 \ \ \forall v\in\mathbb{R}^n$\\
+	$||v|| = 0 \Leftrightarrow v=\mathcal{O}$
+	
+	\item
+	$||\lambda v||=|\lambda|*||v|| \ \forall \lambda \in \mathbb{R}, \forall v\in\mathbb{R}^n$
+	
+	\item
+	$||v+w|| \le ||v||+||w|| \ \forall v,w \in \mathbb{R}^n$
+\end{enumerate}
+
+% % % 9.4
+\subsection{Definition: Skalarprodukt}
+Sind $v,w \in \mathbb{R}^3$ Vektoren, die einen Winkel $\alpha$ einschließen, so heißt \[(v|w) := ||v||*||w||*\cos \alpha\] das \textbf{Skalarprodukt} von v mit w.\\
+anschaulich: $(v|w)=$ Flächeninhalt des von v und w erzeugten Projektionsrechtecks.
+
+% % % 9.5
+\subsection{Eigenschaften des Skalarprodukts}
+seien $u,v,w \in \mathbb{R}^3, \lambda\in \mathbb{R}$
+\begin{enumerate}
+	\item $(v|w)\in R$ (d.h. ist Skalar, daher der Name)
+	\item $(v|w)=(w|v)$ (denn: $(v|w)=||v||*||w||*\cos \alpha = ||w||*||v||*\cos\alpha = (w|v)$)
+	\item $(\lambda*v|w)=(v|\lambda*w) = \lambda*(v|w)$\\
+	(denn $\lambda=0 \surd$\\
+	$\lambda >0: \ (\lambda v|w)=||\lambda*v||*||w||*\cos \alpha=\lambda*||v||*||w||\cos\alpha = \lambda(v|w)$\\
+	$\lambda <0:$ Winkel zw. $\lambda v$ und $w$ ist $\pi -\alpha \ \Rightarrow (\lambda v|w)=||\lambda*v||*||w||*\cos(\pi-\alpha) = -\lambda*||v||*||w||*(-\cos \alpha) = \lambda*(v|w)$)
+	\item $(u+v|w)=(u|w)+(v|w)$ (z.B. grafisch klarmachen)\\
+	wegen (ii) gilt (iii)\&(iv) auch im 2. Argument
+	
+	\item $(v|v)=||v||^2$ (denn: $\alpha =0: ||v||*||v||*1$)
+\end{enumerate}
+zur Berechnung:\\
+$e_1,e_2,e_3$ kanon. Basisvektoren in $\mathbb{R}^3$\\
+$(e_i|e_i)=1, \ (e_i|e_j)=1 \forall i\neq j$ (denn $\alpha=\frac{\pi}{2}$, Vektoren stehen senkrecht zueinander)\\
+$v=\begin{pmatrix}v_1 \\ v_2 \\ v_3\end{pmatrix}, \ w=\begin{pmatrix}w_1 \\ w_2 \\ w_3\end{pmatrix}\in \mathbb{R}^3$\\
+$\Rightarrow (v|w)=(v_1e_1+v_2e_2+v_3*e_3 | w_1e_1+w_2e_2+w_3e_3) \stackrel{(ii),(iii)}{=} v_1w_1(e_1|e_1)+v_1w_2(e_1|e_2)+v_1w_3(e_1|e_3)+\dots = v_1w_1+v_2w_2+v_3w_3$\\
+allgemein:
+
+% % % 9.5
+\subsection{Definition: Standardskalarprodukt, euklidischer Vektorraum, euklidische Norm \& Abstand}
+\begin{enumerate}
+	\item
+	für $v=\begin{pmatrix}v_1 \\ \vdots \\ v_n\end{pmatrix}, \ w=\begin{pmatrix}w_1 \\ \vdots \\ w_n\end{pmatrix}\in \mathbb{R}^3$\\
+	heißt \[(v|w):=\sum_{j=1}^n v_jw_j = v^Tw\] das \textbf{Standardskalarprodukt von v mit w}
+	
+	\item
+	für beliebigen $\mathbb{R}-VR \ V$:\\
+	Eine Abb $(\cdot | \cdot ): V\times V\rightarrow\mathbb{R} \ \ \ (v,w)\rightarrow (v,w)$ heißt \textbf{Skalarprodukt} auf V, falls $(\cdot | \cdot )$ Eigenschaften aus 9.4 erfüllt.\\
+	V heißt dann \textbf{euklidischer Vektorraum}.
+	
+	\item
+	für $v,w\in V$, V eukl. VR, so heißt \[||v|| := +\sqrt{(v|v)}\] die \textbf{(euklidische) Norm} von v, \[d(v,w)=||v-w||\] der \textbf{(euklid) Abstand} von v und w
+\end{enumerate}
+
+% % % 9.6
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	$v=\begin{pmatrix}-1 \\ 2 \\ 1\end{pmatrix}, w=\begin{pmatrix}2 \\ 2 \\ 4\end{pmatrix}\in\mathbb{R}^3$\\
+	$(v|w)=v^Tw=-1*2+2*2+1*4=6$\\
+	$||v||=+\sqrt{(v|v)}=\sqrt{(-1)^2+2^2+1^2}=+\sqrt{6}$\\
+	$d(v,w)=||v-w||=||\begin{pmatrix}-1-2 \\ 2-2 \\ 1-4\end{pmatrix}||=\sqrt{(-3)^2+0^2+(-3)^2}=\sqrt{18}$\\
+	Winkel zwischen v und w:\\
+	$(v|w)=||v||*||w||*\cos \alpha \Leftrightarrow \cos \frac{(v|w)}{||v||*||w||}=\frac{6}{\sqrt{6}\sqrt{24}}=\frac{1}{2}$\\
+	$\Rightarrow \alpha=\frac{\pi}{3}$
+\end{enumerate}

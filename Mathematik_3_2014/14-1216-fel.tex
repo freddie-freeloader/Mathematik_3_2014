@@ -1,23 +1,85 @@
-
+ %7.1 - 8.2
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
  
+% % %
+% 7 %
+% % %
+\section{Determinanten}
+
+% % % 7.1
+\subsection{Definition}
+$A\in M_n(K) \ \ \ i,j\in\lbrace 1,\dots,n\rbrace$\\
+$A_{ij}\in M_{n-1}(K)$ sei die Matrix, die man aus A durch Streichen der i-ten Zeile und der j-ten Spalte erhält.
+
+z.B. $A=\begin{pmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \\  7 & 8 & 9\end{pmatrix} \ \ A_{11}=\begin{pmatrix}5 & 6 \\ 8 & 9\end{pmatrix} \ \ A_{32}=\begin{pmatrix}1 & 3 \\ 4 & 6\end{pmatrix}$
+
+% % % 7.2
+\subsection{Definition: Determinante, rekursive Def.}
+$A\in M_n(K)$
+\begin{itemize}
+	\item[$n=1$] $A=(a)$, dann $\mathrm{det}(A):=a$
+	\item[$n>1$] \begin{align*}
+	{det}(A):&=\sum_{j=1}^n (-1)^{1+j}a_{1j}*\mathrm{det}(A_{1j})\\
+	&=a_{11}*\mathrm{det}(A_{11}-a_{12}*\mathrm{det}(A_{12})\\
+	& \ +a_{13}*\mathrm{det}(A_{13}-a_{14}*\mathrm{det}(A_{14})\\
+	& \ +\dots -\dots\\
+	& \ \dots +/- a_{1n}*\mathrm{det}(A_{1n})
+	\end{align*}
+\end{itemize}
+$\mathrm{det}(A)$ heißt \textbf{Determinante} von A\\
+(Formel heißt auch ''Entwicklung nach der 1. Zeile'' $\rightarrow$ später)
+
+% % % 7.3
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	$\mathrm{det}\begin{pmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{pmatrix}=a_{11}*a_{22}-a_{12}*a_{21}$
+	
+	\item
+	$\mathrm{det}\begin{pmatrix}a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33}\end{pmatrix} = a_{11}*(a_{22}*a_{33}-a_{23}*a_{32} -a_{12}*(a_{21}*a_{33}-a_{23}*a_{31}) + a_{13}*(a_{21}*a_{32}-a_{22}*a_{31}) = \dots$\\
+	Regel von Sarrus:\\
+	$\begin{pmatrix}a_{11} & a_{12} & a_{13} & a_{11} & a_{12}\\ a_{21} & a_{22} & a_{23} & a_{21} & a_{22} \\ a_{31} & a_{32} & a_{33} & a_{31} & a_{32}\end{pmatrix}$ Diagonalen von links oben nach rechts unten addieren, Diagonalen von rechts oben nach links unten subtrahieren
+	
+	\item
+	für $n\times n$-Matrix erhalte $n!$ Summanden (nicht schön! $n=5: 120$, $n=10: 3.6$Mio)
+	
+	\item
+	Ist A eine obere oder untere Dreiecksmatrix ist, so lässt sich $\mathrm{det}(A)$ einfach berechnen:\\
+	$A=\begin{pmatrix}a_{11} \\ a_{21} & a_{22} \\ \dots & \dots & \dots \\ a_{n1} & \dots & \dots & \dots & a_{nn}\end{pmatrix}, \ \mathrm{det}(A)=a_{11}*a_{22}*\dots*a_{nn}$
+	
+	klar für $n=1$: $A=(a)$\\
+	$n>1$: $\mathrm{det}(A)= a_{11}*\mathrm{det}(B)-\underbrace{a_{12}\mathrm{det}( )}_{0} +\underbrace{\dots}_{0}$, B: A ohne erste Spalte und erste Zeile\\
+	Beweis durch Induktion
+	
+	\item
+	damit klar: $\mathrm{det}(E_n)=1$
+\end{enumerate}
+
+% % % 7.4
+\subsection{Entwicklungssatz von Laplace}
+$A\in M_n(K)$
  \begin{enumerate}
  	\item
+ 	Entwicklung nach der i-ten Zeile:\\
+ 	für $i\in \lbrace 1,\dots,n\rbrace $ gilt:
+ 	%
+ 	\[\mathrm{det}(A)=\sum_{j=1}^n (-1)^{i+j} a_{ij}\mathrm{det}(A_{ij})\]
+ 	%
  	\item
  	Entwicklung nach der j-ten Spalte:
  	
  	für $i \in \aset{1, \dots, n}$ gilt:
  	%
- 	\[\det(A) = \sum_{j=1}^{n}(-1)^{i+j}a_{ij}\det(A_{ij})\]
+ 	\[\det(A) = \sum_{i=1}^{n}(-1)^{i+j}a_{ij}\det(A_{ij})\]
  	%
  	$(-1)^{i+j} \rightsquigarrow \aMatrix{cccccc}{
  	+ & - & + & - & + & \dots \\
  	- & + & - & + & \dots \\
  	+ & - & + & \dots \\
  	\dots}$
- 	
- 	
  \end{enumerate}
  
+ % % % 7.5
  \subsection{Beispiel}
  
  
@@ -56,12 +118,14 @@ Also: Es ist geschickt, nach einer Spalte oder Zeile zu entwickeln, in der viele
 
 Falls es wenig Nullen gibt: Zuerst Gauß anwenden (Auchtung: det. ändert sich dabei eventuell!)
 
+% % % 7.6
 \subsection{Bemerkung}
 
 Aus 7.4 %TODO Label
 folgt $\det(A)=\det(A^T)$
 
 
+% % % 7.7
 \subsection{Satz (Eigenschaften der Determinanten)}
 
 $A, B \in M_n(K), s_1, \dots, s_n$ Spalten von $A$,
@@ -108,6 +172,7 @@ Analog mit Zeilen statt Spalten!
 Vorsicht: Im Allgemeinen ist $\det(A+B) \neq \det(A)+ \det(B)$
 
 
+% % % 7.8
 \subsection{Bemerkung / Beispiel}
 
 Also: Erzeuge mit Gaußelimination viele Nulleinträge (! D2, D3: det ändert sich)
@@ -133,6 +198,7 @@ z.B.
 	- (-2) \cdot 1 \cdot 7 = 14$
  
  
+% % % 7.9
 \subsection{Satz (Charakterisietung invertierbarer Matrizen über det)}
 
 $A \in M_n(K)$ ist invertierbar $\gdw \det(A) = 0$
@@ -165,6 +231,7 @@ In diesem Fall gilt:
 	
 \end{itemize} 
 
+% % % 7.10
 \subsection{Bemerkung}
 
 Berechnung von $A^{-1}$ mittels 6.9 (Gauß mit $(A\;|\;E_n))$ oder auch mittels det, vgl. Übungsblatt 10, A1
@@ -175,30 +242,31 @@ $A = \aMatrix{cc}{a & b \\ c & d} \in M_2(\R) \Rightarrow A^{-1} = \frac{1}{\det
 
 \section{Eigenwerte und Eigenvektoren}
 
+% % % 8.1
 \subsection[Definition (Eigenwert)]{Definition}
 
 Sei $A \in M_n(K)$.
 
 Ein Skalar $\lambda \in K$ heißt \emph{Eigenwert} von $A$, wenn es einen Vektor $\zerovec \neq x \in K^n$ gibt (,,nichttrivial'', d.h. $\neq 0$) mit
 
-\[A\cdot x = \lambda x\].
+\[A\cdot x = \lambda x\]
 
-Jedes solche $x$ heißt dann ein za $lambda$ geh``origer \emph{Eigenvektor} von $A$ und $\Eig(\lambda)=\Eig_A(\lambda)=\{x \in K^n | Ax=\lambda\}$ (alle zu $lambda$ geh''or. EV \& der Nullvektor $\zerovec$) der $\lambda$ zugeordnete $\emph{Eigenraum}$.
+Jedes solche $x$ heißt dann ein zu $\lambda$ geh"origer \emph{Eigenvektor} von $A$ und $\Eig(\lambda)=\Eig_A(\lambda)=\{x \in K^n | Ax=\lambda\}$ (alle zu $\lambda$ geh"or. EV \& der Nullvektor $\zerovec$) der $\lambda$ zugeordnete $\emph{Eigenraum}$.
 
 % % % 8.2
 \subsection{Satz}
 
 $\lambda \in K$ ist Eigenwert von $A \in A \in M_n(K) \Leftrightarrow \det(A-\lambda \cdot E_n) = \zerovec)$,
 
-und die zu $\lambda$ geh``origen Eigenvektoren sind genau die nichttrivialen L''osungen des LGS.
+und die zu $\lambda$ geh"origen Eigenvektoren sind genau die nichttrivialen L"osungen des LGS.
 
 $[A - \lambda \cdot E_n] x = \zerovec$, also $\Eig_A(\lambda_ = \ker(A- \lambda \cdot E_n)$.
 
-\subsubsection{Beweis}
+\subsubsection*{Beweis}
 
 $Ax = \lambda x \Leftrightarrow Ax = \lambda \cdot E_n \cdot x \Leftrightarrow (A - \lambda E_n) x = \zerovec$
 
-Also: $\lambda$ Eigenwert von $A \Leftrightarrow (A- \lambda \cdot E_n)x = \zerovec$ hat noch andere L``osungen als 
+Also: $\lambda$ Eigenwert von $A \Leftrightarrow (A- \lambda \cdot E_n)x = \zerovec$ hat noch andere L"osungen als 
 
 $x = \zerovec$\\
 $\underbrace{\Leftrightarrow}_{\text{Mathe III}} \rg(A-\lambda \cdot E_n) < n$\\
@@ -206,3 +274,5 @@ $\underbrace{\Leftrightarrow}_{6.8}(A-\lambda \cdot E_n) \; \text{nicht invertie
 $\underbrace{\Leftrightarrow}_{7.9}\det(A-\lambda \cdot E_n) = 0$
 
 $x$ Eigenvektor $\Leftrightarrow x \neq \zerovec$ und $(A- \lambda \cdot E_n) x = \zerovec$
+
+

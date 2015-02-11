@@ -1,0 +1,96 @@
+ % 11.1 - 11.27
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+ 
+% % % %
+% 11  %
+% % % %
+\section{Mehrdimensionale Analysis}
+siehe Blatt im Moodle
+
+
+% % % % % % % % %
+% % % 11.13   % %
+% % % % % % % % %
+\setcounter{subsection}{12}
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	$f:\mathbb{R}^2\rightarrow\mathbb{R}$\\
+	$f(x,y)=e^x+y^2$\\
+	$\underbrace{f'(x,y}_{\text{Jacobimatrix}}=\begin{pmatrix}\frac{\partial f}{\partial x}(x,y) & \frac{\partial f}{\partial y}(x,y)\end{pmatrix}= \begin{pmatrix}e^x & 2y\end{pmatrix}$\\
+	$f'(0,0)=\begin{pmatrix}1 & 0\end{pmatrix}$\\
+	$\nabla f(x,y)=\begin{pmatrix}e^x \\ 2y\end{pmatrix}$
+	
+	\item
+	$f:\mathbb{R}^3\rightarrow \mathbb{R}^2, \ \ f(x,y,z)=\begin{pmatrix}x+y \\ x*y*z\end{pmatrix}$\\
+	$f'(x,y,z)=\begin{pmatrix}1 & 1 & 0 \\ yz & xz & xy\end{pmatrix}$\\
+	$f'(2,0,1)=\begin{pmatrix}1 & 1 & 0 \\ 0 &  2 & 0 \end{pmatrix}$
+\end{enumerate}
+
+\setcounter{subsection}{21}
+% % % % % % % % %
+% % % 11.22   % %
+% % % % % % % % %
+\subsection{Definition: (total)differenzierbar, affin-linear}
+$D\subseteq \mathbb{R}^n$ offen, $a\in D$\\
+$f:D\rightarrow \mathbb{R}^m$ heißt \textbf{(total)differenzierbar in a} wenn f in a partiell differenzierbar ist und geschrieben werden kann als $f(x)=f(a)+f'(a)(x-a)+\epsilon(x)$ mit $\epsilon: D\rightarrow \mathbb{R}^m$ mit $\lim\limits_{x\rightarrow a} \frac{||\epsilon(x)||}{||x-a||}=0$ (d.h. $\epsilon$ wird klein nahe a)\\
+($n=m=1$, erhalte Definition der Differenzierbarkeit aus Mathe II)\\
+Anschaulich:\\
+f kann in der nähe von a durch die \textbf{affin-lineare} Abbildung $x\mapsto \underbrace{f(a)}_{\text{konst.}}+\underbrace{\underbrace{f'(a)}_{\text{Matrix}}(x-a)}_{\text{linear}}$ beschrieben werden
+
+% % % % % % % % %
+% % % 11.23   % %
+% % % % % % % % %
+\subsection{Definition: Richtungsableitung}
+$D\subseteq \mathbb{R}^n$ offen, $f:D\rightarrow \mathbb{R}, \ a\in D$\\
+$v\in \mathbb{R}^n$ mit $||v||=1$\\
+f heißt \textbf{in a differenzierbar in Richtung v} wenn $\lim\limits_{h\rightarrow 0} \frac{f(a+hv)-f(a)}{h}$ ex.\\
+Der Grenzwert heißt dann \textbf{Richtungsabtleitung} von f in Richtung v im Punkt a.\\
+Bez.: $\frac{\partial f}{\partial v}(a)$
+
+% % % % % % % % %
+% % % 11.24   % %
+% % % % % % % % %
+\subsection{Bemerkung}
+$\frac{\partial f}{\partial x_j}$ ist die Richtungsableitung von f in Richtung $e_j=\begin{pmatrix}0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0\end{pmatrix}$ (1 an Stelle j)
+
+% % % % % % % % %
+% % % 11.25   % %
+% % % % % % % % %
+\subsection{Satz}
+sei $f: D\subseteq \mathbb{R}^n\rightarrow \mathbb{R}$ (total)differenzeirbar in $a\in D$\\
+Dann ex. in a alle Richtungsableitungen und für alle $v\in\mathbb{R}^n$ mit $||v||=1$ gilt:
+\[\frac{\partial f}{\partial v}(a)=f'(a)*v\]
+Die Richtungsableitug stellt den Anstieg von f an der Stelle a in Richtung v dar.
+
+\textbf{Beweis:}\\
+f differenzierbar, d.h. $f(x)=f(a)+f'(a)*(x-a)+\epsilon(x)$\\
+$\stackrel{x=a+h*v}{\Rightarrow} f(a+h*v)=f(a)+f*(a)*(a+h*v-a)+\epsilon(a+h*v)$\\
+$\stackrel{h\neq 0}{\Rightarrow} \frac{f(a+hv-f(a)}{h}=\frac{f'(a)*(hv)}{h} + \frac{\epsilon (a+hv)}{h}$\\
+$\frac{\partial f}{\partial v}=\lim\limits_{h\rightarrow 0}\frac{f(a+hv)-f(a)}{h}=f'(a)*v$\\
+\hspace*{13cm}$\square$
+
+% % % % % % % % %
+% % % 11.26   % %
+% % % % % % % % %
+\subsection{Beispiel}
+\begin{enumerate}
+	\item
+	Anstieg von $f(x,y)=x^2+y^2$ im Punkt $a=\begin{pmatrix}1 \\ 1 \end{pmatrix}$ in Richtung $v=\begin{pmatrix}\sin \alpha \\ \cos \alpha\end{pmatrix} \ \ (||v||=1)$\\
+	$\frac{\partial f}{\partial v}(1,1)=f'(1,1)*\begin{pmatrix}\sin \alpha \\ \cos \alpha\end{pmatrix}=\begin{pmatrix}2 & 2\end{pmatrix}*\begin{pmatrix}\sin \alpha \\ \cos \alpha	\end{pmatrix}=2*\sin \alpha+ 2*\cos\alpha$
+	
+	\item
+	$f(x,y)=2x^2+y^2, \ \ a=\begin{pmatrix}\frac{1}{2} \\ \frac{1}{2} \\ \frac{3}{4}\end{pmatrix}$ Punkt auf ''Gebirge''\\
+	\textbf{gesucht:} Richtung $v=\begin{pmatrix}v_1 \\ v_2\end{pmatrix}$, in der die Tangente an den Graph von f die Steigung $\frac{3}{\sqrt{2}}$ hat.\\
+	$\frac{\partial f}{\partial v}\left(\frac{1}{2},\frac{1}{2}\right)=f'\left(\frac{1}{2},\frac{1}{2}\right) = \begin{pmatrix}2 & 1\end{pmatrix}\begin{pmatrix}v_1 \\ v_2\end{pmatrix}=2v_1+v_2 \stackrel{!}{=} \frac{3}{\sqrt{2}}$ und $||v||=1$, d.h. $v_1^2+v_2^2=1$\\
+	Gleichungssystem lösen...\\
+	ergibt $v=\begin{pmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{pmatrix}$ und $v=\begin{pmatrix}\frac{7}{5\sqrt{2}} \\ \frac{1}{5 \sqrt{2}}\end{pmatrix}$
+\end{enumerate}
+
+% % % % % % % % %
+% % % 11.27   % %
+% % % % % % % % %
+\subsection{Bemerkung}
+Es gilt: $\frac{\partial f}{\partial v}(a)=f'(a)*v=(\nabla f)^T*v = ||\nabla f(a)||*||v||*\cos \alpha$, $\alpha$: Winkel zw. $\nabla f$ und v\\
+$\Rightarrow$ Richtungsableitung: $\frac{\partial f}{\partial v}(a)$ ist am größten, wenn $\cos \alpha = 1$, also $\alpha=0$  ist, d.h. wenn der Richtungsvektor v in Richtung des Gradienten zeigt.\\
+Der Gradient zeigt also immer in die Richtung des steilsten Anstiegs der Funktion.
