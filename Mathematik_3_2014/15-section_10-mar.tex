@@ -93,18 +93,18 @@ $w_1=v_1=\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}$\\
 $r=1, w_{r+1}=w_2$\\
 $w_2=v_2+\sum_{i=1}^1 \lambda_i^{(2)} = v_2+\lambda_1^{(2)}w_1$\\
 mit $\lambda_1^{(2)} = \frac{-(w_1|v_2)}{||w_1||^2}$\\
-$(w_1|v_2)=1*1+1*3+0*2=4$\\
+$(w_1|v_2)=1\cdot 1+1\cdot 3+0\cdot 2=4$\\
 $||w_1||^2=1^2+1^2=2$\\
-$\Rightarrow w_2=\begin{pmatrix}1 \\ 3 \\ 2\end{pmatrix}-\frac{4}{2}*\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}=\begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}$\\
+$\Rightarrow w_2=\begin{pmatrix}1 \\ 3 \\ 2\end{pmatrix}-\frac{4}{2}\cdot \begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}=\begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}$\\
 $\Rightarrow$ OGB $\left\lbrace \begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix},\begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}\right\rbrace$\\
 $\Rightarrow$ ONB $\left\lbrace \frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}, \frac{1}{\sqrt{6}}\begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}\right\rbrace$
 
 \item
 Vektor, der $\lbrace w_1,w_2\rbrace$ zu Basis ergänzt, ist z.B.\\
 $v_3=\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}$\\
-(denn z.B. so zeigen: $\mathrm{det}\begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 0 \\ 0 & 2 & 0\end{pmatrix}=1*\mathrm{det}\begin{pmatrix}1 & 1 \\ 0 & 2\end{pmatrix}=1*2\neq 0 \Rightarrow w_1,w_2,w_3$ l.u.)
+(denn z.B. so zeigen: $\mathrm{det}\begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 0 \\ 0 & 2 & 0\end{pmatrix}=1\cdot \mathrm{det}\begin{pmatrix}1 & 1 \\ 0 & 2\end{pmatrix}=1\cdot 2\neq 0 \Rightarrow w_1,w_2,w_3$ l.u.)
 
-$w_2=v_3-\frac{(w_1|v_3)}{||w_1||^2}*w_1-\frac{(w_2|v_3)}{||w_2||^2}*w_2 = \begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}-\frac{1}{2}*\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}+\frac{1}{6}*\begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}=\begin{pmatrix}\frac{1}{3} \\ -\frac{1}{3} \\ \frac{1}{3}\end{pmatrix}$,\\
+$w_2=v_3-\frac{(w_1|v_3)}{||w_1||^2}\cdot w_1-\frac{(w_2|v_3)}{||w_2||^2}\cdot w_2 = \begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}-\frac{1}{2}\cdot \begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}+\frac{1}{6}\cdot \begin{pmatrix}-1 \\ 1 \\ 2\end{pmatrix}=\begin{pmatrix}\frac{1}{3} \\ -\frac{1}{3} \\ \frac{1}{3}\end{pmatrix}$,\\
 $||w_3||=\sqrt{\frac{1}{3}}$\\
 $y_3=\sqrt{3}\begin{pmatrix}\frac{1}{3} \\ -\frac{1}{3} \\ \frac{1}{3}\end{pmatrix}$
 \end{enumerate}
@@ -121,7 +121,7 @@ Eine Matrix $A\in M_n(\mathbb{R})$ heißt orthogonal, falls ihre Spektralvektore
 \subsection{Beispiel}
 $\mathbb{R}^2:$\\
 $A=\begin{pmatrix}\cos \alpha & -\sin \alpha\\ \underbrace{\sin \alpha}_{s_1} & \underbrace{\cos \alpha}_{s_2}\end{pmatrix} \ \ (\alpha\in\mathbb{R})$ ist orthogonal\\
-$(s_1|s_2)=\cos \alpha*(-\sin \alpha) + \sin \alpha*\cos\alpha = 0$\\
+$(s_1|s_2)=\cos \alpha\cdot (-\sin \alpha) + \sin \alpha\cdot \cos\alpha = 0$\\
 $||s_1|| = ||s_2||\sqrt{\cos^2 \alpha + \sin^2 \alpha}=1$
 
 % ***DATE: 2015-01-20***
@@ -150,8 +150,8 @@ $\Rightarrow A^TA=E_n$
 folgt aus (i)
 
 \item
-$||Av||^2 = (Av|Av) = (Av)^T*Av = v^TA^TAv \stackrel{(i)}{=} v^TE_nv = v^Tv = (v|v) = ||v||^2$
+$||Av||^2 = (Av|Av) = (Av)^T\cdot Av = v^TA^TAv \stackrel{(i)}{=} v^TE_nv = v^Tv = (v|v) = ||v||^2$
 
 \item
-$1=\mathrm{det}E_n \stackrel{(i)}{=} \mathrm{det}(A^TA) = \mathrm{det}(A^T)*\mathrm{det}(A) = \mathrm{det}(A)*\mathrm{det}(A) = (\mathrm{det}(A))^2$
+$1=\mathrm{det}E_n \stackrel{(i)}{=} \mathrm{det}(A^TA) = \mathrm{det}(A^T)\cdot \mathrm{det}(A) = \mathrm{det}(A)\cdot \mathrm{det}(A) = (\mathrm{det}(A))^2$
 \end{enumerate}

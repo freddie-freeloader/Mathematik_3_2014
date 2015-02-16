@@ -24,7 +24,7 @@
 	$\nabla f(x,y)=\begin{pmatrix}e^x \\ 2y\end{pmatrix}$
 	
 	\item
-	$f:\mathbb{R}^3\rightarrow \mathbb{R}^2, \ \ f(x,y,z)=\begin{pmatrix}x+y \\ x*y*z\end{pmatrix}$\\
+	$f:\mathbb{R}^3\rightarrow \mathbb{R}^2, \ \ f(x,y,z)=\begin{pmatrix}x+y \\ x\cdot y\cdot z\end{pmatrix}$\\
 	$f'(x,y,z)=\begin{pmatrix}1 & 1 & 0 \\ yz & xz & xy\end{pmatrix}$\\
 	$f'(2,0,1)=\begin{pmatrix}1 & 1 & 0 \\ 0 &  2 & 0 \end{pmatrix}$
 \end{enumerate}
@@ -66,14 +66,14 @@ $\frac{\partial f}{\partial x_j}$ ist die Richtungsableitung von f in Richtung $
 \subsection{Satz}
 sei $f: D\subseteq \mathbb{R}^n\rightarrow \mathbb{R}$ (total)differenzeirbar in $a\in D$\\
 Dann ex. in a alle Richtungsableitungen und für alle $v\in\mathbb{R}^n$ mit $||v||=1$ gilt:
-\[\frac{\partial f}{\partial v}(a)=f'(a)*v\]
+\[\frac{\partial f}{\partial v}(a)=f'(a)\cdot v\]
 Die Richtungsableitug stellt den Anstieg von f an der Stelle a in Richtung v dar.
 
 \textbf{Beweis:}\\
-f differenzierbar, d.h. $f(x)=f(a)+f'(a)*(x-a)+\epsilon(x)$\\
-$\stackrel{x=a+h*v}{\Rightarrow} f(a+h*v)=f(a)+f*(a)*(a+h*v-a)+\epsilon(a+h*v)$\\
-$\stackrel{h\neq 0}{\Rightarrow} \frac{f(a+hv-f(a)}{h}=\frac{f'(a)*(hv)}{h} + \frac{\epsilon (a+hv)}{h}$\\
-$\frac{\partial f}{\partial v}=\lim\limits_{h\rightarrow 0}\frac{f(a+hv)-f(a)}{h}=f'(a)*v$\\
+f differenzierbar, d.h. $f(x)=f(a)+f'(a)\cdot (x-a)+\epsilon(x)$\\
+$\stackrel{x=a+h\cdot v}{\Rightarrow} f(a+h\cdot v)=f(a)+f\cdot (a)\cdot (a+h\cdot v-a)+\epsilon(a+h\cdot v)$\\
+$\stackrel{h\neq 0}{\Rightarrow} \frac{f(a+hv-f(a)}{h}=\frac{f'(a)\cdot (hv)}{h} + \frac{\epsilon (a+hv)}{h}$\\
+$\frac{\partial f}{\partial v}=\lim\limits_{h\rightarrow 0}\frac{f(a+hv)-f(a)}{h}=f'(a)\cdot v$\\
 \hspace*{13cm}$\square$
 
 % % % % % % % % %
@@ -83,7 +83,7 @@ $\frac{\partial f}{\partial v}=\lim\limits_{h\rightarrow 0}\frac{f(a+hv)-f(a)}{h
 \begin{enumerate}
 	\item
 	Anstieg von $f(x,y)=x^2+y^2$ im Punkt $a=\begin{pmatrix}1 \\ 1 \end{pmatrix}$ in Richtung $v=\begin{pmatrix}\sin \alpha \\ \cos \alpha\end{pmatrix} \ \ (||v||=1)$\\
-	$\frac{\partial f}{\partial v}(1,1)=f'(1,1)*\begin{pmatrix}\sin \alpha \\ \cos \alpha\end{pmatrix}=\begin{pmatrix}2 & 2\end{pmatrix}*\begin{pmatrix}\sin \alpha \\ \cos \alpha	\end{pmatrix}=2*\sin \alpha+ 2*\cos\alpha$
+	$\frac{\partial f}{\partial v}(1,1)=f'(1,1)\cdot \begin{pmatrix}\sin \alpha \\ \cos \alpha\end{pmatrix}=\begin{pmatrix}2 & 2\end{pmatrix}\cdot \begin{pmatrix}\sin \alpha \\ \cos \alpha	\end{pmatrix}=2\cdot \sin \alpha+ 2\cdot \cos\alpha$
 	
 	\item
 	$f(x,y)=2x^2+y^2, \ \ a=\begin{pmatrix}\frac{1}{2} \\ \frac{1}{2} \\ \frac{3}{4}\end{pmatrix}$ Punkt auf ''Gebirge''\\
@@ -97,6 +97,6 @@ $\frac{\partial f}{\partial v}=\lim\limits_{h\rightarrow 0}\frac{f(a+hv)-f(a)}{h
 % % % 11.27   % %
 % % % % % % % % %
 \subsection{Bemerkung}
-Es gilt: $\frac{\partial f}{\partial v}(a)=f'(a)*v=(\nabla f)^T*v = ||\nabla f(a)||*||v||*\cos \alpha$, $\alpha$: Winkel zw. $\nabla f$ und v\\
+Es gilt: $\frac{\partial f}{\partial v}(a)=f'(a)\cdot v=(\nabla f)^T\cdot v = ||\nabla f(a)||\cdot ||v||\cdot \cos \alpha$, $\alpha$: Winkel zw. $\nabla f$ und v\\
 $\Rightarrow$ Richtungsableitung: $\frac{\partial f}{\partial v}(a)$ ist am größten, wenn $\cos \alpha = 1$, also $\alpha=0$  ist, d.h. wenn der Richtungsvektor v in Richtung des Gradienten zeigt.\\
 Der Gradient zeigt also immer in die Richtung des steilsten Anstiegs der Funktion.

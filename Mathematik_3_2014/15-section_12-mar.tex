@@ -53,8 +53,8 @@ $I\subseteq \mathbb{R}$ Intervall, $x_0\in I, \ f:I\rightarrow\mathbb{R}$
 	
 	\item
 	$f:\mathbb{R}^+\rightarrow\mathbb{R}^+, \ \ f(x)=x^\alpha \ \ (\alpha\in\mathbb{R})$\\
-	$f'(x)=\alpha*x^{\alpha-1}$\\
-	$f^{(n)}=\alpha*(\alpha-1)*\dots*(\alpha-n+1)*x^{\alpha-n} = n!\underbrace{\begin{pmatrix}\alpha \\ n\end{pmatrix}}_{\text{binom.}}*x^{\alpha-n} \ \ \forall n\in\mathbb{N}_0$
+	$f'(x)=\alpha\cdot x^{\alpha-1}$\\
+	$f^{(n)}=\alpha\cdot (\alpha-1)\cdot \dots\cdot (\alpha-n+1)\cdot x^{\alpha-n} = n!\underbrace{\begin{pmatrix}\alpha \\ n\end{pmatrix}}_{\text{binom.}}\cdot x^{\alpha-n} \ \ \forall n\in\mathbb{N}_0$
 \end{enumerate}
 
 % % % % % % % % %
@@ -77,15 +77,15 @@ Wie muss $T_n$ aussehen?
 	$T_0(x_0)f(x_0)$
 	
 	\item[für $n=1$:]
-	$T_1(x)=f(x_0)+f'(x_0)*(x-x_0)$ Polynome vom Grad 1 $\surd$\\
+	$T_1(x)=f(x_0)+f'(x_0)\cdot (x-x_0)$ Polynome vom Grad 1 $\surd$\\
 	$T_1(x_0)=f(x_0)+f'(x_0)$ (Übereinstimmung in $x_o$) $\surd$\\
 	$T_1'(x)=f'(x_0)$\\
 	$\Rightarrow T_1'(x_0)=f'(x_0)$ (Übereinstimmung der 1. Ableitung in $x_0$)
 	
 	\item[für $n=2$:]
-	$t_2(x)=f(x_0)+f'(x_0)*(x-x_0)+\frac{1}{2}*f''(x_0)*(x-x_0)^2$ Polynom vom Grad 2 $\surd$\\
+	$t_2(x)=f(x_0)+f'(x_0)\cdot (x-x_0)+\frac{1}{2}\cdot f''(x_0)\cdot (x-x_0)^2$ Polynom vom Grad 2 $\surd$\\
 	$T_2(x_0)=f(x_0)+0+0$ (Übereinstimmung in $x_0$) $\surd$\\
-	$T_2'(x)=f'(x_0)+2*\frac{1}{2}*f**(x_0)*(x-x_o)^1=f'(x_0)+f''(x_0)(x-x_0)$\\
+	$T_2'(x)=f'(x_0)+2\cdot \frac{1}{2}\cdot f**(x_0)\cdot (x-x_o)^1=f'(x_0)+f''(x_0)(x-x_0)$\\
 	$T_2''(x)=f''(x_0)$\\
 	$T_2'(x_0)=f'(x_0)$\\
 	$T_2''(x_0)=f''(x_0)$ $T-2$ und f stimmen in 1. und 2. Ableitung an der Stelle $x_0$ überein.
@@ -109,7 +109,7 @@ $T_n(x)$ nähert also f an. Wie gut?
 $f:I\rightarrow \mathbb{R}$ (n-1)-mal differenzierbar auf I, $x_0\in I$\\
 Sei $R_n(x):=f(x)-T_n(x)$\\
 der Fehler zwischen f un dem n-ten Taylorpolynom von f entwickelt um den Punkt $x_0$. (''Restglied``)\\
-Dann gibt es zu jedem $x\in I$ eine Stelle $\xi$ zwischen $x_0$ und $x$, so dass \[R_n(x)=\frac{f^{(n+1)}(\xi)}{n+1}*(x-x_0)^{n+1}\]
+Dann gibt es zu jedem $x\in I$ eine Stelle $\xi$ zwischen $x_0$ und $x$, so dass \[R_n(x)=\frac{f^{(n+1)}(\xi)}{n+1}\cdot (x-x_0)^{n+1}\]
 (Merkregel: (n+1)-ter Term von $t_{n+1}(x)$ mit $\xi$ statt $x_0$)\\
 also ist f darstellbar durch das n-te Taylorpolynom mittels \[f(x)=\underbrace{\sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k}_{\text{Polynom vom Grad n}} + \underbrace{\frac{f^{(n+1)}(\xi)}{(n+1)!}}_{R_n(x)}(x-x_0)^{n+1}\]
 (Taylorentwicklung von f an der Stelle $X_0$)
@@ -146,7 +146,7 @@ setze $\xi=\xi_{n+1}$, Behauptung folgt
 	$f^{(k)}=e^x \ \forall k\in \mathbb{N}_0$\\
 	$f^{(k)}(x_0)=e^0=1$\\
 	$\Rightarrow T_n(x)=\sum_{k=0}^n \frac{f^{(k)}(0)}{k!}(x-0)^k = \sum_{k=0}^n \frac{1}{k!}x^k$\\
-	$\Rightarrow \underbrace{e^x}{f(x)}=\underbrace{\sum_{k=0}^n \frac{x^k}{k!}}_{T_n(x)}+\underbrace{\frac{e^\xi}{(n+1)!}*x^{n+1}}_{R_n(x)}$ ($\xi$ zwischen 0 und x)\\
+	$\Rightarrow \underbrace{e^x}{f(x)}=\underbrace{\sum_{k=0}^n \frac{x^k}{k!}}_{T_n(x)}+\underbrace{\frac{e^\xi}{(n+1)!}\cdot x^{n+1}}_{R_n(x)}$ ($\xi$ zwischen 0 und x)\\
 	$e^\xi$ ist beschränkt durch $e^0$ oder $e^x$, $\frac{x^{n+1}}{(n+1)!}\rightarrow 0$ für $n\rightarrow \infty$
 	
 	Also:\\

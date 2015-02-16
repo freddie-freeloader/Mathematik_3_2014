@@ -22,7 +22,7 @@ Für $v=\begin{pmatrix}v_1 \\ \vdots \\ v_n\end{pmatrix}\in\mathbb{R}^n$ heißt 
 	$||v|| = 0 \Leftrightarrow v=\mathcal{O}$
 	
 	\item
-	$||\lambda v||=|\lambda|*||v|| \ \forall \lambda \in \mathbb{R}, \forall v\in\mathbb{R}^n$
+	$||\lambda v||=|\lambda|\cdot ||v|| \ \forall \lambda \in \mathbb{R}, \forall v\in\mathbb{R}^n$
 	
 	\item
 	$||v+w|| \le ||v||+||w|| \ \forall v,w \in \mathbb{R}^n$
@@ -30,7 +30,7 @@ Für $v=\begin{pmatrix}v_1 \\ \vdots \\ v_n\end{pmatrix}\in\mathbb{R}^n$ heißt 
 
 % % % 9.4
 \subsection{Definition: Skalarprodukt}
-Sind $v,w \in \mathbb{R}^3$ Vektoren, die einen Winkel $\alpha$ einschließen, so heißt \[(v|w) := ||v||*||w||*\cos \alpha\] das \textbf{Skalarprodukt} von v mit w.\\
+Sind $v,w \in \mathbb{R}^3$ Vektoren, die einen Winkel $\alpha$ einschließen, so heißt \[(v|w) := ||v||\cdot ||w||\cdot \cos \alpha\] das \textbf{Skalarprodukt} von v mit w.\\
 anschaulich: $(v|w)=$ Flächeninhalt des von v und w erzeugten Projektionsrechtecks.
 
 % % % 9.5
@@ -38,21 +38,21 @@ anschaulich: $(v|w)=$ Flächeninhalt des von v und w erzeugten Projektionsrechte
 seien $u,v,w \in \mathbb{R}^3, \lambda\in \mathbb{R}$
 \begin{enumerate}
 	\item $(v|w)\in R$ (d.h. ist Skalar, daher der Name)
-	\item $(v|w)=(w|v)$ (denn: $(v|w)=||v||*||w||*\cos \alpha = ||w||*||v||*\cos\alpha = (w|v)$)
-	\item $(\lambda*v|w)=(v|\lambda*w) = \lambda*(v|w)$\\
+	\item $(v|w)=(w|v)$ (denn: $(v|w)=||v||\cdot ||w||\cdot \cos \alpha = ||w||\cdot ||v||\cdot \cos\alpha = (w|v)$)
+	\item $(\lambda\cdot v|w)=(v|\lambda\cdot w) = \lambda\cdot (v|w)$\\
 	(denn $\lambda=0 \surd$\\
-	$\lambda >0: \ (\lambda v|w)=||\lambda*v||*||w||*\cos \alpha=\lambda*||v||*||w||\cos\alpha = \lambda(v|w)$\\
-	$\lambda <0:$ Winkel zw. $\lambda v$ und $w$ ist $\pi -\alpha \ \Rightarrow (\lambda v|w)=||\lambda*v||*||w||*\cos(\pi-\alpha) = -\lambda*||v||*||w||*(-\cos \alpha) = \lambda*(v|w)$)
+	$\lambda >0: \ (\lambda v|w)=||\lambda\cdot v||\cdot ||w||\cdot \cos \alpha=\lambda\cdot ||v||\cdot ||w||\cos\alpha = \lambda(v|w)$\\
+	$\lambda <0:$ Winkel zw. $\lambda v$ und $w$ ist $\pi -\alpha \ \Rightarrow (\lambda v|w)=||\lambda\cdot v||\cdot ||w||\cdot \cos(\pi-\alpha) = -\lambda\cdot ||v||\cdot ||w||\cdot (-\cos \alpha) = \lambda\cdot (v|w)$)
 	\item $(u+v|w)=(u|w)+(v|w)$ (z.B. grafisch klarmachen)\\
 	wegen (ii) gilt (iii)\&(iv) auch im 2. Argument
 	
-	\item $(v|v)=||v||^2$ (denn: $\alpha =0: ||v||*||v||*1$)
+	\item $(v|v)=||v||^2$ (denn: $\alpha =0: ||v||\cdot ||v||\cdot 1$)
 \end{enumerate}
 zur Berechnung:\\
 $e_1,e_2,e_3$ kanon. Basisvektoren in $\mathbb{R}^3$\\
 $(e_i|e_i)=1, \ (e_i|e_j)=1 \forall i\neq j$ (denn $\alpha=\frac{\pi}{2}$, Vektoren stehen senkrecht zueinander)\\
 $v=\begin{pmatrix}v_1 \\ v_2 \\ v_3\end{pmatrix}, \ w=\begin{pmatrix}w_1 \\ w_2 \\ w_3\end{pmatrix}\in \mathbb{R}^3$\\
-$\Rightarrow (v|w)=(v_1e_1+v_2e_2+v_3*e_3 | w_1e_1+w_2e_2+w_3e_3) \stackrel{(ii),(iii)}{=} v_1w_1(e_1|e_1)+v_1w_2(e_1|e_2)+v_1w_3(e_1|e_3)+\dots = v_1w_1+v_2w_2+v_3w_3$\\
+$\Rightarrow (v|w)=(v_1e_1+v_2e_2+v_3\cdot e_3 | w_1e_1+w_2e_2+w_3e_3) \stackrel{(ii),(iii)}{=} v_1w_1(e_1|e_1)+v_1w_2(e_1|e_2)+v_1w_3(e_1|e_3)+\dots = v_1w_1+v_2w_2+v_3w_3$\\
 allgemein:
 
 % % % 9.5
@@ -76,10 +76,10 @@ allgemein:
 \begin{enumerate}
 	\item
 	$v=\begin{pmatrix}-1 \\ 2 \\ 1\end{pmatrix}, w=\begin{pmatrix}2 \\ 2 \\ 4\end{pmatrix}\in\mathbb{R}^3$\\
-	$(v|w)=v^Tw=-1*2+2*2+1*4=6$\\
+	$(v|w)=v^Tw=-1\cdot 2+2\cdot 2+1\cdot 4=6$\\
 	$||v||=+\sqrt{(v|v)}=\sqrt{(-1)^2+2^2+1^2}=+\sqrt{6}$\\
 	$d(v,w)=||v-w||=||\begin{pmatrix}-1-2 \\ 2-2 \\ 1-4\end{pmatrix}||=\sqrt{(-3)^2+0^2+(-3)^2}=\sqrt{18}$\\
 	Winkel zwischen v und w:\\
-	$(v|w)=||v||*||w||*\cos \alpha \Leftrightarrow \cos \frac{(v|w)}{||v||*||w||}=\frac{6}{\sqrt{6}\sqrt{24}}=\frac{1}{2}$\\
+	$(v|w)=||v||\cdot ||w||\cdot \cos \alpha \Leftrightarrow \cos \frac{(v|w)}{||v||\cdot ||w||}=\frac{6}{\sqrt{6}\sqrt{24}}=\frac{1}{2}$\\
 	$\Rightarrow \alpha=\frac{\pi}{3}$
 \end{enumerate}
