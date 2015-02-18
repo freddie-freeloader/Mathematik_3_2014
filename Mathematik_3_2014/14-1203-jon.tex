@@ -133,8 +133,8 @@ $V,W,\mathcal{B},\mathcal{C},\varphi$ wie in 6.1\bigskip
 
 Sei $v \in V,K_B(v)$ sei Koordinatenvektor von $v$ bzgl. $\mathcal{B}$ (enthält Koordinaten von $v$ bzgl. $\mathcal{B}$)
 
-Dann lässt sich der Koordinatenvektor von $\varphi(b)$ bzgl. $\mathcal{C}$ berechnen als
-\[K_\mathcal{C}(\varphi(V)) = A_\varphi^{\mathcal{B},\mathcal{C}} \cdot K_\mathcal{B}(v)\]
+Dann lässt sich der Koordinatenvektor von $\varphi(v)$ bzgl. $\mathcal{C}$ berechnen als
+\[K_\mathcal{C}(\varphi(v)) = A_\varphi^{\mathcal{B},\mathcal{C}} \cdot K_\mathcal{B}(v)\]
 
 \emph{Beweis}: nacher
 
@@ -203,7 +203,7 @@ Damit folgt:\\
 jede lin. Abb $K^n\rightarrow K^m$ (K Körper) ist von der Form $\varphi(x)=Ax$ für ein $A \in M_{m,n}(K)$
 
 \subsection*{Beweis:}
-Benutze kanonische Basis von $K^n$ bzw. $K^m$. Dann stimmen Elemente von $K^n$ bzw. $K^m$ mit ihren Koodrdinatenvektoren bzgl. Basis überein, Beh. folgt aus 6.3
+Benutze kanonische Basis von $K^n$ bzw. $K^m$. Dann stimmen Elemente von $K^n$ bzw. $K^m$ mit ihren Koordinatenvektoren bzgl. Basis überein, Beh. folgt aus 6.3
 
 % % % 6.6
 \subsection{Satz (Eigenschaften der Darstellungsmatrix)}
@@ -232,7 +232,7 @@ $\varphi_1,\varphi_2,\varphi: U\rightarrow V, \Psi: V\rightarrow W$
 V ein K-VR, dim(V)=n, Basis B\\
 $\varphi: V\rightarrow V$ lin. Abb. mit $A_{\varphi}^B$\\
 Dann gilt:\\
-$\varphi$ invertierbar (bij.) $\Rightarrow A_{\varphi}^B$ invertierbar und $A_{\varphi^{-1}}^B$ ist dann $=(A_{\varphi}^B)^{-1}$
+$\varphi$ invertierbar (bij.) $\Leftrightarrow A_{\varphi}^B$ invertierbar und $A_{\varphi^{-1}}^B$ ist dann $=(A_{\varphi}^B)^{-1}$
 
 \subsection*{Beweis:}
 \begin{enumerate}
@@ -292,7 +292,7 @@ Es gilt $(S_{B,B'})^{-1}=(S_{B',B})$\\
 \subsection{Satz: Koordinaten umrechnen}
 V mit $B,B'$ wie in 6.10, $v\in V$
 
-Dann ist $K_{B'}\cdot (v)=S_{B',B}\cdot K_B(v)$
+Dann ist $K_{B'} (v)=S_{B',B}\cdot K_B(v)$
 
 \subsection*{Beweis:} $v=\sum_{k=1}^n \lambda_k\cdot \underbrace{v_k}_{\sum_{l=1}^n t_{lk}v_l'}$, also $K_B(v)=\begin{pmatrix}\lambda_1 \\ \vdots \\ \lambda_n\end{pmatrix}$\\
 also $V=\sum_{l=1}^n\underbrace{\left(\sum_{k=1}^n \lambda_k t_{lk}\right)}_{\text{neue Koordinaten (bzgl. B')}}\cdot \underbrace{v_l'}_{\in B'}$
