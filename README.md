@@ -6,6 +6,7 @@ Allgemeines
 
 In diesem Repository findet ihr unter /Mathematik_3_2014 unsere aktuelle Mitschrift zur "Mathematik 3"-Vorlesung in Form von ".tex"-Dateien und auch einer ".pdf".
 
+
 Wenn ihr Fehler in den Mitschriften finden solltet oder sonstige Anmerkungen habt, schickt einfach eine Mail an mail(at)benn(dot)in.
 
 
